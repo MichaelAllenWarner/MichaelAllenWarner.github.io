@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Serve ES6+ to Modern Browsers and ES5 to Legacy Browsers"
 date:   2019-05-22 11:28:56 -0400
-categories: web development, javascript, modules, webpack, babel
+categories: webdev
 ---
 ## A Good Way
 
