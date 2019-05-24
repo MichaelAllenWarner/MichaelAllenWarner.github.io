@@ -6,7 +6,7 @@ categories: webdev
 excerpt: >
   React displays unexpected (buggy?) behavior when you try to manually impose user-input restrictions on input boxes with the <code>type="number"</code> attribute. In this post I demonstrate the problem and provide a fix.
 ---
-Unexpected behavior (a bug?) in React occurs when trying to manually impose user-input restrictions on input boxes with the `type="number"` attribute. The code in question looks like this (I’m using a [Babel plugin](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) that allows for class properties):
+Unexpected behavior in React occurs when trying to manually impose user-input restrictions on input boxes with the `type="number"` attribute (a bug? [wouldn’t be React’s first](https://github.com/facebook/react/pull/7359#event-1017024857) for this attribute). The code in question looks like this:
 
 ```javascript
 export class BadInput extends Component {
@@ -42,7 +42,9 @@ export class BadInput extends Component {
 }
 ```
 
- This is a basic [controlled component](https://reactjs.org/docs/forms.html#controlled-components). As the user types, React checks whether the input evaluates to an integer between 1 and 9. If it does, the input box re-renders with its value set to a string of that integer. If it doesn’t, then the input box *should* re-render blank, as we’re setting its value to an empty string. But it doesn’t work! On Firefox and Safari, *anything* can be typed in the box. On Chrome, most non&ndash;1-9 characters cannot be typed, but at least `e`, `E`, `+`, `-`, and `.` can be.
+  (I’m using a [Babel plugin](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) that allows for class properties).
+  
+  This is a basic [controlled component](https://reactjs.org/docs/forms.html#controlled-components). As the user types, React checks whether the input evaluates to an integer between 1 and 9. If it does, the input box re-renders with its value set to a string of that integer. If it doesn’t, then the input box *should* re-render blank, as we’re setting its value to an empty string. But it doesn’t work! On Firefox and Safari, *anything* can be typed in the box. On Chrome, most non&ndash;1-9 characters cannot be typed, but at least `e`, `E`, `+`, `-`, and `.` can be.
 
 The fix is to change `this.setState({ value: '' })` to something like `this.setState({ value: ' ' })`. That string is a single space, but actually *any* non-empty string will do if it doesn’t evaluate to an integer between 1 and 9; and if it *does* evaluate to an integer between 1 and 9 (e.g., if the string is `'1'`), then that integer is what shows up in the box after a “bad” input.
 
