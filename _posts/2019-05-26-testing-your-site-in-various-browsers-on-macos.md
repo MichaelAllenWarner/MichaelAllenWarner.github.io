@@ -18,7 +18,7 @@ Get your web project’s server up and running on your Mac. Say that the local s
 
 ## Testing on Internet Explorer 8&ndash;11 (or Edge)
 
-Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads). Then download and install the [appropriate virtual machine from Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). With your web project’s server running, open the browser on your virtual Windows machine, and navigate not to `http://localhost:PORT` but rather to `http://10.0.2.2:PORT`. Done!
+Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads). Then download and install the [appropriate virtual machine from Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). With your web project’s server running, open the browser on your virtual Windows machine, and navigate not to `http://localhost:PORT` [but rather to](https://www.virtualbox.org/manual/ch09.html#changenat) `http://10.0.2.2:PORT`. Done!
 
 ## Testing on Mobile Safari
 
