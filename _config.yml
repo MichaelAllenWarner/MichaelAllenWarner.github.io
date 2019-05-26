@@ -26,6 +26,10 @@ show_excerpts: true
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
