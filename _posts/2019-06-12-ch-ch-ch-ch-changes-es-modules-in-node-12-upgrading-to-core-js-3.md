@@ -7,9 +7,9 @@ excerpt: >
   Just cataloging a couple of updates I’ve made to my JavaScript/Node workflow. 
 ---
 
-## No More `require`, No More `module.exports`
+## Say Goodbye to `require`, Say Goodbye to `module.exports`
 
-Node 12 comes with substantially improved support for [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). You can read the official announcement [here](https://medium.com/@nodejs/announcing-a-new-experimental-modules-1be8d2d6c2ff) and the documentation [here](https://nodejs.org/docs/latest-v12.x/api/esm.html), but the gist of it (for my purposes, anyway) is this: if you include the line `"type": "module"` in your `package.json`, then Node will treat your project’s `.js` files as ES modules *when run with the* `--experimental-modules` *flag* (just throw it into your `"start"` script!). I made the jump last week, and now I’m using the same [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)/[`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) syntax in my server-side code that I already use for my client-side stuff. Say goodbye to `require` and `modules.exports`!
+Node 12 comes with substantially improved support for [ES modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). You can read the official announcement [here](https://medium.com/@nodejs/announcing-a-new-experimental-modules-1be8d2d6c2ff) and the documentation [here](https://nodejs.org/docs/latest-v12.x/api/esm.html), but the gist of it (for my purposes, anyway) is this: if you include the line `"type": "module"` in your `package.json`, then Node will treat your project’s `.js` files as ES modules *when run with the* `--experimental-modules` *flag* (just throw it into your `"start"` script!). I made the jump last week, and now I’m using the same [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)/[`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) syntax in my server-side code that I already use for my client-side stuff. So long, `require` and `modules.exports`!
 
 For reference, the relevant lines of a module-ready `package.json` file might look something like this:
 
@@ -49,7 +49,7 @@ export default myObj;
 // no equivalent; the module.exports object is all we've got
 ```
 
-## Switching from `@babel/polyfill` (and `core-js@2`) to `core-js@3`
+## Say Goodbye to `@babel/polyfill`, Say Goodbye to `core-js@2`
 
 With the release of `core-js@3`, the `@babel/polyfill` package [is officially deprecated](https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md#babelpolyfill). Making the switch is pretty simple, because almost everything stays the same! Just install `core-js@3` as a dependency (in place of `@babel/polyfill`), and [add the line `corejs: 3`](https://babeljs.io/blog/2019/03/19/7.4.0#migration-from-core-js-2) to your `@babel/preset-env` settings, like this:
 
