@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ch-ch-ch-ch-changes: ES Modules in Node 12, Upgrading to core-js@3"
+title:  "Ch-ch-ch-ch-changes: ES Modules in Node 12; Upgrading core-js"
 date:   2019-06-12 12:00:00 -0400
 categories: webdev
 excerpt: >
