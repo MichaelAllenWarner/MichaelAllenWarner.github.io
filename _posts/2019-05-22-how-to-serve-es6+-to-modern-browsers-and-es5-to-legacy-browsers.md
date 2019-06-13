@@ -28,7 +28,7 @@ To be clear, it doesn’t matter whether the ES6+ version is actually a module. 
 Now, about those devilish details&hellip; what did we mean by *ignore* in the first paragraph? Actually we meant two things:
 
 - modern browsers won’t attempt to download scripts marked `nomodule` (this is what makes the trick worthwhile!);
-- legacy browsers will download but not execute scripts marked `type="module`.
+- legacy browsers will download but not execute scripts marked `type="module"`.
 
 So to sum up, the procedure here is to write your code in ES6+, use Webpack and Babel to build *two* bundles (a small ES6+ one and a larger one compiled to ES5 with any needed polyfills; I use Webpack’s [babel-loader](https://webpack.js.org/loaders/babel-loader/) plugin), and then serve both files as in the HTML snippet above. The browsers will take care of the rest.
 
