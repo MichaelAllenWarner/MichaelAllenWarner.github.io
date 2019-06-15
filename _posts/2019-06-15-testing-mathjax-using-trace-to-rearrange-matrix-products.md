@@ -46,7 +46,7 @@ Say you’re using [matrix notation to represent](https://en.wikipedia.org/wiki/
 
 $$  [\vec a]^{\mathrm{T}} [\vec c][\vec b]^{\mathrm{T}}[\vec d] $$
 
- (so \\( [\vec a]^\mathrm{T} \\) is the row-matrix representation of \\( \vec a \\), and \\( [\vec c] \\) is the column-matrix representation of \\( \vec c \\) ). Note that this is a 1-by-1 matrix.
+ (so \\( [\vec a]^\mathrm{T} \\) is the row-matrix representation of \\( \vec a \\), and \\( [\vec c] \\) is the column-matrix representation of \\( \vec c \\)). Note that this is a 1-by-1 matrix.
 
 Now, the quantity \\( (\vec a \cdot \vec c)(\vec b \cdot \vec d) \\) is the definition of the [double dot product](https://en.wikipedia.org/wiki/Dyadics#Product_of_dyadic_and_dyadic) of the [dyads](https://en.wikipedia.org/wiki/Dyadics#Definitions_and_terminology) \\( \vec a \otimes \vec b \\) and \\( \vec c \otimes \vec d \\):
 
