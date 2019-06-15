@@ -60,7 +60,7 @@ So here is the trick. First, invoke the commutativity of the dot product to reor
 
 $$\begin{aligned}
 ( \vec a \otimes \vec b ) : ( \vec c \otimes \vec d ) &= (\vec a \cdot \vec c)(\vec b \cdot \vec d) \\
-&= (\vec c \cdot \vec a)(\vec b \cdot \vec d)
+&= (\vec c \cdot \vec a)(\vec b \cdot \vec d) .
 \end{aligned}$$
 
 Next, note that \\( (\vec c \cdot \vec a)(\vec b \cdot \vec d) \\) is equal to the trace of its 1-by-1 matrix representation, and take advantage of the fact that the trace of a matrix product is invariant under cyclic permutations of the multiplied matrices:
@@ -73,7 +73,7 @@ $$
 \end{aligned}
 $$
 
-\\( [\vec a][\vec b]^{\mathrm{T}} \\) is the matrix representation of the dyad \\( \vec a \otimes \vec b \\), and \\( [\vec d] [\vec c]^{\mathrm{T}} \\) is the *transpose* of the matrix representation of \\( \vec c \otimes \vec d \\), so now we have a matrix expression of the double dot product for dyads that readily generalizes to non-dyad dyadics. For a pair of arbitrary dyadics \\( \mathbf{A} \\) and \\( \mathbf{B} \\), it is:
+Since \\( [\vec a][\vec b]^{\mathrm{T}} \\) is the matrix representation of the dyad \\( \vec a \otimes \vec b \\), and since \\( [\vec d] [\vec c]^{\mathrm{T}} \\) is the *transpose* of the matrix representation of \\( \vec c \otimes \vec d \\), we now have a matrix expression of the double dot product for dyads that readily generalizes to non-dyad dyadics. For a pair of arbitrary dyadics \\( \mathbf{A} \\) and \\( \mathbf{B} \\), it is:
 
 $$ \mathbf{A} : \mathbf{B} = \mathrm{Tr} \left( [\mathbf{A}] [\mathbf{B}]^{\mathrm{T}} \right) , $$
 
