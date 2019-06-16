@@ -4,7 +4,7 @@ title:  "Testing MathJax: Using Trace to Rearrange Matrix Products"
 date:   2019-06-15 17:20:00 -0400
 categories: math
 excerpt: >
-  My first post using Mathjax. I explain how I load the script conditionally, and I share a little matrix maneuver I recently discovered.
+  My first post using MathJax. I explain how I load the script conditionally, and I share a little matrix maneuver I recently discovered.
 usemathjax: true
 ---
 
