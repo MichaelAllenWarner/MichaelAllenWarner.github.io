@@ -36,8 +36,7 @@ where \\( \vec q \cdot \vec w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y W^y 
 
 ### Adding Curl to the Mix
 
-A special case of the vector triple product is when the “inner” cross product is the [curl](https://en.wikipedia.org/wiki/Curl_(mathematics)) of a [vector field](https://en.wikipedia.org/wiki/Vector_field) \\( 
-  \vec c = \vec c (\vec r) \\) (using \\( \vec r \\) for the position vector):
+A special case of the vector triple product is when the “inner” cross product is the [curl](https://en.wikipedia.org/wiki/Curl_(mathematics)) of a [vector field](https://en.wikipedia.org/wiki/Vector_field) \\( \vec c = \vec c (\vec r) \\) (using \\( \vec r \\) for the position vector):
 
 $$
 \begin{aligned}
