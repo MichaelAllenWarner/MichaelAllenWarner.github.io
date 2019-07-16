@@ -85,7 +85,7 @@ Then there’s the *extra* special case of the [curl of the curl](https://en.wik
 
 $$
 \begin{aligned}
-\vec \nabla \times\vec \nabla \times \vec c &= \vec \nabla (\vec \nabla \cdot \vec c) - (\vec \nabla \cdot \vec \nabla) \vec c \\
+\vec \nabla \times (\vec \nabla \times \vec c) &= \vec \nabla (\vec \nabla \cdot \vec c) - (\vec \nabla \cdot \vec \nabla) \vec c \\
 &= \vec \nabla (\vec \nabla \cdot \vec c) - \nabla^2 \vec c ,
 \end{aligned}
 $$
@@ -94,7 +94,7 @@ with \\( \nabla^2 = \vec \nabla \cdot \vec \nabla \\) as the [(vector) Laplacian
 
 $$
 \begin{aligned}
-\vec \partial \; \text{“} \mkern-5mu \times \vec \partial \times \mkern-5mu \text{”} \, \vec C &= \vec \partial (\vec \partial \cdot \vec C) - (\vec \partial \cdot \vec \partial) \vec C \\
+\vec \partial \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec C) &= \vec \partial (\vec \partial \cdot \vec C) - (\vec \partial \cdot \vec \partial) \vec C \\
 &= \vec \partial (\vec \partial \cdot \vec C) - \Box \vec C ,
 \end{aligned}
 $$
@@ -120,7 +120,7 @@ Charge- and current-densities together constitute a four-vector \\( \vec J = (\r
 
 $$
 \begin{aligned}
-\vec J &= - \vec \partial \; \text{“} \mkern-5mu \times \vec \partial \times \mkern-5mu \text{”} \, \vec A \\
+\vec J &= - \vec \partial \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec A) \\
 &= \Box \vec A - \vec \partial (\vec \partial \cdot \vec A) .
 \end{aligned}
 $$
