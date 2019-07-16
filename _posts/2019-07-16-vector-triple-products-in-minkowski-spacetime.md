@@ -91,7 +91,7 @@ $$
 \end{aligned}
 $$
 
-with \\( \nabla^2 = \vec \nabla \cdot \vec \nabla \\) as the ([vector) Laplacian](https://en.wikipedia.org/wiki/Vector_Laplacian), a scalar operator. The four-vector “double curl” is:
+with \\( \nabla^2 = \vec \nabla \cdot \vec \nabla \\) as the [(vector) Laplacian](https://en.wikipedia.org/wiki/Vector_Laplacian), a scalar operator. The four-vector “double curl” is:
 
 $$
 \begin{aligned}
