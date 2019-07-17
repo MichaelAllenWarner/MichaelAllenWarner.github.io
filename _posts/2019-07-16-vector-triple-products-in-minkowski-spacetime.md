@@ -53,8 +53,10 @@ or using the “bac - cab” expansion:
 
 $$
 \begin{aligned}
-\vec \nabla _{\vec c , \, f} [\vec a \cdot (\vec c + \vec \nabla f)] - (\vec a \cdot \vec \nabla) (\vec c + \vec \nabla f) &= \vec \nabla _{\vec c} (\vec a \cdot \vec c) + \vec \nabla _{f} (\vec a \cdot \vec \nabla f) - (\vec a \cdot \vec \nabla) \vec c - (\vec a \cdot \vec \nabla) \vec \nabla f \\
-&= \vec \nabla _{\vec c} (\vec a \cdot \vec c) - (\vec a \cdot \vec \nabla) \vec c ,
+\vec a \times [\vec \nabla \times (\vec c + \vec \nabla f)] &= \vec \nabla _{\vec c , \, f} [\vec a \cdot (\vec c + \vec \nabla f)] - (\vec a \cdot \vec \nabla) (\vec c + \vec \nabla f) \\
+&= \vec \nabla _{\vec c} (\vec a \cdot \vec c) + \vec \nabla _{f} (\vec a \cdot \vec \nabla f) - (\vec a \cdot \vec \nabla) \vec c - (\vec a \cdot \vec \nabla) \vec \nabla f \\
+&= \vec \nabla _{\vec c} (\vec a \cdot \vec c) - (\vec a \cdot \vec \nabla) \vec c \\
+&= \vec a \times (\vec \nabla \times \vec c),
 \end{aligned}
 $$
 
@@ -64,7 +66,7 @@ The “four-del” is:
 
 $$\vec \partial = \left( \frac{1}{c} \, \frac{\partial}{\partial t} , \, - \vec \nabla \right)$$
 
-(\\( c \\) is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With \\( \vec R \\) as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field \\( \vec C = \vec C ( \vec R ) \\) is:
+(\\( c \\) is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](https://www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With \\( \vec R \\) as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field \\( \vec C = \vec C ( \vec R ) \\) is:
 
 $$
 \vec A \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec C) = \vec \partial _{\vec C} (\vec A \cdot \vec C) - (\vec A \cdot \vec \partial) \vec C .
@@ -74,8 +76,10 @@ The resulting vector is likewise unchanged by a transformation that takes \\( \v
 
 $$
 \begin{aligned}
-\vec \partial _{\vec C , \, F} [\vec A \cdot (\vec C + \vec \partial F)] - (\vec A \cdot \vec \partial) (\vec C + \vec \partial F) &= \vec \partial _{\vec C} (\vec A \cdot \vec C) + (\vec A \cdot \vec \partial) \vec \partial F - (\vec A \cdot \vec \partial) \vec C - (\vec A \cdot \vec \partial) \vec \partial F \\
-&= \vec \partial _{\vec C} (\vec A \cdot \vec C) - (\vec A \cdot \vec \partial) \vec C .
+\vec A \; \text{“} \mkern-5mu \times [ \vec \partial \times \mkern-5mu \text{”} \, ( \vec C + \vec \partial F ) ] &= \vec \partial _{\vec C , \, F} [\vec A \cdot (\vec C + \vec \partial F)] - (\vec A \cdot \vec \partial) (\vec C + \vec \partial F) \\
+&= \vec \partial _{\vec C} (\vec A \cdot \vec C) + (\vec A \cdot \vec \partial) \vec \partial F - (\vec A \cdot \vec \partial) \vec C - (\vec A \cdot \vec \partial) \vec \partial F \\
+&= \vec \partial _{\vec C} (\vec A \cdot \vec C) - (\vec A \cdot \vec \partial) \vec C \\
+&= \vec A \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec C).
 \end{aligned}
 $$
 
@@ -103,8 +107,10 @@ with \\( \Box = \vec \partial \cdot \vec \partial \\) as the [d’Alembertian](h
 
 $$
 \begin{aligned}
-\vec \partial [\vec \partial \cdot (\vec C + \vec \partial F)] - \Box (\vec C + \vec \partial F) &= \vec \partial (\vec \partial \cdot \vec C) + \vec \partial \Box F - \Box \vec C - \Box \vec \partial F \\
-&= \vec \partial (\vec \partial \cdot \vec C) - \Box \vec C ,
+\vec \partial \; \text{“} \mkern-5mu \times [ \vec \partial \times \mkern-5mu \text{”} \, ( \vec C + \vec \partial F ) ] &= \vec \partial [\vec \partial \cdot (\vec C + \vec \partial F)] - \Box (\vec C + \vec \partial F) \\
+&= \vec \partial (\vec \partial \cdot \vec C) + \vec \partial \Box F - \Box \vec C - \Box \vec \partial F \\
+&= \vec \partial (\vec \partial \cdot \vec C) - \Box \vec C \\
+&= \vec \partial \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec C) ,
 \end{aligned}
 $$
 
@@ -116,11 +122,11 @@ The physics is really pretty simple now. We’ll do this in [Heaviside&ndash;Lor
 
 ### Four-Current Density, Four-Potential, Lorenz Gauge
 
-Charge- and current-densities together constitute a four-vector \\( \vec J = (\rho c, \vec j) \\) called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) \\( \vec A \\) as any four-vector field whose (negative) “double curl” is the four-current density (divided by \\( c \\)):
+Charge- and current-densities together constitute a four-vector \\( \vec J = (\rho, \vec j / c) \\) called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. (Usually it’s defined as \\((\rho c , \vec j)\\), but dividing by \\( c \\) now prevents us from having to divide \\( \vec J \\) by \\( c \\) later when it appears in other equations.) We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) \\( \vec A \\) as any four-vector field whose (negative) “double curl” is the four-current density:
 
 $$
 \begin{aligned}
-\frac{1}{c} \, \vec J &= - \vec \partial \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec A) \\
+\vec J &= - \vec \partial \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec A) \\
 &= \Box \vec A - \vec \partial (\vec \partial \cdot \vec A) .
 \end{aligned}
 $$
@@ -136,7 +142,7 @@ $$
 
 leaving just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
 
-$$ \frac{1}{c} \, \vec J = \Box \vec A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \vec A .$$
+$$\vec J = \Box \vec A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \vec A .$$
 
 So in the Lorenz gauge, a non-zero value of \\( \vec J \\) at a position in spacetime generates a commensurate disturbance in the \\( \vec A \\) field that spreads outward through space at the speed of light; the sum of all such disturbances passing through a location in space at a particular time determines the “value” of the (Lorenz-gauge) \\( \vec A \\) field at that spacetime point. (We still need scare quotes because for any scalar \\( \eta \\) that satisfies \\( \Box \eta = 0 \\), we get \\( \Box (\vec A + \vec \partial \eta) = \Box \vec A + \vec \partial \Box \eta = \Box \vec A \\), meaning that we have some “gauge freedom” even within the Lorenz gauge.)
 
@@ -144,7 +150,12 @@ So in the Lorenz gauge, a non-zero value of \\( \vec J \\) at a position in spac
 
 The reason we care about the four-potential is the following empirical result:
 
-$$\vec F = \frac{q}{c} \left[ \vec V \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec A) \right].$$
+$$
+\begin{aligned}
+\vec F &= \frac{q}{c} \left[ \vec V \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec A) \right] \\[5pt]
+&= \frac{q}{c} \left[ \vec \partial _{\vec A} \left( \vec V \cdot \vec A  \right) - \left( \vec V \cdot \vec \partial \right) \vec A \right] .
+\end{aligned}
+$$
 
 This is the physical effect that the local “value” of the \\( \vec A \\) field has on a test charge at a given spacetime location (we’re differentiating the four-potential, so its non-uniqueness doesn’t matter). Here \\( q \\) is the particle’s charge, \\( \vec V \\) is its [four-velocity](https://en.wikipedia.org/wiki/Four-velocity#Definition_of_the_four-velocity), and \\( \vec F \\) is the resulting [four-force](https://en.wikipedia.org/wiki/Four-force) exerted on it (the full four-vector version of the [Lorentz force](https://en.wikipedia.org/wiki/Lorentz_force)).
 
@@ -156,4 +167,94 @@ We know from our mathematical preliminaries that this equation is unaffected by 
 
 That’s how “information” about charges travels through spacetime and physically affects other charges.
 
-Except for the [radiation reaction](https://en.wikipedia.org/wiki/Abraham%E2%80%93Lorentz_force#Abraham%E2%80%93Lorentz%E2%80%93Dirac_force), this is electrodynamics in a nutshell! To extract from this formalism the more familiar three-vector relations (Maxwell’s equations and the Lorentz three-force), put all the four-vectors into component form, define the electric and magnetic three-vector fields in terms of the four-potential \\( \vec A = (A^t, \vec a)\\) like \\( \vec e = - \vec \nabla A^t - \tfrac{\partial}{\partial(ct)} \vec a \\) and \\( \vec b = \vec \nabla \times \vec a \\), and do some algebra. We leave this as an exercise for the reader! &#128521; (Or see the relevant section of my [little treatise](https://drive.google.com/open?id=0BzbijOFcLYkTSWJ5R0s5U1ZMYWM).)
+Except for the [radiation reaction](https://en.wikipedia.org/wiki/Abraham%E2%80%93Lorentz_force#Abraham%E2%80%93Lorentz%E2%80%93Dirac_force), this is classical electrodynamics in a nutshell!
+
+### Lorentz Three-Force and Maxwell’s Equations
+
+To extract from this formalism the more familiar three-vector relations (the Lorentz three-force and Maxwell’s equations), we have to put the Lorentz four-force into component form. The four-velocity’s component form is \\( \vec V = ( \gamma c, \gamma \vec v) \\), where \\( \vec v \\) is the regular three-velocity and \\( \gamma = [1 - (v /c)^2 ]^{-1/2} \\) is the Lorentz factor. For the four-potential we’ll use \\( \vec A = (A^t , \vec a) \\), and for the four-del we’ll write \\( \vec \partial = (\partial^t , - \vec \nabla ) \\) with the understanding that \\( \partial^t = \frac{1}{c} \frac{\partial}{\partial t} \\).
+
+So we want to put the following equation into component form:
+
+$$\vec F = \frac{q}{c} \left[ \vec \partial _{\vec A} \left( \vec V \cdot \vec A  \right) - \left( \vec V \cdot \vec \partial \right) \vec A \right] . $$
+
+First carry out the Minkowski dot products, factor out \\( \gamma \\), and distribute \\( c^{-1} \\):
+
+$$
+\begin{aligned}
+\vec F &= \frac{q}{c} \left[ \vec \partial _{\vec A} \left( \gamma c A^t - \gamma \vec v \cdot \vec a \right) - \left( \gamma c \partial^t - \gamma \vec v \cdot [- \vec \nabla] \right) \vec A \right] \\[3pt]
+&= \gamma q \left[ \vec \partial A^t - \vec \partial _{\vec a} \left( \frac{\vec v}{c} \cdot \vec a \right) - \partial^t \vec A - \left( \frac{\vec v}{c} \cdot \vec \nabla \right) \vec A \right] .
+\end{aligned}
+$$
+
+The time component is now:
+
+$$
+\begin{aligned}
+F^t &= \gamma q \left[ \partial^t A^t - \left( \frac{\vec v}{c} \cdot \partial^t \vec a \right) - \partial^t A^t - \left( \frac{\vec v}{c} \cdot \vec \nabla A^t \right) \right] \\[4pt]
+&= \gamma q \, \frac{\vec v}{c} \cdot \left( - \partial^t \vec a - \vec \nabla A^t \right) .
+\end{aligned}
+$$
+
+The space component we’ll notate \\( \gamma \vec f \\) (so that \\( \vec f \\) is the regular three-force), and it’s:
+
+$$
+\begin{aligned}
+\gamma \vec f &= \gamma q \left[ - \vec \nabla A^t + \vec \nabla _{\vec a} \left( \frac{\vec v}{c} \cdot \vec a \right) - \partial^t \vec a - \left( \frac{\vec v}{c} \cdot \vec \nabla \right) \vec a \right] \\[4pt]
+&= \gamma q \left[ - \partial^t \vec a - \vec \nabla A^t + \frac{\vec v}{c} \times ( \vec \nabla \times \vec a ) \right] ,
+\end{aligned}
+$$
+
+where we’ve used the “bac - cab” rule. Defining the electric field as \\( \vec e = - \partial^t \vec a - \vec \nabla A^t \\) and the magnetic field as \\( \vec b = \vec \nabla \times \vec a \\), we have:
+
+$$\vec F = \gamma q \left( \frac{\vec v}{c} \cdot \vec e, \, \vec e + \frac{\vec v}{c} \times \vec b \right), $$
+
+and the spatial component is indeed the Lorentz three-force (times \\( \gamma \\)).
+
+To get Maxwell’s equations, we just need to relate our new \\( \vec e \\) and \\( \vec b \\) fields to the charge- and current-densities. This is easiest in the Lorenz gauge, where the four-potential is divergenceless (i.e., \\( \partial^t A^t = - \vec \nabla \cdot \vec a \\)) and \\( (\rho, \vec j / c) = \vec J = \Box \vec A = (\Box A^t, \Box \vec a) \\). First:
+
+$$
+\begin{aligned}
+\rho &= \Box A^t \\
+&= \partial^t (\partial^t A^t) - \nabla ^2 A^t \\
+&= - \partial^t ( \vec \nabla \cdot \vec a ) - \vec \nabla \cdot \vec \nabla A^t \\
+&= \vec \nabla \cdot ( -\partial^t \vec a - \vec \nabla A^t ) \\
+\rho &= \vec \nabla \cdot \vec e .
+\end{aligned}
+$$
+
+And second:
+
+$$
+\begin{aligned}
+\frac{\vec j}{c} &= \Box \vec a \\
+&= \partial^t ( \partial^t \vec a ) - \nabla ^2 \vec a \\
+&= \partial^t ( \partial^t \vec a ) + \vec \nabla \times ( \vec \nabla \times \vec a ) - \vec \nabla ( \vec \nabla \cdot \vec a ) \\
+&= \vec \nabla \times \vec b + \partial^t ( \partial^t \vec a ) - \vec \nabla ( \vec \nabla \cdot \vec a ) \\
+&= \vec \nabla \times \vec b + \partial^t ( \partial^t \vec a ) + \vec \nabla ( \partial^t A^t ) \\
+&= \vec \nabla \times \vec b + \partial^t ( \partial^t \vec a + \vec \nabla A^t ) \\
+\frac{\vec j}{c} &= \vec \nabla \times \vec b - \partial^t \vec e .
+\end{aligned}
+$$
+
+Those are the two “inhomogeneous” Maxwell equations. The “homogeneous” ones follow from a couple of vector calculus identities. First, because the divergence of a curl is always the zero vector:
+
+$$
+\begin{aligned}
+\vec \nabla \cdot \vec b &= \vec \nabla \cdot ( \vec \nabla \times \vec a ) \\
+\vec \nabla \cdot \vec b &= \vec 0 .
+\end{aligned}
+$$
+
+And second, because the curl of a gradient is always zero:
+
+$$
+\begin{aligned}
+\vec \nabla \times \vec e + \partial^t \vec b &= \vec \nabla \times ( - \partial^t \vec a - \vec \nabla A^t ) + \partial^t ( \vec \nabla \times \vec a ) \\
+&= - \vec \nabla \times \partial^t \vec a \; + \, \vec \nabla \times \partial^t \vec a \\
+\vec \nabla \times \vec e + \partial^t \vec b &= 0 .
+\end{aligned}
+$$
+
+We’re done!
+
+For more details, see my [little treatise](https://drive.google.com/open?id=0BzbijOFcLYkTSWJ5R0s5U1ZMYWM).
