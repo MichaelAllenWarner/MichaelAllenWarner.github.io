@@ -36,7 +36,7 @@ $$
 \vec Q \cdot \vec W = Q^t W^t - (\vec q \cdot \vec w) ,
 $$
 
-where \\( \vec q \cdot \vec w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y W^y + Q^z W^z\\) is the [Euclidean dot product](https://en.wikipedia.org/wiki/Dot_product) (we’ll use superscript indices for four-vector components).
+where \\( \vec q \cdot \vec w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y W^y + Q^z W^z\\) is the [Euclidean dot product](https://en.wikipedia.org/wiki/Dot_product) (we’ll use superscript indices for four-vector components and subscript indices for three-vector components).
 
 ### Adding Curl to the Mix
 
