@@ -171,7 +171,7 @@ Except for the [radiation reaction](https://en.wikipedia.org/wiki/Abraham%E2%80%
 
 ### Lorentz Three-Force and Maxwell’s Equations
 
-To extract from this formalism the more familiar three-vector relations (the Lorentz three-force and Maxwell’s equations), we have to put the Lorentz four-force into component form. The four-velocity’s component form is \\( \vec V = ( \gamma c, \gamma \vec v) \\), where \\( \vec v \\) is the regular three-velocity and \\( \gamma = [1 - (v /c)^2 ]^{-1/2} \\) is the Lorentz factor. For the four-potential we’ll use \\( \vec A = (A^t , \vec a) \\), and for the four-del we’ll write \\( \vec \partial = (\partial^t , - \vec \nabla ) \\) with the understanding that \\( \partial^t = \frac{1}{c} \frac{\partial}{\partial t} \\).
+To extract from this formalism the more familiar three-vector relations (the Lorentz three-force and [Maxwell’s equations](https://en.wikipedia.org/wiki/Lorentz%E2%80%93Heaviside_units#Maxwell's_equations_with_sources)), we have to put the Lorentz four-force into component form. The four-velocity’s component form is \\( \vec V = ( \gamma c, \gamma \vec v) \\), where \\( \vec v \\) is the regular three-velocity and \\( \gamma = [1 - (v /c)^2 ]^{-1/2} \\) is the [Lorentz factor](https://en.wikipedia.org/wiki/Lorentz_factor). For the four-potential we’ll use \\( \vec A = (A^t , \vec a) \\), and for the four-del we’ll write \\( \vec \partial = (\partial^t , - \vec \nabla ) \\) with the understanding that \\( \partial^t = \frac{1}{c} \frac{\partial}{\partial t} \\).
 
 So we want to put the following equation into component form:
 
