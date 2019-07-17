@@ -241,7 +241,7 @@ Those are the two “inhomogeneous” Maxwell equations. The “homogeneous” o
 $$
 \begin{aligned}
 \vec \nabla \cdot \vec b &= \vec \nabla \cdot ( \vec \nabla \times \vec a ) \\
-\vec \nabla \cdot \vec b &= \vec 0 .
+\vec \nabla \cdot \vec b &= 0 .
 \end{aligned}
 $$
 
@@ -251,7 +251,7 @@ $$
 \begin{aligned}
 \vec \nabla \times \vec e + \partial^t \vec b &= \vec \nabla \times ( - \partial^t \vec a - \vec \nabla A^t ) + \partial^t ( \vec \nabla \times \vec a ) \\
 &= - \vec \nabla \times \partial^t \vec a \; + \, \vec \nabla \times \partial^t \vec a \\
-\vec \nabla \times \vec e + \partial^t \vec b &= 0 .
+\vec \nabla \times \vec e + \partial^t \vec b &= \vec 0 .
 \end{aligned}
 $$
 
