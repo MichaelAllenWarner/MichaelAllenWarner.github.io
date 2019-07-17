@@ -157,13 +157,13 @@ $$
 \end{aligned}
 $$
 
-This is the physical effect that the local “value” of the \\( \vec A \\) field has on a test charge at a given spacetime location (we’re differentiating the four-potential, so its non-uniqueness doesn’t matter). Here \\( q \\) is the particle’s charge, \\( \vec V \\) is its [four-velocity](https://en.wikipedia.org/wiki/Four-velocity#Definition_of_the_four-velocity), and \\( \vec F \\) is the resulting [four-force](https://en.wikipedia.org/wiki/Four-force) exerted on it (the full four-vector version of the [Lorentz force](https://en.wikipedia.org/wiki/Lorentz_force)).
+This is the physical effect that derivatives of the local \\( \vec A \\) field have on a test charge at a given spacetime location. Here \\( q \\) is the particle’s charge, \\( \vec V \\) is its [four-velocity](https://en.wikipedia.org/wiki/Four-velocity#Definition_of_the_four-velocity), and \\( \vec F \\) is the resulting [four-force](https://en.wikipedia.org/wiki/Four-force) exerted on it (the full four-vector version of the [Lorentz force](https://en.wikipedia.org/wiki/Lorentz_force)).
 
 We know from our mathematical preliminaries that this equation is unaffected by a gauge transformation of \\( \vec A \\), so it holds for *any* valid four-potential. Still, it’s easiest to think about all this in the Lorenz gauge:
 
 - charge- and current-densities (the \\( \vec J \\) field) generate disturbances in the (Lorenz-gauge) \\( \vec A \\) field that travel outward through space at the speed of light;
 - the sum of all such disturbances passing through a spacetime location determines the “value” of the (Lorenz-gauge) \\( \vec A \\) field there/then;
-- if there’s a particle at that spacetime location, it’s subjected to a four-force determined by its charge, its four-velocity, and the local “value” of the (Lorenz-gauge) four-potential.
+- if there’s a particle at that spacetime location, it’s subjected to a four-force determined by its charge, its four-velocity, and the derivatives of the local (Lorenz-gauge) four-potential.
 
 That’s how “information” about charges travels through spacetime and physically affects other charges.
 
@@ -210,7 +210,7 @@ $$\vec F = \gamma q \left( \frac{\vec v}{c} \cdot \vec e, \, \vec e + \frac{\vec
 
 and the spatial component is indeed the Lorentz three-force (times \\( \gamma \\)).
 
-To get Maxwell’s equations, we just need to relate our new \\( \vec e \\) and \\( \vec b \\) fields to the charge- and current-densities. This is easiest in the Lorenz gauge, where the four-potential is divergenceless (i.e., \\( \partial^t A^t = - \vec \nabla \cdot \vec a \\)) and \\( (\rho, \vec j / c) = \vec J = \Box \vec A = (\Box A^t, \Box \vec a) \\). First:
+To get Maxwell’s equations, we just need to relate our new \\( \vec e \\) and \\( \vec b \\) fields to the charge- and current-densities. This is easiest in the Lorenz gauge, where the four-potential is divergenceless (i.e., \\( \partial^t A^t = - \vec \nabla \cdot \vec a \\)), and where \\( (\rho, \vec j / c) = \vec J = \Box \vec A = (\Box A^t, \Box \vec a) \\). First:
 
 $$
 \begin{aligned}
