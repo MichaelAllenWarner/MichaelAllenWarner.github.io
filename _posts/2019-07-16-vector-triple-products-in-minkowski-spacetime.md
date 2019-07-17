@@ -8,6 +8,10 @@ excerpt: >
 usemathjax: true
 ---
 
+In this post, I introduce [covariant electrodynamics](https://en.wikipedia.org/wiki/Covariant_formulation_of_classical_electromagnetism) in the least painful way I know: by extending the [vector triple product](https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product) to [Minkowski spacetime](https://en.wikipedia.org/wiki/Minkowski_space). The reader is assumed to have some familiarity with [four-vectors](https://en.wikipedia.org/wiki/Four-vector) and Euclidean [vector calculus](https://en.wikipedia.org/wiki/Vector_calculus), but we won’t use any index gymnastics or explicit rank-2 tensors; just four-vectors.
+
+I developed this approach myself, and I’ve found no other sources that employ it. If you’ve seen it elsewhere, please let me know (email address at the bottom of the page).
+
 ## Mathematical Preliminaries
 
 ### The “bac - cab” Rule
@@ -16,23 +20,23 @@ In three-dimensional Euclidean space, we have this lovely vector identity:
 
 $$ \vec a \times (\vec b \times \vec c) = \vec b (\vec a \cdot \vec c) - \vec c (\vec a \cdot \vec b) .$$
 
-The [cross product](https://en.wikipedia.org/wiki/Cross_product) \\( \vec b \times \vec c \\) is perpendicular to \\( \vec b \\) and \\( \vec c \\), but the [vector triple product](https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product) \\( \vec a \times (\vec b \times \vec c) \\) lies in the plane spanned by \\( \vec b \\) and \\( \vec c \\). So even though the cross product is defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique), the vector triple product in its “bac - cab” form has no such limitation.
+The [cross product](https://en.wikipedia.org/wiki/Cross_product) \\( \vec b \times \vec c \\) is perpendicular to \\( \vec b \\) and \\( \vec c \\) and defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique). The vector triple product \\( \vec a \times (\vec b \times \vec c) \\), on the other hand, is a linear combination of \\( \vec b \\) and \\( \vec c \\) and *lies in the plane they span*, so there’s nothing stopping us from using it in its “bac - cab” form in contexts other than three-dimensional Euclidean space.
 
 ### Four-Vector Triple Product
 
-Accordingly, we can define a “vector triple product” in four-dimensional [Minkowski spacetime](https://en.wikipedia.org/wiki/Minkowski_space):
+Accordingly, we can define a “vector triple product” in four-dimensional Minkowski spacetime:
 
 $$ \vec A \; \text{“} \mkern-5mu \times (\vec B \times \mkern-5mu \text{”} \, \vec C) = \vec B (\vec A \cdot \vec C) - \vec C (\vec A \cdot \vec B). $$
 
-Here the dot means the *Minkowski* dot product (we’ll use capital letters for [four-vectors](https://en.wikipedia.org/wiki/Four-vector) in this post), and the scare quotes on the left side remind us that the cross product itself isn’t actually defined in Minkowski spacetime.
+Here the dot means the *Minkowski* dot product (we’ll use capital letters for four-vectors in this post), and the scare quotes on the left side remind us that the cross product itself isn’t actually defined in Minkowski spacetime.
 
-If you need a refresher, a four-vector has one time component and three Cartesian spatial components that together obey the [Lorentz transformation](https://en.wikipedia.org/wiki/Lorentz_transformation). Adopting the \\( (+, -, -, -) \\) sign convention, the [Minkowski dot product](https://en.wikipedia.org/wiki/Four-vector#Standard_basis,_(+%E2%88%92%E2%88%92%E2%88%92)_signature) of \\( \vec Q = (Q^t, Q^x, Q^y, Q^z) = (Q^t, \vec q) \\) and \\( \vec W = (W^t, \vec w) \\) is:
+If you need a refresher, a four-vector in standard Minkowski coordinates has one time component and three Cartesian spatial components that together obey the [Lorentz transformation](https://en.wikipedia.org/wiki/Lorentz_transformation). Adopting the \\( (+, -, -, -) \\) sign convention, the [Minkowski dot product](https://en.wikipedia.org/wiki/Four-vector#Standard_basis,_(+%E2%88%92%E2%88%92%E2%88%92)_signature) of \\( \vec Q = (Q^t, Q^x, Q^y, Q^z) = (Q^t, \vec q) \\) and \\( \vec W = (W^t, \vec w) \\) is:
 
 $$
 \vec Q \cdot \vec W = Q^t W^t - (\vec q \cdot \vec w) ,
 $$
 
-where \\( \vec q \cdot \vec w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y W^y + Q^z W^z\\) is the [Euclidean dot product](https://en.wikipedia.org/wiki/Dot_product) (we’ll use superscript indices for four-vector components and subscript indices for three-vector components).
+where \\( \vec q \cdot \vec w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y W^y + Q^z W^z\\) is the [Euclidean dot product](https://en.wikipedia.org/wiki/Dot_product) (we’ll use superscript indices for four-vector components).
 
 ### Adding Curl to the Mix
 
@@ -103,7 +107,7 @@ $$
 \end{aligned}
 $$
 
-with \\( \Box = \vec \partial \cdot \vec \partial \\) as the [d’Alembertian](https://en.wikipedia.org/wiki/D%27Alembert_operator), a scalar operator. Taking \\( \vec C \\) to (\\( \vec C + \vec \partial F \\)) here looks like:
+with \\( \Box = \vec \partial \cdot \vec \partial \\) as the [d’Alembertian](https://en.wikipedia.org/wiki/D%27Alembert_operator). Taking \\( \vec C \\) to (\\( \vec C + \vec \partial F \\)) here looks like:
 
 $$
 \begin{aligned}
@@ -136,11 +140,11 @@ We haven’t yet established why we’d care about the four-potential, but this 
 $$
 \begin{aligned}
 \Box ( \vec A + \vec \partial \psi ) - \vec \partial [ \vec \partial \cdot ( \vec A + \vec \partial \psi ) ] &= \Box ( \vec A + \vec \partial \psi ) - \vec \partial ( \vec \partial \cdot \vec A + \Box \psi ) \\
-&= \Box (\vec A + \vec \partial \psi) ,
+&= \Box (\vec A + \vec \partial \psi) .
 \end{aligned}
 $$
 
-leaving just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
+We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
 
 $$\vec J = \Box \vec A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \vec A .$$
 
@@ -159,7 +163,7 @@ $$
 
 This is the physical effect that derivatives of the local \\( \vec A \\) field have on a test charge at a given spacetime location. Here \\( q \\) is the particle’s charge, \\( \vec V \\) is its [four-velocity](https://en.wikipedia.org/wiki/Four-velocity#Definition_of_the_four-velocity), and \\( \vec F \\) is the resulting [four-force](https://en.wikipedia.org/wiki/Four-force) exerted on it (the full four-vector version of the [Lorentz force](https://en.wikipedia.org/wiki/Lorentz_force)).
 
-We know from our mathematical preliminaries that this equation is unaffected by a gauge transformation of \\( \vec A \\), so it holds for *any* valid four-potential. Still, it’s easiest to think about all this in the Lorenz gauge:
+We know from our mathematical preliminaries that this equation is unaffected by a gauge transformation of \\( \vec A \\), so it holds for *any* valid four-potential. Still, it’s most intuitive to think about all this in the Lorenz gauge:
 
 - charge- and current-densities (the \\( \vec J \\) field) generate disturbances in the (Lorenz-gauge) \\( \vec A \\) field that travel outward through space at the speed of light;
 - the sum of all such disturbances passing through a spacetime location determines the “value” of the (Lorenz-gauge) \\( \vec A \\) field there/then;
