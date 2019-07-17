@@ -236,7 +236,7 @@ $$
 \end{aligned}
 $$
 
-Those are the two “inhomogeneous” Maxwell equations. The “homogeneous” ones follow from a couple of vector calculus identities. First, because the divergence of a curl is always the zero vector:
+Those are the two “inhomogeneous” Maxwell equations. The “homogeneous” ones follow from a couple of vector calculus identities. First, because the divergence of a curl is always zero:
 
 $$
 \begin{aligned}
@@ -245,7 +245,7 @@ $$
 \end{aligned}
 $$
 
-And second, because the curl of a gradient is always zero:
+And second, because the curl of a gradient is always the zero vector:
 
 $$
 \begin{aligned}
