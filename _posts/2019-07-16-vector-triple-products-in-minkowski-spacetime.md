@@ -112,15 +112,15 @@ where we’ve used \\( \Box \vec \partial = \vec \partial \Box \\) (because \\( 
 
 ## Covariant Electrodynamics, Four-Vectors Only
 
-The physics is really pretty simple now.
+The physics is really pretty simple now. We’ll do this in [Heaviside&ndash;Lorentz units](https://en.wikipedia.org/wiki/Lorentz%E2%80%93Heaviside_units).
 
 ### Four-Current Density, Four-Potential, Lorenz Gauge
 
-Charge- and current-densities together constitute a four-vector \\( \vec J = (\rho c, \vec j) \\) called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) \\( \vec A \\) as any four-vector field whose (negative) “double curl” is the four-current density:
+Charge- and current-densities together constitute a four-vector \\( \vec J = (\rho c, \vec j) \\) called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) \\( \vec A \\) as any four-vector field whose (negative) “double curl” is the four-current density (divided by \\( c \\)):
 
 $$
 \begin{aligned}
-\vec J &= - \vec \partial \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec A) \\
+\frac{1}{c} \, \vec J &= - \vec \partial \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec A) \\
 &= \Box \vec A - \vec \partial (\vec \partial \cdot \vec A) .
 \end{aligned}
 $$
@@ -136,7 +136,7 @@ $$
 
 leaving just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
 
-$$ \vec J = \Box \vec A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \vec A .$$
+$$ \frac{1}{c} \, \vec J = \Box \vec A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \vec A .$$
 
 So in the Lorenz gauge, a non-zero value of \\( \vec J \\) at a position in spacetime generates a commensurate disturbance in the \\( \vec A \\) field that spreads outward through space at the speed of light; the sum of all such disturbances passing through a location in space at a particular time determines the “value” of the (Lorenz-gauge) \\( \vec A \\) field at that spacetime point. (We still need scare quotes because for any scalar \\( \eta \\) that satisfies \\( \Box \eta = 0 \\), we get \\( \Box (\vec A + \vec \partial \eta) = \Box \vec A + \vec \partial \Box \eta = \Box \vec A \\), meaning that we have some “gauge freedom” even within the Lorenz gauge.)
 
