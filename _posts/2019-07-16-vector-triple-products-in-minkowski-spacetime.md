@@ -70,7 +70,7 @@ The “four-del” is:
 
 $$\vec \partial = \left( \frac{1}{c} \, \frac{\partial}{\partial t} , \, - \vec \nabla \right)$$
 
-(\\( c \\) is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](https://www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With \\( \vec R \\) as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field \\( \vec C = \vec C ( \vec R ) \\) is:
+(\\( c \\) is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](http://www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With \\( \vec R \\) as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field \\( \vec C = \vec C ( \vec R ) \\) is:
 
 $$
 \vec A \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec C) = \vec \partial _{\vec C} (\vec A \cdot \vec C) - (\vec A \cdot \vec \partial) \vec C .
@@ -126,7 +126,7 @@ The physics is really pretty simple now. We’ll do this in [Heaviside&ndash;Lor
 
 ### Four-Current Density, Four-Potential, Lorenz Gauge
 
-Charge- and current-densities together constitute a four-vector \\( \vec J = (\rho, \vec j / c) \\) called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. (Usually it’s defined as \\((\rho c , \vec j)\\), but dividing by \\( c \\) now prevents us from having to divide \\( \vec J \\) by \\( c \\) later when it appears in other equations.) We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) \\( \vec A \\) as any four-vector field whose (negative) “double curl” is the four-current density:
+Charge- and current-densities together constitute a four-vector \\( \vec J = (\rho, \vec j / c) \\) called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. (Usually it’s defined as \\((\rho c , \vec j)\\), but dividing by \\( c \\) now saves us from having to divide \\( \vec J \\) by \\( c \\) later when it appears in other equations.) We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) \\( \vec A \\) as any four-vector field whose (negative) “double curl” is the four-current density:
 
 $$
 \begin{aligned}
