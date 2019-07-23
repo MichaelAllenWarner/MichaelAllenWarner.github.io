@@ -6,6 +6,10 @@ categories: webdev
 excerpt: >
   React displays unexpected (buggy?) behavior when you try to manually impose user-input restrictions on input boxes with the <code>type="number"</code> attribute. In this post I demonstrate the problem and provide a fix.
 ---
+**EDIT, 7/23/19**: A better workaround to the issue described in this post is to use `type="tel"` instead of `type="number"`. This solves the “empty string” problem *and* guarantees that mobile users will see a numeric virtual keyboard (rather than an alphabetic one). Hat tip to [this Stack Overflow answer](https://stackoverflow.com/a/50668256/11072309).
+
+***
+
 Unexpected behavior in React occurs when trying to manually impose user-input restrictions on input boxes with the `type="number"` attribute (a bug? [wouldn’t be React’s first](https://github.com/facebook/react/pull/7359#event-1017024857) for this attribute). The code in question looks like this:
 
 ```javascript
@@ -42,9 +46,9 @@ export class BadInput extends Component {
 }
 ```
 
-  (I’m using a [Babel plugin](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) that allows for class properties).
-  
-  This is a basic [controlled component](https://reactjs.org/docs/forms.html#controlled-components). As the user types, React checks whether the input evaluates to an integer between 1 and 9. If it does, the input box re-renders with its value set to a string of that integer. If it doesn’t, then the input box *should* re-render blank, as we’re setting its value to an empty string. But it doesn’t work! On Firefox and Safari, *anything* can be typed in the box. On Chrome, most non&ndash;1-9 characters cannot be typed, but at least `e`, `E`, `+`, `-`, and `.` can be.
+(I’m using a [Babel plugin](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) that allows for class properties).
+
+This is a basic [controlled component](https://reactjs.org/docs/forms.html#controlled-components). As the user types, React checks whether the input evaluates to an integer between 1 and 9. If it does, the input box re-renders with its value set to a string of that integer. If it doesn’t, then the input box *should* re-render blank, as we’re setting its value to an empty string. But it doesn’t work! On Firefox and Safari, *anything* can be typed in the box. On Chrome, most non&ndash;1-9 characters cannot be typed, but at least `e`, `E`, `+`, `-`, and `.` can be.
 
 The fix is to change `this.setState({ value: '' })` to something like `this.setState({ value: ' ' })`. That string is a single space, but actually *any* non-empty string will do if it doesn’t evaluate to an integer between 1 and 9; and if it *does* evaluate to an integer between 1 and 9 (e.g., if the string is `'1'`), then that integer is what shows up in the box after a “bad” input.
 
@@ -76,4 +80,4 @@ function handleInput(event) {
 
 That’s an empty string at the end, and this code works exactly as expected: it clears the box on a bad input (you can see it in action [here](https://michaelallenwarner.github.io/react-number-input-example/public/vanilla.html)). So I’m confident that the issue is related to React.
 
-Whatever the cause, it’s good to be aware of this behavior (and to have a fix!). Check out my [React Sudoku Solver](https://github.com/MichaelAllenWarner/react-sudoku-solver) to see the fix put to good use.
+Whatever the cause, it’s good to be aware of this behavior (and to have a fix!). Check out my [React Sudoku Solver](https://github.com/MichaelAllenWarner/react-sudoku-solver) to see the fix put to good use. **EDIT, 7/23/19**: This code now uses the superior workaround mentioned in the edit at the top of this post.
