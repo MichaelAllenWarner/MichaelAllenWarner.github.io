@@ -67,4 +67,4 @@ const workerFile = ('noModule' in testScript) ? 'worker.js' : 'es5-worker.js';
 const worker = new Worker(workerFile);
 ```
 
-This is what I did in my Sudoku Solver. [Here](https://github.com/MichaelAllenWarner/react-sudoku-solver/blob/master/webpack.config.js) is my Webpack configuration file (four bundles!), and [here](https://github.com/MichaelAllenWarner/react-sudoku-solver/blob/master/src/main/App.js#L49) is where I call the appropriate worker from my main script.
+This is what I did in my Sudoku Solver. [Here](https://github.com/MichaelAllenWarner/react-sudoku-solver/blob/master/webpack.config.js) is my Webpack configuration file (four bundles!), and [here](https://github.com/MichaelAllenWarner/react-sudoku-solver/blob/master/src/main/worker.js) is where I call the appropriate worker from my main script.
