@@ -28,7 +28,7 @@ Accordingly, we can define a “vector triple product” in four-dimensional Min
 
 $$ \vec A \; \text{“} \mkern-5mu \times (\vec B \times \mkern-5mu \text{”} \, \vec C) = \vec B (\vec A \cdot \vec C) - \vec C (\vec A \cdot \vec B). $$
 
-Here the dot means the *Minkowski* dot product (we’ll use capital letters for four-vectors in this post), and the scare quotes on the left side remind us that the cross product itself isn’t actually defined in Minkowski spacetime.
+Here the dot means the *Minkowski* dot product (we’ll use capital letters for four-vectors in this post), and the scare quotes on the left side remind us that the cross product itself isn’t actually defined in Minkowski spacetime (don't take the \\(\times\\) notation literally!).
 
 If you need a refresher, a four-vector in standard Minkowski coordinates has one time component and three Cartesian spatial components that together obey the [Lorentz transformation](https://en.wikipedia.org/wiki/Lorentz_transformation). Adopting the \\( (+, -, -, -) \\) sign convention, the [Minkowski dot product](https://en.wikipedia.org/wiki/Four-vector#Standard_basis,_(+%E2%88%92%E2%88%92%E2%88%92)_signature) of \\( \vec Q = (Q^t, Q^x, Q^y, Q^z) = (Q^t, \vec q) \\) and \\( \vec W = (W^t, \vec w) \\) is:
 
@@ -49,7 +49,7 @@ $$
 \end{aligned}
 $$
 
-where the [subscript](https://en.wikipedia.org/wiki/Vector_calculus_identities#Special_notations) indicates that \\( \vec \nabla \\) (“del”) operates on \\( \vec c \\) and only on \\( \vec c \\), regardless of its placement in a term. Note that because the [curl of a gradient](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_gradient_is_zero) is always the zero vector, this differential vector triple product is unchanged by a transformation that takes \\( \vec c \\) to (\\( \vec c + \vec \nabla f \\)) for *any* scalar field \\( f = f (\vec r) \\):
+where the [subscript](https://en.wikipedia.org/wiki/Vector_calculus_identities#Special_notations) indicates that \\( \vec \nabla \\) (“del”) operates on \\( \vec c \\) and only on \\( \vec c \\), regardless of its placement in a term. Note that because the [curl of a gradient](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_gradient_is_zero) is always the zero vector, this differential vector triple product is unchanged by a transformation that takes \\( \vec c \\) to (\\( \vec c + \vec \nabla f \\)) for *any* scalar field <span style="white-space: nowrap;">\\( f = f (\vec r) \\):</span>
 
 $$\vec a \times [\vec \nabla \times (\vec c + \vec \nabla f)] = \vec a \times (\vec \nabla \times \vec c) ,$$
 
@@ -57,7 +57,7 @@ or using the “bac - cab” expansion:
 
 $$
 \begin{aligned}
-\vec a \times [\vec \nabla \times (\vec c + \vec \nabla f)] &= \vec \nabla _{\vec c , \, f} [\vec a \cdot (\vec c + \vec \nabla f)] - (\vec a \cdot \vec \nabla) (\vec c + \vec \nabla f) \\
+\vec a \times [\vec \nabla \times (\vec c + \vec \nabla f)] &= \vec \nabla _{\vec c \, + \vec \nabla f} \, [\vec a \cdot (\vec c + \vec \nabla f)] - (\vec a \cdot \vec \nabla) (\vec c + \vec \nabla f) \\
 &= \vec \nabla _{\vec c} (\vec a \cdot \vec c) + \vec \nabla _{f} (\vec a \cdot \vec \nabla f) - (\vec a \cdot \vec \nabla) \vec c - (\vec a \cdot \vec \nabla) \vec \nabla f \\
 &= \vec \nabla _{\vec c} (\vec a \cdot \vec c) - (\vec a \cdot \vec \nabla) \vec c \\
 &= \vec a \times (\vec \nabla \times \vec c),
@@ -80,7 +80,7 @@ The resulting vector is likewise unchanged by a transformation that takes \\( \v
 
 $$
 \begin{aligned}
-\vec A \; \text{“} \mkern-5mu \times [ \vec \partial \times \mkern-5mu \text{”} \, ( \vec C + \vec \partial F ) ] &= \vec \partial _{\vec C , \, F} [\vec A \cdot (\vec C + \vec \partial F)] - (\vec A \cdot \vec \partial) (\vec C + \vec \partial F) \\
+\vec A \; \text{“} \mkern-5mu \times [ \vec \partial \times \mkern-5mu \text{”} \, ( \vec C + \vec \partial F ) ] &= \vec \partial _{\vec C \, + \, \vec \partial F} \, [\vec A \cdot (\vec C + \vec \partial F)] - (\vec A \cdot \vec \partial) (\vec C + \vec \partial F) \\
 &= \vec \partial _{\vec C} (\vec A \cdot \vec C) + (\vec A \cdot \vec \partial) \vec \partial F - (\vec A \cdot \vec \partial) \vec C - (\vec A \cdot \vec \partial) \vec \partial F \\
 &= \vec \partial _{\vec C} (\vec A \cdot \vec C) - (\vec A \cdot \vec \partial) \vec C \\
 &= \vec A \; \text{“} \mkern-5mu \times (\vec \partial \times \mkern-5mu \text{”} \, \vec C).
@@ -144,7 +144,7 @@ $$
 \end{aligned}
 $$
 
-We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
+We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = \vec \partial \cdot \vec A + \Box \psi = \vec \partial \cdot \vec A - \vec \partial \cdot \vec A = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
 
 $$\vec J = \Box \vec A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \vec A .$$
 
