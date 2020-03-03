@@ -144,7 +144,7 @@ $$
 \end{aligned}
 $$
 
-We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = \vec \partial \cdot \vec A + \Box \psi = \vec \partial \cdot \vec A - \vec \partial \cdot \vec A = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
+We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \vec A + \vec \partial \psi \\), which we see is divergenceless: \\( \vec \partial \cdot (\vec A + \vec \partial \psi) = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \vec A \\), then:
 
 $$\vec J = \Box \vec A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \vec A .$$
 
