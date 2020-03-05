@@ -49,7 +49,7 @@ $$
 \end{aligned}
 $$
 
-where the [subscript](https://en.wikipedia.org/wiki/Vector_calculus_identities#Special_notations) indicates that \\( \vec \nabla \\) (“del”) operates on \\( \vec c \\) and only on \\( \vec c \\), regardless of its placement in a term. Note that because the [curl of a gradient](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_gradient_is_zero) is always the zero vector, this differential vector triple product is unchanged by a transformation that takes \\( \vec c \\) to (\\( \vec c + \vec \nabla f \\)) for *any* scalar field <span style="white-space: nowrap;">\\( f = f (\vec r) \\):</span>
+where the [subscript](https://en.wikipedia.org/wiki/Vector_calculus_identities#Special_notations) indicates that \\( \vec \nabla \\) (“del”) operates on \\( \vec c \\) and only on \\( \vec c \\), regardless of its placement in a term. Note that because the [curl of a gradient](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_gradient_is_zero) is always the zero vector, this differential vector triple product is unchanged by a transformation that takes \\( \vec c \\) to (\\( \vec c + \vec \nabla f \\)) for *any* scalar field \\( f = f (\vec r) \\):
 
 $$\vec a \times [\vec \nabla \times (\vec c + \vec \nabla f)] = \vec a \times (\vec \nabla \times \vec c) ,$$
 
