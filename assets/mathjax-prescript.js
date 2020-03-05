@@ -1,4 +1,5 @@
 // IE11 polyfills
+// first two loaded separtely now b/c needed in this script
 NodeList.prototype.forEach = NodeList.prototype.forEach || Array.prototype.forEach;
 if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
@@ -11,10 +12,22 @@ if (!String.prototype.includes) {
     return this.indexOf(search, start) !== -1;
   };
 }
+
+// ES6 polyfills needed for MathJax in IE11
 if (!window.Symbol) {
   var script = document.createElement('script');
   script.src = 'https://polyfill.io/v3/polyfill.min.js?features=es6';
   document.head.appendChild(script);
+}
+
+// configure MathJax
+window.MathJax = {
+  tex: {
+    macros: {
+      partialup: '\\style{transform: rotate(-15deg)}{\\boldsymbol \\partial}',
+      del: '\\boldsymbol \\nabla'
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
