@@ -5,8 +5,16 @@
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- if page.usemathjax -%}
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+    <style type="text/css">
+      .no-wrap {
+        white-space: nowrap;
+      }
+    </style>
+    <script type="text/javascript"
+      src="{{ "/assets/mathjax-prescript.js" | relative_url }}">
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
   {%- endif -%}
   {%- feed_meta -%}
