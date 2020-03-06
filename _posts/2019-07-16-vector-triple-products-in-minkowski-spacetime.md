@@ -214,7 +214,7 @@ $$\mathbf F = \gamma q \left( \frac{\mathbf v}{c} \cdot \mathbf e, \, \mathbf e 
 
 and the spatial component is indeed the Lorentz three-force (times \\( \gamma \\)).
 
-To get Maxwell’s equations, we just need to relate our new \\( \mathbf e \\) and \\( \mathbf b \\) fields to the charge- and current-densities. This is easiest in the Lorenz gauge, where the four-potential is divergenceless (i.e., \\( \partial^t A^t = - \del \cdot \mathbf a \\)), and where \\( (\rho, \, \mathbf j / c) = \mathbf J = \Box \mathbf A = (\Box A^t, \Box \mathbf a) \\). First:
+To get Maxwell’s equations, we just need to relate our new \\( \mathbf e \\) and \\( \mathbf b \\) fields to the charge- and current-densities. This is easiest in the Lorenz gauge, where the four-potential is divergenceless (i.e., \\( \partial^t A^t = - \del \cdot \mathbf a \\)), and where \\( (\rho, \, \mathbf j / c) = \mathbf J = \Box \mathbf A = (\Box A^t, \, \Box \mathbf a) \\). First:
 
 $$
 \begin{aligned}

@@ -24,7 +24,7 @@ if (!window.Symbol) {
 window.MathJax = {
   tex: {
     macros: {
-      partialup: '\\style{transform: rotate(-15deg)}{\\boldsymbol \\partial}',
+      partialup: '\\style{transform: rotate(-16deg)}{\\boldsymbol \\partial}',
       del: '\\boldsymbol \\nabla'
     }
   }
