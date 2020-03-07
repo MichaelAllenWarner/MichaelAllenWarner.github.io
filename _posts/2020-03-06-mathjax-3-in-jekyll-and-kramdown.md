@@ -13,15 +13,15 @@ I’ve [blogged before](https://michaelallenwarner.github.io/math/2019/06/15/tes
 
 ## MathJax 3 in Kramdown
 
-Jekyll uses Kramdown by default, and Kramdown comes with [native support for MathJax](https://kramdown.gettalong.org/syntax.html#math-blocks) that uses `$$` as delimiters (for *both* inline and display math). The inline-math blocks [get rendered as](https://kramdown.gettalong.org/math_engine/mathjax.html#math-engine-mathjax) <span style="white-space: nowrap;">`<script type="math/tex">`</span> tags, and the display-math blocks get rendered as <span style="white-space: nowrap;">`<script type="math/tex; mode=display">`</span> tags.
+Jekyll uses Kramdown by default, and Kramdown comes with [native support for MathJax](https://kramdown.gettalong.org/syntax.html#math-blocks) that uses `$$` as delimiters (for *both* inline and display math). The inline-math blocks [get rendered as](https://kramdown.gettalong.org/math_engine/mathjax.html#math-engine-mathjax) <span class="no-wrap">`<script type="math/tex">`</span> tags, and the display-math blocks get rendered as <span class="no-wrap">`<script type="math/tex; mode=display">`</span> tags.
 
-Unfortunately, support for those `<script>` tags [has been dropped](https://docs.mathjax.org/en/latest/upgrading/v2.html#math-script-example) in the new MathJax 3! The link there has a snippet of code that solves the problem (to be run *before* MathJax), though if you use it with Kramdown you’ll have to replace <span style="white-space: nowrap;">`'script[type^="text/tex"]'`</span> with <span style="white-space: nowrap;">`'script[type^="math/tex"]'`</span>.
+Unfortunately, support for those `<script>` tags [has been dropped](https://docs.mathjax.org/en/latest/upgrading/v2.html#math-script-example) in the new MathJax 3! The link there has a snippet of code that solves the problem (to be run *before* MathJax), though if you use it with Kramdown you’ll have to replace <span class="no-wrap">`'script[type^="text/tex"]'`</span> with <span class="no-wrap">`'script[type^="math/tex"]'`</span>.
 
 ## Keep Inline Math on the Same Line as Immediately Adjacent Punctuation
 
 One thing that LaTeX does that MathJax doesn’t is keep inline math on the same line as immediately adjacent punctuation. Browsers are perfectly happy to insert a line break between MathJax and a comma, period, colon, parenthesis, or dash, for example. This isn’t *often* a problem, but it’s more common than you might think, and when it strikes it’s a real eyesore! It’s also hard to “diagnose,” since it depends on screen width and browser, which are variable.
 
-While implementing the Kramdown solution mentioned above, I took the opportunity to solve this line-break problem for myself once and for all. Here is the code, which I use [on this blog](https://github.com/MichaelAllenWarner/MichaelAllenWarner.github.io/blob/master/assets/mathjax-prescript.js) in conjunction with a <span style="white-space: nowrap;">`.no-wrap: { white-space: nowrap; }` </span> style rule:
+While implementing the Kramdown solution mentioned above, I took the opportunity to solve this line-break problem for myself once and for all. Here is the code, which I use [on this blog](https://github.com/MichaelAllenWarner/MichaelAllenWarner.github.io/blob/master/assets/mathjax-prescript.js) in conjunction with a <span class="no-wrap">`.no-wrap: { white-space: nowrap; }` </span> style rule:
 
 ```javascript
 const getInlineReplacement = (node, text) => {

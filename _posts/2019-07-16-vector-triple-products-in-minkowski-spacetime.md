@@ -20,9 +20,15 @@ In three-dimensional Euclidean space, we have this lovely vector identity:
 
 $$ \mathbf a \times (\mathbf b \times \mathbf c) = \mathbf b (\mathbf a \cdot \mathbf c) - \mathbf c (\mathbf a \cdot \mathbf b) .$$
 
-The [cross product](https://en.wikipedia.org/wiki/Cross_product) $$ \mathbf b \times \mathbf c $$ is perpendicular to $$ \mathbf b $$ and $$ \mathbf c $$ and defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique). The vector triple product $$ \mathbf a \times (\mathbf b \times \mathbf c) $$, on the other hand, is a linear combination of $$ \mathbf b $$ and $$ \mathbf c $$, which is to say that it *lies in the plane they span* (its direction is given by the projection of $$ \mathbf a $$ onto that plane, rotated 90° in the $$ \mathbf c $$-to-$$ \mathbf b $$ sense&mdash;see the illustration below [from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg)). So although the cross product is restricted to three-dimensional Euclidean space, there’s nothing stopping us from using the “bac - cab” combination in other contexts.
+The [cross product](https://en.wikipedia.org/wiki/Cross_product) $$ \mathbf b \times \mathbf c $$ is perpendicular to $$ \mathbf b $$ and $$ \mathbf c $$ and defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique). The vector triple product $$ \mathbf a \times (\mathbf b \times \mathbf c) $$, on the other hand, is a linear combination of $$ \mathbf b $$ and $$ \mathbf c $$, which is to say that it’s a vector that *lies in the plane they span* (its direction is given by the projection of $$ \mathbf a $$ onto that plane, rotated 90° in the $$ \mathbf c $$-to-$$ \mathbf b $$ sense&mdash;see the illustration below [from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg), but don’t let it mislead you into thinking that the vector’s *magnitude* is necessarily equal to that of $$ \mathbf a $$’s projection onto the plane). So although the cross product is restricted to three-dimensional Euclidean space, there’s nothing stopping us from using the “bac - cab” combination in other contexts.
 
-<span style="text-align: center; display: block; margin: 1.25rem auto 1.75rem auto; padding-right: 10%;">[![vector triple product](https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg){:class="img-responsive"}](https://commons.wikimedia.org/wiki/File:Cross_product_triple.svg#/media/File:Cross_product_triple.svg)</span>
+<!-- using HTML tags here b/c this image needs to be cropped -->
+<span style="display: flex; margin: 0 auto; max-width: 31.25rem; overflow: hidden;">
+  <span style="position: relative; flex: 0 0 auto; margin-top: -5rem;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg" alt="hidden placeholder for vector triple product image" style="visibility: hidden;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg" alt="vector triple product" style="position: absolute; object-fit: cover; object-position: left; height: 100%; width: 56%; padding-right: 2.5rem; right: 0; left: 0; top: 27%; margin: 0 auto;">
+  </span>
+</span>
 
 ### Four-Vector Triple Product
 
@@ -201,7 +207,7 @@ F^t &= \gamma q \left[ \partial^t A^t - \left( \frac{\mathbf v}{c} \cdot \partia
 \end{aligned}
 $$
 
-The space component we’ll notate $$ \gamma \mathbf f $$ (so that $$ \mathbf f $$ is the regular three-force), and it’s:
+The space component we’ll notate $$ \gamma \mathbf f $$ (so that $$ \mathbf f $$ is the [relativistic three-force](https://en.wikipedia.org/wiki/Relativistic_mechanics#Force)), and it’s:
 
 $$
 \begin{aligned}

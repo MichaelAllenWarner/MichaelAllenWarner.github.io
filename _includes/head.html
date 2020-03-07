@@ -4,12 +4,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {%- if page.usemathjax -%}
     <style type="text/css">
+      .header-link-wrapper {
+        display: block;
+        color: inherit !important;
+        text-decoration: none !important;
+        width: fit-content;
+      }
+      .header-link {
+        width: fit-content;
+      }
+      .header-link::before {
+        content: '🔗';
+        margin-right: 1rem;
+        display: none;
+      }
+      .header-link-wrapper:hover .header-link::before {
+        display: inline;
+      }
       .no-wrap {
         white-space: nowrap;
       }
     </style>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('h2, h3, h4, h5, h6').forEach(header => {
+          if (header.id) {
+            const anchor = document.createElement('a');
+            anchor.href = '#' + header.id;
+            anchor.classList.add('header-link-wrapper');
+            header.classList.add('header-link');
+            header.parentNode.replaceChild(anchor, header);
+            anchor.appendChild(header);
+          }
+        });
+      });
+    </script>
+  {%- if page.usemathjax -%}
     <script type="text/javascript"
       src="{{ "/assets/mathjax-prescript.js" | relative_url }}">
     </script>
