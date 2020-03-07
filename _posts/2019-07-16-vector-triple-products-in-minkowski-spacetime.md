@@ -24,9 +24,9 @@ The [cross product](https://en.wikipedia.org/wiki/Cross_product) $$ \mathbf b \t
 
 <!-- using HTML tags here b/c this image needs to be cropped -->
 <span style="display: flex; margin: 0 auto; max-width: 31.25rem; overflow: hidden;">
-  <span style="position: relative; flex: 0 0 auto; margin-top: -5rem;">
+  <span style="position: relative; flex: 0 0 auto; margin-top: -4rem; max-width: 100vw">
     <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg" alt="hidden placeholder for vector triple product image" style="visibility: hidden;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg" alt="vector triple product" style="position: absolute; object-fit: cover; object-position: left; height: 100%; width: 56%; padding-right: 2.5rem; right: 0; left: 0; top: 27%; margin: 0 auto;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg" alt="vector triple product" style="position: absolute; object-fit: cover; object-position: left; height: 100%; width: 56%; padding-right: 3rem; right: 0; left: 0; top: 27%; margin: 0 auto;">
   </span>
 </span>
 
