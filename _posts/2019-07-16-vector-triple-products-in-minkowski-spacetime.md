@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Vector Triple Products in Minkowski Spacetime"
+title:  "Covariant Electrodynamics the Easy Way: Vector Triple Products in Minkowski Spacetime"
 date:   2019-07-16 08:00:00 -0400
 categories: physics
 excerpt: >
