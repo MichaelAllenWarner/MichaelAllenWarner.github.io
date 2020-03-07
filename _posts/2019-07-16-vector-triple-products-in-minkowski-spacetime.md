@@ -20,7 +20,9 @@ In three-dimensional Euclidean space, we have this lovely vector identity:
 
 $$ \mathbf a \times (\mathbf b \times \mathbf c) = \mathbf b (\mathbf a \cdot \mathbf c) - \mathbf c (\mathbf a \cdot \mathbf b) .$$
 
-The [cross product](https://en.wikipedia.org/wiki/Cross_product) $$ \mathbf b \times \mathbf c $$ is perpendicular to $$ \mathbf b $$ and $$ \mathbf c $$ and defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique). The vector triple product $$ \mathbf a \times (\mathbf b \times \mathbf c) $$, on the other hand, is a linear combination of $$ \mathbf b $$ and $$ \mathbf c $$ and *lies in the plane they span*, so there’s nothing stopping us from using it in its “bac - cab” form in contexts other than three-dimensional Euclidean space.
+The [cross product](https://en.wikipedia.org/wiki/Cross_product) $$ \mathbf b \times \mathbf c $$ is perpendicular to $$ \mathbf b $$ and $$ \mathbf c $$ and defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique). The vector triple product $$ \mathbf a \times (\mathbf b \times \mathbf c) $$, on the other hand, is a linear combination of $$ \mathbf b $$ and $$ \mathbf c $$, which is to say that it *lies in the plane they span* (its direction is given by the projection of $$ \mathbf a $$ onto that plane, rotated 90° in the $$ \mathbf c $$-to-$$ \mathbf b $$ sense&mdash;see the illustration below [from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg)). So although the cross product is restricted to three-dimensional Euclidean space, there’s nothing stopping us from using the “bac - cab” combination in other contexts.
+
+<span style="text-align: center; display: block; margin: 1.25rem auto 1.75rem auto; padding-right: 10%;">[![vector triple product](https://upload.wikimedia.org/wikipedia/commons/e/ea/Cross_product_triple.svg){:class="img-responsive"}](https://commons.wikimedia.org/wiki/File:Cross_product_triple.svg#/media/File:Cross_product_triple.svg)</span>
 
 ### Four-Vector Triple Product
 
