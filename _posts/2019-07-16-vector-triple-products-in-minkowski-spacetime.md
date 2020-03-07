@@ -20,7 +20,7 @@ In three-dimensional Euclidean space, we have this lovely vector identity:
 
 $$ \mathbf a \times (\mathbf b \times \mathbf c) = \mathbf b (\mathbf a \cdot \mathbf c) - \mathbf c (\mathbf a \cdot \mathbf b) .$$
 
-The [cross product](https://en.wikipedia.org/wiki/Cross_product) \\( \mathbf b \times \mathbf c \\) is perpendicular to \\( \mathbf b \\) and \\( \mathbf c \\) and defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique). The vector triple product \\( \mathbf a \times (\mathbf b \times \mathbf c) \\), on the other hand, is a linear combination of \\( \mathbf b \\) and \\( \mathbf c \\) and *lies in the plane they span*, so there’s nothing stopping us from using it in its “bac - cab” form in contexts other than three-dimensional Euclidean space.
+The [cross product](https://en.wikipedia.org/wiki/Cross_product) $$ \mathbf b \times \mathbf c $$ is perpendicular to $$ \mathbf b $$ and $$ \mathbf c $$ and defined only in three dimensions (where an axis that’s orthogonal to a pair of vectors is unique). The vector triple product $$ \mathbf a \times (\mathbf b \times \mathbf c) $$, on the other hand, is a linear combination of $$ \mathbf b $$ and $$ \mathbf c $$ and *lies in the plane they span*, so there’s nothing stopping us from using it in its “bac - cab” form in contexts other than three-dimensional Euclidean space.
 
 ### Four-Vector Triple Product
 
@@ -28,19 +28,19 @@ Accordingly, we can define a “vector triple product” in four-dimensional Min
 
 $$ \mathbf A \; \text{“} \mkern-5mu \times (\mathbf B \times \mkern-5mu \text{”} \, \mathbf C) = \mathbf B (\mathbf A \cdot \mathbf C) - \mathbf C (\mathbf A \cdot \mathbf B). $$
 
-Here the dot means the *Minkowski* dot product (we’ll use capital letters for four-vectors in this post), and the scare quotes on the left side remind us that the cross product itself isn’t actually defined in Minkowski spacetime (don't take the \\(\times\\) notation literally!).
+Here the dot means the *Minkowski* dot product (we’ll use capital letters for four-vectors in this post), and the scare quotes on the left side remind us that the cross product itself isn’t actually defined in Minkowski spacetime (don't take the $$\times$$ notation literally!).
 
-If you need a refresher, a four-vector in standard Minkowski coordinates has one time component and three Cartesian spatial components that together obey the [Lorentz transformation](https://en.wikipedia.org/wiki/Lorentz_transformation). Adopting the \\( (+, -, -, -) \\) sign convention, the [Minkowski dot product](https://en.wikipedia.org/wiki/Four-vector#Standard_basis,_(+%E2%88%92%E2%88%92%E2%88%92)_signature) of \\( \mathbf Q = (Q^t, Q^x, Q^y, Q^z) = (Q^t, \mathbf q) \\) and \\( \mathbf W = (W^t, \mathbf w) \\) is:
+If you need a refresher, a four-vector in standard Minkowski coordinates has one time component and three Cartesian spatial components that together obey the [Lorentz transformation](https://en.wikipedia.org/wiki/Lorentz_transformation). Adopting the $$ (+, -, -, -) $$ sign convention, the [Minkowski dot product](https://en.wikipedia.org/wiki/Four-vector#Standard_basis,_(+%E2%88%92%E2%88%92%E2%88%92)_signature) of $$ \mathbf Q = (Q^t, Q^x, Q^y, Q^z) = (Q^t, \mathbf q) $$ and $$ \mathbf W = (W^t, \mathbf w) $$ is:
 
 $$
 \mathbf Q \cdot \mathbf W = Q^t W^t - (\mathbf q \cdot \mathbf w) ,
 $$
 
-where \\( \mathbf q \cdot \mathbf w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y W^y + Q^z W^z\\) is the [Euclidean dot product](https://en.wikipedia.org/wiki/Dot_product) (we’ll use superscript indices for four-vector components and subscript indices for three-vector components).
+where $$ \mathbf q \cdot \mathbf w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y W^y + Q^z W^z$$ is the [Euclidean dot product](https://en.wikipedia.org/wiki/Dot_product) (we’ll use superscript indices for four-vector components and subscript indices for three-vector components).
 
 ### Adding Curl to the Mix
 
-A special case of the vector triple product is when the “inner” cross product is the [curl](https://en.wikipedia.org/wiki/Curl_(mathematics)) of a [vector field](https://en.wikipedia.org/wiki/Vector_field) \\( \mathbf c = \mathbf c (\mathbf r) \\) (using \\( \mathbf r \\) for the position vector):
+A special case of the vector triple product is when the “inner” cross product is the [curl](https://en.wikipedia.org/wiki/Curl_(mathematics)) of a [vector field](https://en.wikipedia.org/wiki/Vector_field) $$ \mathbf c = \mathbf c (\mathbf r) $$ (using $$ \mathbf r $$ for the position vector):
 
 $$
 \begin{aligned}
@@ -49,7 +49,7 @@ $$
 \end{aligned}
 $$
 
-where the [subscript](https://en.wikipedia.org/wiki/Vector_calculus_identities#Special_notations) indicates that \\( \del \\) (“del”) operates on \\( \mathbf c \\) and only on \\( \mathbf c \\), regardless of its placement in a term. Note that because the [curl of a gradient](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_gradient_is_zero) is always the zero vector, this differential vector triple product is unchanged by a transformation that takes \\( \mathbf c \\) to (\\( \mathbf c + \del f \\)) for *any* scalar field \\( f = f (\mathbf r) \\):
+where the [subscript](https://en.wikipedia.org/wiki/Vector_calculus_identities#Special_notations) indicates that $$ \del $$ (“del”) operates on $$ \mathbf c $$ and only on $$ \mathbf c $$, regardless of its placement in a term. Note that because the [curl of a gradient](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_gradient_is_zero) is always the zero vector, this differential vector triple product is unchanged by a transformation that takes $$ \mathbf c $$ to ($$ \mathbf c + \del f $$) for *any* scalar field $$ f = f (\mathbf r) $$:
 
 $$\mathbf a \times [\del \times (\mathbf c + \del f)] = \mathbf a \times (\del \times \mathbf c) ,$$
 
@@ -64,19 +64,19 @@ $$
 \end{aligned}
 $$
 
-because for the scalar \\( f \\) we have \\( \del _{f} (\mathbf a \cdot \del f) = \del _{f} (\mathbf a \cdot \del) f = (\mathbf a \cdot \del) \del f \\) (if you need convincing write it out in terms of components).
+because for the scalar $$ f $$ we have $$ \del _{f} (\mathbf a \cdot \del f) = \del _{f} (\mathbf a \cdot \del) f = (\mathbf a \cdot \del) \del f $$ (if you need convincing write it out in terms of components).
 
 The “four-del” is:
 
 $$\partialup = \left( \frac{1}{c} \, \frac{\partial}{\partial t} , \, - \del \right)$$
 
-(\\( c \\) is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](http://www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With \\( \mathbf R \\) as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field \\( \mathbf C = \mathbf C ( \mathbf R ) \\) is:
+($$ c $$ is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](http://www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With $$ \mathbf R $$ as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field $$ \mathbf C = \mathbf C ( \mathbf R ) $$ is:
 
 $$
 \mathbf A \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf C) = \partialup _{\mathbf C} (\mathbf A \cdot \mathbf C) - (\mathbf A \cdot \partialup) \mathbf C .
 $$
 
-The resulting vector is likewise unchanged by a transformation that takes \\( \mathbf C \\) to (\\( \mathbf C + \partialup F \\)) for any spacetime scalar field \\( F = F (\mathbf R) \\), though now we can *only* show this with the “bac - cab” side:
+The resulting vector is likewise unchanged by a transformation that takes $$ \mathbf C $$ to ($$ \mathbf C + \partialup F $$) for any spacetime scalar field $$ F = F (\mathbf R) $$, though now we can *only* show this with the “bac - cab” side:
 
 $$
 \begin{aligned}
@@ -98,7 +98,7 @@ $$
 \end{aligned}
 $$
 
-with \\( \nabla^2 = \del \cdot \del \\) as the [(vector) Laplacian](https://en.wikipedia.org/wiki/Vector_Laplacian), a scalar operator. The four-vector “double curl” is:
+with $$ \nabla^2 = \del \cdot \del $$ as the [(vector) Laplacian](https://en.wikipedia.org/wiki/Vector_Laplacian), a scalar operator. The four-vector “double curl” is:
 
 $$
 \begin{aligned}
@@ -107,7 +107,7 @@ $$
 \end{aligned}
 $$
 
-with \\( \Box = \partialup \cdot \partialup \\) as the [d’Alembertian](https://en.wikipedia.org/wiki/D%27Alembert_operator). Taking \\( \mathbf C \\) to (\\( \mathbf C + \partialup F \\)) here looks like:
+with $$ \Box = \partialup \cdot \partialup $$ as the [d’Alembertian](https://en.wikipedia.org/wiki/D%27Alembert_operator). Taking $$ \mathbf C $$ to ($$ \mathbf C + \partialup F $$) here looks like:
 
 $$
 \begin{aligned}
@@ -118,7 +118,7 @@ $$
 \end{aligned}
 $$
 
-where we’ve used \\( \Box \partialup = \partialup \Box \\) (because \\( \Box \\) is a scalar operator).
+where we’ve used $$ \Box \partialup = \partialup \Box $$ (because $$ \Box $$ is a scalar operator).
 
 ## Covariant Electrodynamics, Four-Vectors Only
 
@@ -126,7 +126,7 @@ The physics is really pretty simple now. We’ll do this in [Heaviside&ndash;Lor
 
 ### Four-Current Density, Four-Potential, Lorenz Gauge
 
-Charge- and current-densities together constitute a four-vector \\( \mathbf J = (\rho, \, \mathbf j / c) \\) called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. (Usually it’s defined as \\((\rho c , \, \mathbf j)\\), but dividing by \\( c \\) now saves us from having to divide \\( \mathbf J \\) by \\( c \\) later when it appears in other equations.) We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) \\( \mathbf A \\) as any four-vector field whose (negative) “double curl” is the four-current density:
+Charge- and current-densities together constitute a four-vector $$ \mathbf J = (\rho, \, \mathbf j / c) $$ called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. (Usually it’s defined as $$(\rho c , \, \mathbf j)$$, but dividing by $$ c $$ now saves us from having to divide $$ \mathbf J $$ by $$ c $$ later when it appears in other equations.) We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) $$ \mathbf A $$ as any four-vector field whose (negative) “double curl” is the four-current density:
 
 $$
 \begin{aligned}
@@ -135,7 +135,7 @@ $$
 \end{aligned}
 $$
 
-We haven’t yet established why we’d care about the four-potential, but this equation tells us how the “value” of \\( \mathbf A \\) at a given spacetime location is determined by the value of \\( \mathbf J \\) elsewhere in spacetime. Scare quotes because \\( \mathbf A \\) isn’t uniquely defined: remember, the above differential triple product is unchanged by a [“gauge” transformation](https://en.wikipedia.org/wiki/Gauge_theory#Classical_electromagnetism) that takes \\( \mathbf A \\) to (\\( \mathbf A + \partialup \psi \\)) for *any* spacetime scalar field \\( \psi \\). And look what happens if we choose a \\( \psi \\) that satisfies \\( \Box \psi = - \partialup \cdot \mathbf A \\):
+We haven’t yet established why we’d care about the four-potential, but this equation tells us how the “value” of $$ \mathbf A $$ at a given spacetime location is determined by the value of $$ \mathbf J $$ elsewhere in spacetime. Scare quotes because $$ \mathbf A $$ isn’t uniquely defined: remember, the above differential triple product is unchanged by a [“gauge” transformation](https://en.wikipedia.org/wiki/Gauge_theory#Classical_electromagnetism) that takes $$ \mathbf A $$ to ($$ \mathbf A + \partialup \psi $$) for *any* spacetime scalar field $$ \psi $$. And look what happens if we choose a $$ \psi $$ that satisfies $$ \Box \psi = - \partialup \cdot \mathbf A $$:
 
 $$
 \begin{aligned}
@@ -144,11 +144,11 @@ $$
 \end{aligned}
 $$
 
-We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential \\( \mathbf A + \partialup \psi \\), which we see is divergenceless: \\( \partialup \cdot (\mathbf A + \partialup \psi) = 0\\). Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* \\( \mathbf A \\), then:
+We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential $$ \mathbf A + \partialup \psi $$, which we see is divergenceless: $$ \partialup \cdot (\mathbf A + \partialup \psi) = 0$$. Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* $$ \mathbf A $$, then:
 
 $$\mathbf J = \Box \mathbf A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \mathbf A .$$
 
-So in the Lorenz gauge, a non-zero value of \\( \mathbf J \\) at a position in spacetime generates a commensurate disturbance in the \\( \mathbf A \\) field that spreads outward through space at the speed of light; the sum of all such disturbances passing through a location in space at a particular time determines the “value” of the (Lorenz-gauge) \\( \mathbf A \\) field at that spacetime point. (We still need scare quotes because for any scalar \\( \eta \\) that satisfies \\( \Box \eta = 0 \\), we get \\( \Box (\mathbf A + \partialup \eta) = \Box \mathbf A + \partialup \Box \eta = \Box \mathbf A \\), meaning that we have some “gauge freedom” even within the Lorenz gauge.)
+So in the Lorenz gauge, a non-zero value of $$ \mathbf J $$ at a position in spacetime generates a commensurate disturbance in the $$ \mathbf A $$ field that spreads outward through space at the speed of light; the sum of all such disturbances passing through a location in space at a particular time determines the “value” of the (Lorenz-gauge) $$ \mathbf A $$ field at that spacetime point. (We still need scare quotes because for any scalar $$ \eta $$ that satisfies $$ \Box \eta = 0 $$, we get $$ \Box (\mathbf A + \partialup \eta) = \Box \mathbf A + \partialup \Box \eta = \Box \mathbf A $$, meaning that we have some “gauge freedom” even within the Lorenz gauge.)
 
 ### Lorentz Four-Force
 
@@ -161,12 +161,12 @@ $$
 \end{aligned}
 $$
 
-This is the physical effect that derivatives of the local \\( \mathbf A \\) field have on a test charge at a given spacetime location. Here \\( q \\) is the particle’s charge, \\( \mathbf V \\) is its [four-velocity](https://en.wikipedia.org/wiki/Four-velocity#Definition_of_the_four-velocity), and \\( \mathbf F \\) is the resulting [four-force](https://en.wikipedia.org/wiki/Four-force) exerted on it (the full four-vector version of the [Lorentz force](https://en.wikipedia.org/wiki/Lorentz_force)).
+This is the physical effect that derivatives of the local $$ \mathbf A $$ field have on a test charge at a given spacetime location. Here $$ q $$ is the particle’s charge, $$ \mathbf V $$ is its [four-velocity](https://en.wikipedia.org/wiki/Four-velocity#Definition_of_the_four-velocity), and $$ \mathbf F $$ is the resulting [four-force](https://en.wikipedia.org/wiki/Four-force) exerted on it (the full four-vector version of the [Lorentz force](https://en.wikipedia.org/wiki/Lorentz_force)).
 
-We know from our mathematical preliminaries that this equation is unaffected by a gauge transformation of \\( \mathbf A \\), so it holds for *any* valid four-potential. Still, it’s most intuitive to think about all this in the Lorenz gauge:
+We know from our mathematical preliminaries that this equation is unaffected by a gauge transformation of $$ \mathbf A $$, so it holds for *any* valid four-potential. Still, it’s most intuitive to think about all this in the Lorenz gauge:
 
-- charge- and current-densities (the \\( \mathbf J \\) field) generate disturbances in the (Lorenz-gauge) \\( \mathbf A \\) field that travel outward through space at the speed of light;
-- the sum of all such disturbances passing through a spacetime location determines the “value” of the (Lorenz-gauge) \\( \mathbf A \\) field there/then;
+- charge- and current-densities (the $$ \mathbf J $$ field) generate disturbances in the (Lorenz-gauge) $$ \mathbf A $$ field that travel outward through space at the speed of light;
+- the sum of all such disturbances passing through a spacetime location determines the “value” of the (Lorenz-gauge) $$ \mathbf A $$ field there/then;
 - if there’s a particle at that spacetime location, it’s subjected to a four-force determined by its charge, its four-velocity, and the derivatives of the local (Lorenz-gauge) four-potential.
 
 That’s how “information” about charges travels through spacetime and physically affects other charges.
@@ -175,13 +175,13 @@ Except for the [radiation reaction](https://en.wikipedia.org/wiki/Abraham%E2%80%
 
 ### Lorentz Three-Force and Maxwell’s Equations
 
-To extract from this formalism the more familiar three-vector relations (the Lorentz three-force and [Maxwell’s equations](https://en.wikipedia.org/wiki/Lorentz%E2%80%93Heaviside_units#Maxwell's_equations_with_sources)), we have to put the Lorentz four-force into component form. The four-velocity’s component form is \\( \mathbf V = ( \gamma c, \gamma \mathbf v) \\), where \\( \mathbf v \\) is the regular three-velocity and \\( \gamma = [1 - (v /c)^2 ]^{-1/2} \\) is the [Lorentz factor](https://en.wikipedia.org/wiki/Lorentz_factor). For the four-potential we’ll use \\( \mathbf A = (A^t , \mathbf a) \\), and for the four-del we’ll write \\( \partialup = (\partial^t , - \del ) \\) with the understanding that \\( \partial^t = \frac{1}{c} \frac{\partial}{\partial t} \\).
+To extract from this formalism the more familiar three-vector relations (the Lorentz three-force and [Maxwell’s equations](https://en.wikipedia.org/wiki/Lorentz%E2%80%93Heaviside_units#Maxwell's_equations_with_sources)), we have to put the Lorentz four-force into component form. The four-velocity’s component form is $$ \mathbf V = ( \gamma c, \gamma \mathbf v) $$, where $$ \mathbf v $$ is the regular three-velocity and $$ \gamma = [1 - (v /c)^2 ]^{-1/2} $$ is the [Lorentz factor](https://en.wikipedia.org/wiki/Lorentz_factor). For the four-potential we’ll use $$ \mathbf A = (A^t , \mathbf a) $$, and for the four-del we’ll write $$ \partialup = (\partial^t , - \del ) $$ with the understanding that $$ \partial^t = \frac{1}{c} \frac{\partial}{\partial t} $$.
 
 So we want to put the following equation into component form:
 
 $$\mathbf F = \frac{q}{c} \Big[ \partialup _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \partialup \right) \mathbf A \Big] . $$
 
-First carry out the Minkowski dot products, factor out \\( \gamma \\), and distribute \\( c^{-1} \\):
+First carry out the Minkowski dot products, factor out $$ \gamma $$, and distribute $$ c^{-1} $$:
 
 $$
 \begin{aligned}
@@ -199,7 +199,7 @@ F^t &= \gamma q \left[ \partial^t A^t - \left( \frac{\mathbf v}{c} \cdot \partia
 \end{aligned}
 $$
 
-The space component we’ll notate \\( \gamma \mathbf f \\) (so that \\( \mathbf f \\) is the regular three-force), and it’s:
+The space component we’ll notate $$ \gamma \mathbf f $$ (so that $$ \mathbf f $$ is the regular three-force), and it’s:
 
 $$
 \begin{aligned}
@@ -208,13 +208,13 @@ $$
 \end{aligned}
 $$
 
-where we’ve used the “bac - cab” rule. Defining the electric field as \\( \mathbf e = - \partial^t \mathbf a - \del A^t \\) and the magnetic field as \\( \mathbf b = \del \times \mathbf a \\), we have:
+where we’ve used the “bac - cab” rule. Defining the electric field as $$ \mathbf e = - \partial^t \mathbf a - \del A^t $$ and the magnetic field as $$ \mathbf b = \del \times \mathbf a $$, we have:
 
 $$\mathbf F = \gamma q \left( \frac{\mathbf v}{c} \cdot \mathbf e, \, \mathbf e + \frac{\mathbf v}{c} \times \mathbf b \right), $$
 
-and the spatial component is indeed the Lorentz three-force (times \\( \gamma \\)).
+and the spatial component is indeed the Lorentz three-force (times $$ \gamma $$).
 
-To get Maxwell’s equations, we just need to relate our new \\( \mathbf e \\) and \\( \mathbf b \\) fields to the charge- and current-densities. This is easiest in the Lorenz gauge, where the four-potential is divergenceless (i.e., \\( \partial^t A^t = - \del \cdot \mathbf a \\)), and where \\( (\rho, \, \mathbf j / c) = \mathbf J = \Box \mathbf A = (\Box A^t, \, \Box \mathbf a) \\). First:
+To get Maxwell’s equations, we just need to relate our new $$ \mathbf e $$ and $$ \mathbf b $$ fields to the charge- and current-densities. This is easiest in the Lorenz gauge, where the four-potential is divergenceless (i.e., $$ \partial^t A^t = - \del \cdot \mathbf a $$), and where $$ (\rho, \, \mathbf j / c) = \mathbf J = \Box \mathbf A = (\Box A^t, \, \Box \mathbf a) $$. First:
 
 $$
 \begin{aligned}
