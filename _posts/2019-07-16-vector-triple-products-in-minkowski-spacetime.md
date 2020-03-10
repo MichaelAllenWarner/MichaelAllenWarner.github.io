@@ -143,7 +143,7 @@ $$
 \end{aligned}
 $$
 
-We haven’t yet established why we’d care about the four-potential, but this equation tells us how the “value” of $$ \mathbf A $$ at a given spacetime location is determined by the value of $$ \mathbf J $$ elsewhere in spacetime. Scare quotes because $$ \mathbf A $$ isn’t uniquely defined: remember, the above differential triple product is unchanged by a [“gauge” transformation](https://en.wikipedia.org/wiki/Gauge_theory#Classical_electromagnetism) that takes $$ \mathbf A $$ to ($$ \mathbf A + \partialup \psi $$) for *any* spacetime scalar field $$ \psi $$. And look what happens if we choose a $$ \psi $$ that satisfies $$ \Box \psi = - \partialup \cdot \mathbf A $$:
+We haven’t yet established why we’d care about the four-potential, but this equation tells us how the “value” of $$ \mathbf A $$ at a given spacetime location is determined by the value of $$ \mathbf J $$ elsewhere in spacetime. Scare quotes around *value* because $$ \mathbf A $$ isn’t uniquely defined: remember, the above differential triple product is unchanged by a [“gauge” transformation](https://en.wikipedia.org/wiki/Gauge_theory#Classical_electromagnetism) that takes $$ \mathbf A $$ to ($$ \mathbf A + \partialup \psi $$) for *any* spacetime scalar field $$ \psi $$. And look what happens if we choose a $$ \psi $$ that satisfies $$ \Box \psi = - \partialup \cdot \mathbf A $$:
 
 $$
 \begin{aligned}
