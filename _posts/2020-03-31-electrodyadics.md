@@ -276,7 +276,7 @@ Since the left sides of the homogeneous Maxwell equations have the same form as 
 
 ### The Maxwell Dyadic
 
-The answer reveals itself if we multiply both sides of $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ by $$ -1 $$, which yields $$ - \partial^t \mathbf b - \del \times \mathbf e = \mathbf 0 $$. Now we have $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, - \partial^t \mathbf b - \del \times \mathbf e ) $$ to compare with $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, and we see that we must replace $$ \mathbf e $$ with $$ \mathbf b $$ and $$ \mathbf b$$ with $$ - \mathbf e $$. So:
+The answer reveals itself if we multiply both sides of $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ by $$ -1 $$, which yields $$ - \partial^t \mathbf b - \del \times \mathbf e = \mathbf 0 $$. Now we have $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, - \partial^t \mathbf b - \del \times \mathbf e ) $$ to compare with $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, and we see that we should replace $$ \mathbf e $$ with $$ \mathbf b $$ and $$ \mathbf b$$ with $$ - \mathbf e $$. So:
 
 $$
 [ \mathbb{G} ]
@@ -307,7 +307,7 @@ $$
 \mathbb{G} \equiv \star \mathbb{F} .
 $$
 
-If you perform the *corresponding* component-rotating/sign-flipping procedure on $$ \mathbb{G} $$ (i.e., replace $$ \mathbf b $$ with $$ - \mathbf e $$ and $$ - \mathbf e $$ with $$ - \mathbf b $$, which actually amounts to the *same* procedure as before), you’ll end up with $$ - \mathbb{F} $$, so that $$ \star \mathbb{G} = \star \star \mathbb{F} = - \mathbb{F} $$.
+If you perform the *corresponding* component-rotating/sign-flipping procedure on $$ \mathbb{G} $$ (i.e., replace $$ \mathbf b $$ with $$ - \mathbf e $$ and $$ - \mathbf e $$ with $$ - \mathbf b $$, which actually amounts to the *same* procedure as before), you’ll end up with $$ - \mathbb{F} $$, so that $$ \star \mathbb{G} = \star \star \mathbb{F} = - \mathbb{F} = ( \partialup \wedge \mathbf A )^{\mathrm{T}} $$. Then the Hodge dual of *that* is $$ - \mathbb{G} $$, whose Hodge dual brings us back to $$ \mathbb{F} $$.
 
 Just as the magnetic field is a [pseudovector](https://en.wikipedia.org/wiki/Pseudovector) that gains an extra sign-flip under “orientation-reversing” coordinate transformations (like reflection across an axis), the Maxwell dyadic is a *pseudodyadic* that does the same. More generally, both are examples of [pseudotensors](https://en.wikipedia.org/wiki/Pseudotensor).
 
