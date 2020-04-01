@@ -83,6 +83,8 @@ $$
 \end{aligned}
 $$
 
+(An analogous identity holds for three-vectors, where the vector triple product is “literal”: $$ \mathbf a \times ( \mathbf b \times \mathbf c ) = ( \mathbf b \wedge \mathbf c ) \cdot \mathbf a $$.)
+
 ## Electrodyadics
 
 Let’s apply our new identity to our key results from Part I.
