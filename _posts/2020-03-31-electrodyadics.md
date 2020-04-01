@@ -67,7 +67,7 @@ The question is: does this mean anything? Sure it does! We can *define* $$ \math
 
 ### Terminology and Antisymmetry
 
-We call the operation $$ \mathbf B \otimes \mathbf C $$ the [**dyadic product**](https://en.wikipedia.org/wiki/Dyadic_product) (a special case of the [**tensor product**](https://en.wikipedia.org/wiki/Tensor_product), which we won’t discuss in generality), and we call the resulting object a **dyad**. Dyads and *sums of dyads* are collectively **dyadics**, so $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) $$ is a four-dyadic but not a four-dyad.
+We call the operation $$ \mathbf B \otimes \mathbf C $$ the [**dyadic product**](https://en.wikipedia.org/wiki/Dyadic_product) (a special case of the [**tensor product**](https://en.wikipedia.org/wiki/Tensor_product), which we won’t cover in generality), and we call the resulting object a **dyad**. Dyads and *sums of dyads* are collectively **dyadics**, so $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) $$ is a four-dyadic but not a four-dyad.
 
 A dyad’s **transpose** is the dyadic product in reverse order: $$ ( \mathbf B \otimes \mathbf C ) ^\textrm{T} = \mathbf C \otimes \mathbf B $$. A *dyadic’s* transpose is the sum of the transposes of the dyads that total the dyadic: $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) ^\textrm{T} = \mathbf C \otimes \mathbf B - \mathbf B \otimes \mathbf C $$. Note that this last example is a dyadic whose transpose is also its additive inverse. Such a dyadic is **antisymmetric**, and we use the following shorthand for forming an antisymmetric dyadic from a pair of vectors:
 
@@ -156,9 +156,9 @@ $$
 Now that we have the Minkowski dot product (between vectors) in matrix notation, we can write $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in matrix notation:
 
 $$
-[ \mathbf A \cdot (\mathbf B \otimes  \mathbf C )]
+[ \mathbf A \cdot (\mathbf B \otimes  \mathbf C )]^\mathrm{T}
 =
-[( \mathbf A \cdot \mathbf B ) \mathbf C]
+[( \mathbf A \cdot \mathbf B ) \mathbf C]^\mathrm{T}
 =
 [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ][ \mathbf C ]^{\mathrm{T}} ,
 $$
@@ -329,6 +329,6 @@ which vanishes. The point is that we get $$ \partialup \cdot \mathbb G $$ “for
 
 This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space (indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \partialup \cdot \mathbb{G} $$, and $$ \mathbf b = \del \times \mathbf a $$). It’s also a manifestation of a broader principle called the (second) [**Bianchi identity**](https://en.wikipedia.org/wiki/Curvature_form#Bianchi_identities)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it).
 
-And that’s it for Part II! I’m planning a Part III that will use dyadics to cover the electromagnetic stress&ndash;energy tensor and the electromagnetic Lagrangians (for both a particle and the field).
+And that’s it for Part II! I’m planning another part (or two?) that will discuss how the components of a four-dyadic must transform under a Lorentz boost, introduce the Minkowski metric dyadic, and use dyadics to cover the electromagnetic stress&ndash;energy tensor and the electromagnetic Lagrangians (for both a particle and the field).
 
 For more details, see my [little treatise](https://drive.google.com/open?id=0BzbijOFcLYkTSWJ5R0s5U1ZMYWM).
