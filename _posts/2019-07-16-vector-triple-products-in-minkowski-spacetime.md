@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Covariant Electrodynamics the Easy Way: Vector Triple Products in Minkowski Spacetime"
+title:  "Covariant Electrodynamics the Easy Way, Part I: Vector Triple Products in Minkowski Spacetime"
 date:   2019-07-16 08:00:00 -0400
 categories: physics
 excerpt: >
@@ -8,7 +8,7 @@ excerpt: >
 usemathjax: true
 ---
 
-In this post, I introduce [covariant electrodynamics](https://en.wikipedia.org/wiki/Covariant_formulation_of_classical_electromagnetism) in the least painful way I know: by extending the [vector triple product](https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product) to [Minkowski spacetime](https://en.wikipedia.org/wiki/Minkowski_space). The reader is assumed to have some familiarity with [four-vectors](https://en.wikipedia.org/wiki/Four-vector) and Euclidean [vector calculus](https://en.wikipedia.org/wiki/Vector_calculus), but we won’t use any index gymnastics or explicit rank-2 tensors; just four-vectors.
+In this post, I introduce [covariant electrodynamics](https://en.wikipedia.org/wiki/Covariant_formulation_of_classical_electromagnetism) in the least painful way I know: by extending the [vector triple product](https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product) to [Minkowski spacetime](https://en.wikipedia.org/wiki/Minkowski_space). The reader is assumed to have some familiarity with [four-vectors](https://en.wikipedia.org/wiki/Four-vector) and Euclidean [vector calculus](https://en.wikipedia.org/wiki/Vector_calculus), but we won’t use any index gymnastics or explicit rank-2 tensors; just four-vectors. (In [Part II](/physics/2020/03/31/electrodyadics.html) we’ll use dyadics, which are like “tensors lite.”)
 
 I developed this approach myself, and I’ve found no other sources that employ it. If you’ve seen it elsewhere, please let me know (email address at the bottom of the page).
 
@@ -268,5 +268,7 @@ $$
 $$
 
 We’re done!
+
+If you’re ready to take the next step, check out [Part II](/physics/2020/03/31/electrodyadics.html), where I introduce Minkowski dyadics (like “tensors lite”).
 
 For more details, see my [little treatise](https://drive.google.com/open?id=0BzbijOFcLYkTSWJ5R0s5U1ZMYWM).

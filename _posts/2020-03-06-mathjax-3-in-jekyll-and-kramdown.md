@@ -9,7 +9,7 @@ excerpt: >
 
 ## MathJax 3 in Jekyll
 
-I’ve [blogged before](https://michaelallenwarner.github.io/math/2019/06/15/testing-mathjax-using-trace-to-rearrange-matrix-products.html) about serving MathJax 2 *conditionally* in Jekyll. It’s the same for MathJax 3&mdash;just link to the [appropriate file](https://docs.mathjax.org/en/latest/web/components/combined.html) (the *[tex-chtml](https://docs.mathjax.org/en/latest/web/components/combined.html#tex-chtml)* component suffices for my purposes).
+I’ve [blogged before](/math/2019/06/15/testing-mathjax-using-trace-to-rearrange-matrix-products.html) about serving MathJax 2 *conditionally* in Jekyll. It’s the same for MathJax 3&mdash;just link to the [appropriate file](https://docs.mathjax.org/en/latest/web/components/combined.html) (the *[tex-chtml](https://docs.mathjax.org/en/latest/web/components/combined.html#tex-chtml)* component suffices for my purposes).
 
 ## MathJax 3 in Kramdown
 
@@ -73,4 +73,4 @@ window.MathJax = {
 
 This code could certainly be adapated to non-Kramdown situations.
 
-Anyway, the new MathJax 3 is more modular, lighter-weight, and faster to load than its predecessor, so I do recommend it. I’ve made good use of it in my post on [covariant electrodynamics](https://michaelallenwarner.github.io/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html).
+Anyway, the new MathJax 3 is more modular, lighter-weight, and faster to load than its predecessor, so I do recommend it. I’ve made good use of it in my post on [covariant electrodynamics](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html).
