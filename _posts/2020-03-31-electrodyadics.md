@@ -268,7 +268,7 @@ e_z & -b_y & b_x & 0
 \end{bmatrix} ,
 $$
 
-where it’s understood that $$ \partialup $$ operates on $$ \mathbb{F} $$ (not on $$ \eta $$). Carrying out the multiplication gives the row-matrix representation of the four-vector $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, which constitutes the inhomogenous pair of Maxwell’s equations (see the [last section](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html#lorentz-three-force-and-maxwells-equations) of Part I). But what about the other two? How do we get the homogeneous $$ \del \cdot \mathbf b = 0 $$ and $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ from a dyadic equation?
+where it’s understood that $$ \partialup $$ operates on $$ \mathbb{F} $$ (not on $$ \eta $$). Carrying out the multiplication gives the row-matrix representation of the four-vector $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, which constitutes the inhomogeneous pair of Maxwell’s equations (see the [last section](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html#lorentz-three-force-and-maxwells-equations) of Part I). But what about the other two? How do we get the homogeneous $$ \del \cdot \mathbf b = 0 $$ and $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ from a dyadic equation?
 
 ## The Homogeneous Maxwell Equations
 
