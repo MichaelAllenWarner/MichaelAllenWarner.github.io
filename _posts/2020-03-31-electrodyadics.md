@@ -272,7 +272,7 @@ where it’s understood that $$ \partialup $$ operates on $$ \mathbb{F} $$ (not 
 
 ## The Homogeneous Maxwell Equations
 
-Since the left sides of the homogeneous Maxwell equations have the same form as the those of the inhomogeneous pair, and since the right sides together constitute a four-vector (the *zero* four-vector), it must be possible to express $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, \partial^t \mathbf b + \del \times \mathbf e ) $$ as the four-divergence of some four-dyadic $$ \mathbb{G} $$ whose components are those of $$ \mathbb{F} $$ rearranged, with $$ \mathbf e $$ and $$ \mathbf b $$ swapped and with the appropriate signs flipped. But which signs?
+Since the left sides of the homogeneous Maxwell equations have the same form as those of the inhomogeneous pair, and since the right sides together constitute a four-vector (the *zero* four-vector), it must be possible to express $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, \partial^t \mathbf b + \del \times \mathbf e ) $$ as the four-divergence of some four-dyadic $$ \mathbb{G} $$ whose components are those of $$ \mathbb{F} $$ rearranged, with $$ \mathbf e $$ and $$ \mathbf b $$ swapped and with the appropriate signs flipped. But which signs?
 
 ### The Maxwell Dyadic
 
