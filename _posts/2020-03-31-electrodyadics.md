@@ -327,7 +327,7 @@ $$
 ( \partialup \cdot \mathbb{G} )^{t} = - \partial^x ( \partial^z A^y - \partial^y A^z ) - \partial^y ( \partial^x A^z - \partial^z A^x ) - \partial^z ( \partial^y A^x - \partial^x A^y ) ,
 $$
 
-which vanishes. The point is that we get $$ \partialup \cdot \mathbb G $$ “for free” by virtue of the Faraday dyadic’s having the form $$ \partialup \wedge \mathbf A $$.
+which vanishes. The point is that we get $$ \partialup \cdot \mathbb G = \boldsymbol \emptyset $$ “for free” by virtue of the Faraday dyadic’s having the form $$ \partialup \wedge \mathbf A $$.
 
 This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space (indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \partialup \cdot \mathbb{G} $$, and $$ \mathbf b = \del \times \mathbf a $$). It’s also a manifestation of a broader principle called the (second) [**Bianchi identity**](https://en.wikipedia.org/wiki/Curvature_form#Bianchi_identities)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it).
 
