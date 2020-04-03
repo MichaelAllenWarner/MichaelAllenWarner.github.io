@@ -270,11 +270,11 @@ $$
 
 where it’s understood that $$ \partialup $$ operates on $$ \mathbb{F} $$ (not on $$ \eta $$). Carrying out the multiplication gives the row-matrix representation of the four-vector $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, which constitutes the inhomogeneous pair of Maxwell’s equations (see the [last section](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html#lorentz-three-force-and-maxwells-equations) of Part I). But what about the other two? How do we get the homogeneous $$ \del \cdot \mathbf b = 0 $$ and $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ from a dyadic equation?
 
-## The Homogeneous Maxwell Equations
+## Hodge Duality
 
 Since the left sides of the homogeneous Maxwell equations have the same form as those of the inhomogeneous pair, and since the right sides together constitute a four-vector (the *zero* four-vector), it must be possible to express $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, \partial^t \mathbf b + \del \times \mathbf e ) $$ as the four-divergence of some four-dyadic $$ \mathbb{G} $$ whose components are those of $$ \mathbb{F} $$ rearranged, with $$ \mathbf e $$ and $$ \mathbf b $$ swapped and with the appropriate signs flipped. But which signs?
 
-### The Maxwell Dyadic
+### The Maxwell Dyadic (Homogeneous Maxwell Equations)
 
 The answer (or *an* answer) reveals itself if we multiply both sides of $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ by $$ -1 $$, which yields $$ - \partial^t \mathbf b - \del \times \mathbf e = \mathbf 0 $$. Now we have $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, - \partial^t \mathbf b - \del \times \mathbf e ) $$ to compare with $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, and we see that we should replace $$ \mathbf e $$ with $$ \mathbf b $$ and $$ \mathbf b$$ with $$ - \mathbf e $$. So:
 
@@ -299,7 +299,7 @@ where $$ \boldsymbol \emptyset $$ is the zero four-vector.
 
 We call $$ \mathbb{G} $$ the **Maxwell dyadic**. Note that because it’s antisymmetric, we would have obtained its additive inverse (*whose divergence also vanishes*) if we’d instead replaced $$ \mathbf b $$ with $$ \mathbf e $$ and $$ \mathbf e $$ with $$ - \mathbf b $$. The choice we made seems to be more common in the literature.
 
-### Hodge Duality
+### Hodge Duality (for Antisymmetric Minkowski Dyadics)
 
 The Maxwell dyadic’s component-rotating/sign-flipping relationship with the Faraday dyadic is called [**Hodge duality**](https://en.wikipedia.org/wiki/Hodge_star_operator), and we say that $$ \mathbb{G} $$ is the *Hodge dual* of $$ \mathbb{F} $$:
 
@@ -309,13 +309,75 @@ $$
 
 If we perform the *corresponding* component-rotating/sign-flipping procedure on $$ \mathbb{G} $$ (i.e., replace $$ \mathbf b $$ with $$ - \mathbf e $$ and $$ - \mathbf e $$ with $$ - \mathbf b $$, which actually amounts to the *same* procedure as before), we’ll end up with $$ - \mathbb{F} $$, so that $$ \star \mathbb{G} = \star \star \mathbb{F} = - \mathbb{F} = ( \partialup \wedge \mathbf A )^{\mathrm{T}} $$. Then the Hodge dual of *that* is $$ - \mathbb{G} $$, whose Hodge dual brings us back to $$ \mathbb{F} $$.
 
-Just as the magnetic field is a [pseudovector](https://en.wikipedia.org/wiki/Pseudovector) that gains an extra sign-flip under “orientation-reversing” coordinate transformations (like reflection across an axis), the Maxwell dyadic is a *pseudodyadic* that does the same. More generally, both are examples of [pseudotensors](https://en.wikipedia.org/wiki/Pseudotensor).
+Just as the magnetic field is a [pseudovector](https://en.wikipedia.org/wiki/Pseudovector) that gains an extra sign-flip under “orientation-reversing” coordinate transformations (like reflection across an axis), the Maxwell dyadic is a *pseudodyadic* that does the same. Both are examples of [pseudotensors](https://en.wikipedia.org/wiki/Pseudotensor).
 
-We should note that Hodge duality isn’t specific to antisymmetric Minkowski dyadics. Other types of geometric objects have Hodge duals, too, and that includes vectors and scalars. But the mathematical toolkit we’re using isn’t equipped to handle the more advanced facets of this topic. For that, something like differential forms or index gymnastics is necessary.
+### Hodge Duality (a Bit) More Generally
+
+Hodge duality isn’t specific to antisymmetric Minkowski dyadics. Other types of geometric objects have Hodge duals, too, and that includes vectors and scalars. The mathematical toolkit we’re using isn’t equipped to handle the more advanced facets of this topic&mdash;for that, something like differential forms or index gymnastics is necessary&mdash;but a few remarks are in order.
+
+We’ve taken for granted that scalars, vectors, and dyadics are all geometric objects. Specifically, they are all *tensors*, characterized by components that transform a certain way under coordinate transformations (we haven’t yet covered how a dyadic’s components transform, but dyadics are either dyads or sums of dyads, and dyads are built from vectors, so with our knowledge of the Lorentz transformation for four-vectors this won’t be a difficult task). A tensor’s **rank** tells you how many indices you need to uniquely identify one of its components. A scalar is a rank-0 tensor, a vector is a rank-1 tensor, a dyadic is a rank-2 tensor, and so on.
+
+In an $$ n $$-dimensional space, the Hodge dual maps an antisymmetric tensor of rank $$ k $$ to an antisymmetric *pseudo*tensor of rank $$ n - k $$, and vice versa (all vectors and scalars are regarded as antisymmetric in this context). In Euclidean space, the Hodge dual of the Hodge dual is the original object, but in other kinds of spaces it may be the original object’s additive inverse (as we’ve seen is the case in Minkowski spacetime for antisymmetric dyadics).
+
+So in 4-dimensional Minkowski spacetime, the Hodge dual maps rank-2 to rank-2 (dyadics to dyadics), rank-4 to rank-0 (scalars), rank-3 to rank-1 (vectors), and vice versa for all of the above. But in 3-dimensional Euclidean space, the Hodge dual maps between rank-3 and rank-0 and between rank-2 and rank-1.
+
+### Hodge Duality for Three-Vectors and Three-Dyadics
+
+For example, the Hodge dual of the cross product is the three-vector wedge product (and vice versa):
+
+$$ \star \star ( \mathbf q \wedge \mathbf w ) = \star ( \mathbf q \times \mathbf w ) = \mathbf q \wedge \mathbf w . $$
+
+This makes sense, as in matrix notation:
+
+$$
+[ \mathbf q \wedge \mathbf w ]
+=
+[ \mathbf q ][ \mathbf w ]^{\mathrm{T}} - [ \mathbf w ][ \mathbf q ]^{\mathrm{T}}
+=
+\begin{bmatrix}
+0 & q_x w_y - w_x q_y & q_x w_z - w_x q_z \\
+q_y w_x - w_y q_x & 0 & q_y w_z - w_y q_z \\
+q_z w_x - w_z q_x & q_z w_y - w_z q_y & 0
+\end{bmatrix} ,
+$$
+
+which is:
+
+$$
+\begin{bmatrix}
+0 & ( \mathbf q \times \mathbf w )_z & - ( \mathbf q \times \mathbf w )_y \\
+-( \mathbf q \times \mathbf w )_z & 0 & ( \mathbf q \times \mathbf w )_x \\
+( \mathbf q \times \mathbf w )_y & -( \mathbf q \times \mathbf w )_x & 0
+\end{bmatrix} .
+$$
+
+The Hodge dual of *any* three-vector is a three-dyadic with that pattern of components. We can now write the Faraday dyadic in matrix notation like this:
+
+$$
+[ \mathbb{F} ]
+=
+\begin{bmatrix}
+0 & - [ \mathbf e ]^\mathrm{T} \\
+[ \mathbf e ] & - [ \star \mathbf b ]
+\end{bmatrix} ,
+$$
+
+and the Maxwell dyadic like this:
+
+$$
+[ \mathbb{G} ]
+=
+\begin{bmatrix}
+0 & - [ \mathbf b ]^\mathrm{T} \\
+[ \mathbf b ] & [ \star \mathbf e ]
+\end{bmatrix} .
+$$
+
+Each member of a “Hodge pair” contains the same information as its counterpart, but one is a pseudotensor. In the Hodge pair $$ \mathbb{F} $$ and $$ \mathbb{G} $$, the pseudotensor is the four-dyadic $$ \mathbb{G} $$. In the Hodge pair $$ \mathbf e $$ and $$ \star \mathbf e $$, the pseudotensor is the three-dyadic $$ \star \mathbf e $$. In the Hodge pair $$ \mathbf b $$ and $$ \star \mathbf b $$, the pseudotensor is the three-vector $$ \mathbf b $$.
 
 ### The Bianchi Identity
 
-Having defined the Maxwell dyadic as the Hodge dual of the Faraday dyadic, we can appreciate that the divergencelessness of the former is an instance of a mathematical identity: the four-divergence of the Hodge dual of a four-vector field’s “differential wedge product” is zero. That’s a mouthful! It’s easier to see in an equation:
+Having defined the Maxwell (pseudo)dyadic as the Hodge dual of the Faraday dyadic, we can appreciate that the divergencelessness of the former is an instance of a mathematical identity: the four-divergence of the Hodge dual of a four-vector field’s “differential wedge product” is zero. That’s a mouthful! It’s easier to see in an equation:
 
 $$
 \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset .
@@ -329,8 +391,18 @@ $$
 
 which vanishes. The point is that we get $$ \partialup \cdot \mathbb G = \boldsymbol \emptyset $$ “for free” by virtue of the Faraday dyadic’s having the form $$ \partialup \wedge \mathbf A $$.
 
-This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space (indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \partialup \cdot \mathbb{G} $$, and $$ \mathbf b = \del \times \mathbf a $$). It’s also a manifestation of a broader principle called the (second) [**Bianchi identity**](https://en.wikipedia.org/wiki/Curvature_form#Bianchi_identities)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it).
+This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space. Indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \partialup \cdot \mathbb{G} $$, and $$ \mathbf b = \del \times \mathbf a $$. Moreover, the divergencelessness of the curl can likewise be expressed with the Hodge dual of the wedge product:
 
-And that’s it for Part II! I’m planning another part (or two?) that will discuss how the components of a four-dyadic must transform under a Lorentz boost, introduce the Minkowski metric dyadic, and use dyadics to cover the electromagnetic stress&ndash;energy tensor and the electromagnetic Lagrangians (for both a particle and the field).
+$$ \del \cdot \star ( \del \wedge \mathbf a ) = 0 . $$
+
+These rules are manifestations of a broader principle called the (second) [**Bianchi identity**](https://en.wikipedia.org/wiki/Curvature_form#Bianchi_identities)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Bianchi identity is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
+
+$$
+\star ( \del \wedge \del f ) = \mathbf 0 .
+$$
+
+Since the “self&ndash;wedge product” is always zero, that relation becomes obvious when you realize that $$ ( \del \wedge \del f ) = ( \del \wedge \del ) f $$ (because the order of mixed partials is reversible), so this is a beautifully simple way to *derive* the gradient’s curl-lessness.
+
+And that’s it for Part II! I’m planning another part (or two?) that will discuss how the components of a four-dyadic must transform under a Lorentz boost, show that our matrix $$ \eta $$ is actually the matrix-representation of a dyadic (the Minkowski metric tensor), and use the tools we’ve developed to cover the electromagnetic stress&ndash;energy tensor and the electromagnetic Lagrangians (for both a particle and the field).
 
 For more details, see my [little treatise](https://drive.google.com/open?id=0BzbijOFcLYkTSWJ5R0s5U1ZMYWM).
