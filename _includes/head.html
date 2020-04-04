@@ -52,6 +52,7 @@
       /* give equations invisible horizontal scrollbars if they're too wide */
       mjx-container[jax="CHTML"] {
         overflow-x: auto;
+        overflow-y: hidden; /* might have to undo this if anything gets cut off, or apply it only to not-display */
         max-width: 100%;
         scrollbar-width: none; /* for FF (webkit pseudoelement rule below) */
       }
@@ -63,7 +64,7 @@
       }
       mjx-container[jax="CHTML"]:not([display="true"]) {
         display: inline-flex; /* inline-block ruins vertical alignment (unfixable w/ `vertical-align`) */
-        padding: 0 .11rem; /* otherwise some inline eqs cut off a bit on left/right; a few still are still scrollable t/b but it's well-hidden */
+        padding: 0 .11rem; /* otherwise some inline eqs cut off a bit on left/right */
         margin: 0 -.11rem; /* "undo" padding to keep in right position w/ text */
       }
     </style>
