@@ -53,12 +53,18 @@
       mjx-container[jax="CHTML"] {
         overflow-x: auto;
         max-width: 100%;
-        display: inline-flex;
         scrollbar-width: none; /* for FF (webkit pseudoelement rule below) */
-        padding: .05rem .07rem; /* otherwise some eqs cut off a bit */
       }
       mjx-container[jax="CHTML"]::-webkit-scrollbar {
         display: none; /* make scrollbars invisible in webkit */
+      }
+      mjx-container[jax="CHTML"][display="true"] {
+        padding: .11rem 0; /* otherwise some display eqs cut off a bit at top/bottom */
+      }
+      mjx-container[jax="CHTML"]:not([display="true"]) {
+        display: inline-flex; /* inline-block ruins vertical alignment (unfixable w/ `vertical-align`) */
+        padding: 0 .11rem; /* otherwise some inline eqs cut off a bit on left/right; a few still are still scrollable t/b but it's well-hidden */
+        margin: 0 -.11rem; /* "undo" padding to keep in right position w/ text */
       }
     </style>
   {%- endif -%}
