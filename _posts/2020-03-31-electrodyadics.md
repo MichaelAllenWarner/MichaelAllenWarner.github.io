@@ -375,7 +375,7 @@ $$
 
 Each member of a “Hodge pair” contains the same information as its counterpart, but one is a pseudotensor. In the Hodge pair $$ \mathbb{F} $$ and $$ \mathbb{G} $$, the pseudotensor is the four-dyadic $$ \mathbb{G} $$. In the Hodge pair $$ \mathbf e $$ and $$ \star \mathbf e $$, the pseudotensor is the three-dyadic $$ \star \mathbf e $$. In the Hodge pair $$ \mathbf b $$ and $$ \star \mathbf b $$, the pseudotensor is the three-vector $$ \mathbf b $$.
 
-### The Bianchi Identity
+### The Poincaré Lemma
 
 Having defined the Maxwell (pseudo)dyadic as the Hodge dual of the Faraday dyadic, we can appreciate that the divergencelessness of the former is an instance of a mathematical identity: the four-divergence of the Hodge dual of a four-vector field’s “differential wedge product” is zero. That’s a mouthful! It’s easier to see in an equation:
 
@@ -395,7 +395,7 @@ This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbo
 
 $$ \del \cdot \star ( \del \wedge \mathbf a ) = 0 . $$
 
-These rules are manifestations of a broader principle called the (second) [**Bianchi identity**](https://en.wikipedia.org/wiki/Curvature_form#Bianchi_identities)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Bianchi identity is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
+In the language of [differential forms](https://en.wikipedia.org/wiki/Differential_form), both of these rules can be expressed as back-to-back applications of the [exterior derivative](https://en.wikipedia.org/wiki/Exterior_derivative), which is a generalization of our “differential wedge product” ($$ \partialup \wedge \text{_} $$ or $$ \del \wedge \text{_} $$). The principle that the double exterior product vanishes is called the [Poincaré lemma](https://en.wikipedia.org/wiki/Closed_and_exact_differential_forms#Poincar%C3%A9_lemma)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Poincaré lemma is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
 
 $$
 \star ( \del \wedge \del f ) = \mathbf 0 .
