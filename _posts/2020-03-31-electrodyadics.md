@@ -386,16 +386,16 @@ $$
 You can verify this in the trenches by writing $$ \partialup \cdot \mathbb{G} $$ in matrix notation (explicitly in terms of $$ \mathbf A $$) and calculating any particular component. You’ll end up with six terms, each of which is a mixed-partial of a component of $$ \mathbf A $$, and each of which is canceled by its additive inverse. For example, the time component looks like this:
 
 $$
-( \partialup \cdot \mathbb{G} )^{t} = - \partial^x ( \partial^z A^y - \partial^y A^z ) - \partial^y ( \partial^x A^z - \partial^z A^x ) - \partial^z ( \partial^y A^x - \partial^x A^y ) ,
+( \partialup \cdot \mathbb{G} )^{t} = - \partial^x ( \partial^z A^y - \partial^y A^z ) - \partial^y ( \partial^x A^z - \partial^z A^x ) - \partial^z ( \partial^y A^x - \partial^x A^y ) = 0.
 $$
 
-which vanishes. The point is that we get $$ \partialup \cdot \mathbb G = \boldsymbol \emptyset $$ “for free” by virtue of the Faraday dyadic’s having the form $$ \partialup \wedge \mathbf A $$.
+The point is that we get $$ \partialup \cdot \mathbb G = \boldsymbol \emptyset $$ “for free” by virtue of the Faraday dyadic’s having the form $$ \partialup \wedge \mathbf A $$.
 
-This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space. Indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \partialup \cdot \mathbb{G} $$, and $$ \mathbf b = \del \times \mathbf a $$. Moreover, the divergencelessness of the curl can likewise be expressed with the Hodge dual of the wedge product:
+This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space. Indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \partialup \cdot \mathbb{G} $$, and $$ \mathbf b = \del \times \mathbf a $$. Moreover, the divergencelessness of the curl can likewise be written with the Hodge dual of the wedge product:
 
 $$ \del \cdot \star ( \del \wedge \mathbf a ) = 0 . $$
 
-In the language of [differential forms](https://en.wikipedia.org/wiki/Differential_form), both of these rules can be expressed as back-to-back applications of the [exterior derivative](https://en.wikipedia.org/wiki/Exterior_derivative), which is a generalization of our “differential wedge product” ($$ \partialup \wedge \text{_} $$ or $$ \del \wedge \text{_} $$). The principle that the double exterior product vanishes is called the [Poincaré lemma](https://en.wikipedia.org/wiki/Closed_and_exact_differential_forms#Poincar%C3%A9_lemma)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Poincaré lemma is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
+In the language of [differential forms](https://en.wikipedia.org/wiki/Differential_form), both of these rules can be expressed as back-to-back applications of the [exterior derivative](https://en.wikipedia.org/wiki/Exterior_derivative), which is a generalization of our “differential wedge product” ($$ \partialup \wedge \text{_} $$ or $$ \del \wedge \text{_} $$). The principle that the double exterior derivative vanishes is called the [Poincaré lemma](https://en.wikipedia.org/wiki/Closed_and_exact_differential_forms#Poincar%C3%A9_lemma)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Poincaré lemma is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
 
 $$
 \star ( \del \wedge \del f ) = \mathbf 0 .
