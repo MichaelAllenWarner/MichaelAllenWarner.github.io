@@ -9,6 +9,11 @@ excerpt: >
 
 ## MathJax 3 in Jekyll
 
+**EDIT, 8/18/20**: A recent Kramdown update has rendered much of this post obsolete.
+
+***
+
+
 I’ve [blogged before](/math/2019/06/15/testing-mathjax-using-trace-to-rearrange-matrix-products.html) about serving MathJax 2 *conditionally* in Jekyll. It’s the same for MathJax 3&mdash;just link to the [appropriate file](https://docs.mathjax.org/en/latest/web/components/combined.html) (the *[tex-chtml](https://docs.mathjax.org/en/latest/web/components/combined.html#tex-chtml)* component suffices for my purposes).
 
 ## MathJax 3 in Kramdown

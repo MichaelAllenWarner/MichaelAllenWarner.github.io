@@ -1,28 +1,32 @@
-const getInlineReplacement = (node, text) => {
-  const [prevSib, nextSib] = ['previousSibling', 'nextSibling'].map(prop => node[prop]);
-  const [prevIsText, nextIsText] = [prevSib, nextSib].map(sib => sib && sib.nodeType === Node.TEXT_NODE);
-  const prevChar = prevIsText ? prevSib.textContent.slice(-1) : '';
-  const nextChar = nextIsText ? nextSib.textContent[0] : '';
-  const [keepPrevChar, keepNextChar] = [prevChar, nextChar].map(char => /\S/.test(char));
+const preventLineWrapForPunctuation = () => {
+  const inlineEquations = document.querySelectorAll('mjx-container:not([display=true])');
 
-  if (!keepPrevChar && !keepNextChar) return text;
+  for (const equation of inlineEquations) {
+    const [prevSib, nextSib] = ['previousSibling', 'nextSibling'].map(prop => equation[prop]);
+    const [prevIsText, nextIsText] = [prevSib, nextSib].map(sib => sib && sib.nodeType === Node.TEXT_NODE);
+    const prevChar = prevIsText ? prevSib.textContent.slice(-1) : '';
+    const nextChar = nextIsText ? nextSib.textContent[0] : '';
+    const [keepPrevChar, keepNextChar] = [prevChar, nextChar].map(char => /\S/.test(char));
+  
+    if (!keepPrevChar && !keepNextChar) continue;
 
-  const span = document.createElement('span');
-  span.classList.add('no-wrap');
-
-  if (keepPrevChar) {
-    prevSib.textContent = prevSib.textContent.slice(0, -1);
-    span.appendChild(document.createTextNode(prevChar));
-  }
-
-  span.appendChild(text);
-
-  if (keepNextChar) {
-    nextSib.textContent = nextSib.textContent.slice(1);
-    span.appendChild(document.createTextNode(nextChar));
-  }
-
-  return span;
+    const span = document.createElement('span');
+    span.classList.add('no-wrap');
+  
+    equation.parentNode.replaceChild(span, equation);
+  
+    if (keepPrevChar) {
+      prevSib.textContent = prevSib.textContent.slice(0, -1);
+      span.appendChild(document.createTextNode(prevChar));
+    }
+  
+    span.appendChild(equation);
+  
+    if (keepNextChar) {
+      nextSib.textContent = nextSib.textContent.slice(1);
+      span.appendChild(document.createTextNode(nextChar));
+    }
+  }    
 };
 
 window.MathJax = {
@@ -32,27 +36,14 @@ window.MathJax = {
       del: '\\boldsymbol \\nabla'
     }
   },
-  options: {
-    renderActions: {
-      find: [10, doc => {
-        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-          const display = !!node.type.match(/; *mode=display/);
-          const text = document.createTextNode('');
-          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-          math.start = { node: text, delim: '', n: 0} ;
-          math.end = { node: text, delim: '', n: 0 };
-          doc.math.push(math);
-          const replacement = display ? text : getInlineReplacement(node, text);
-          node.parentNode.replaceChild(replacement, node);
-        }
-      }, '']
-    }
-  },
   startup: {
     ready() {
       window.MathJax.startup.defaultReady();
+
       const font = window.MathJax.startup.output.font;
       font.getChar('bold', 0x2202)[3].smp = font.getChar('bold-italic', 0x2202)[3].smp;
+
+      window.MathJax.startup.promise.then(preventLineWrapForPunctuation);
     }
-  }
+  } 
 };
