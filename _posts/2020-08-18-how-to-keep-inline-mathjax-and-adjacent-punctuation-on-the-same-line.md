@@ -1,3 +1,17 @@
+---
+layout: post
+title:  "How to Keep Inline MathJax and Adjacent Punctuation on the Same Line"
+date:   2020-08-18 17:30 -0400
+categories: webdev
+excerpt: >
+  Ever notice that sometimes a line break will occur between an inline MathJax equation and an immediately adjacent punctuation mark? In this post I show how to prevent that.
+---
+
+## Prevent Line Breaks between Inline MathJax Equations and Adjacent Punctuation
+
+With MathJax 3 and up-to-date Kramdown, set a `.no-wrap { white-space: nowrap; }` style rule and have the following script execute before MathJax runs:
+
+```javascript
 const preventLineWrapForPunctuation = () => {
   const inlineEquations = document.querySelectorAll('mjx-container:not([display=true])');
 
@@ -30,20 +44,11 @@ const preventLineWrapForPunctuation = () => {
 };
 
 window.MathJax = {
-  tex: {
-    macros: {
-      partialup: '\\style{transform: rotate(-16deg)}{\\boldsymbol \\partial}',
-      del: '\\boldsymbol \\nabla'
-    }
-  },
   startup: {
     ready() {
       window.MathJax.startup.defaultReady();
-
-      const font = window.MathJax.startup.output.font;
-      font.getChar('bold', 0x2202)[3].smp = font.getChar('bold-italic', 0x2202)[3].smp;
-
       window.MathJax.startup.promise.then(preventLineWrapForPunctuation);
     }
   }
 };
+```

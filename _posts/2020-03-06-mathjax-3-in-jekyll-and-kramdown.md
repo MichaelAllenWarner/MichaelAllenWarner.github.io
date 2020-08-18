@@ -9,10 +9,9 @@ excerpt: >
 
 ## MathJax 3 in Jekyll
 
-**EDIT, 8/18/20**: A recent Kramdown update has rendered much of this post obsolete.
+**EDIT, 8/18/20**: A recent Kramdown update has rendered some of this post obsolete. For up-to-date instructions on preventing line breaks between inline MathJax 3 equations and immediately adjacent punctuation, see [this post](/webdev/2020/08/18/how-to-keep-inline-mathjax-and-adjacent-punctuation-on-the-same-line.html).
 
 ***
-
 
 I’ve [blogged before](/math/2019/06/15/testing-mathjax-using-trace-to-rearrange-matrix-products.html) about serving MathJax 2 *conditionally* in Jekyll. It’s the same for MathJax 3&mdash;just link to the [appropriate file](https://docs.mathjax.org/en/latest/web/components/combined.html) (the *[tex-chtml](https://docs.mathjax.org/en/latest/web/components/combined.html#tex-chtml)* component suffices for my purposes).
 
