@@ -179,7 +179,7 @@ $$
 
 ### Dyadic Product in Matrix Notation
 
-Now that we have the Minkowski dot product (between vectors) in matrix notation, we can write our dyad-defining equation $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in matrix notation. First:
+aNow that we have the Minkowski dot product (between vectors) in matrix notation, we can write our dyad-defining equation $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in matrix notation. First:
 
 $$
 [ \mathbf A \cdot (\mathbf B \otimes  \mathbf C )]
