@@ -55,7 +55,7 @@ where $$ \mathbf q \cdot \mathbf w = q_x w_x + q_y w_y + q_z w_z = Q^x W^x + Q^y
 
 Both of our key equations from Part I are “Minkowski vector triple products,” and the scare quotes remind us that the $$ \times $$ notation is merely suggestive (the cross product isn’t defined in four dimensions). But the four-vector “BAC - CAB” expressions are literal, and if you stare long enough at $$ \mathbf B (\mathbf A \cdot \mathbf C) - \mathbf C (\mathbf A \cdot \mathbf B) $$, you might start to wonder whether it’s possible to somehow “factor out” the vector that’s common to both dot products, which is $$ \mathbf A $$ (a generic four-vector here, not the four-potential).
 
-You’re not sure how to “combine” $$ \mathbf B $$ and $$ \mathbf C $$ to make it happen, but you can tell that the combination can’t be commutative (otherwise the “BAC - CAB” would yield zero!). So you rearrange the thing in preparation for the big move: $$ \mathbf B (\mathbf C \cdot \mathbf A) - \mathbf C (\mathbf B \cdot \mathbf A) $$. Now $$ \mathbf B $$ and $$ \mathbf C $$ are adjacent in both terms, and $$\mathbf A $$ is in position on the right. Proceed:
+Maybe you’re not sure how to “combine” $$ \mathbf B $$ and $$ \mathbf C $$ to make it happen, but you can tell that the combination can’t be commutative (otherwise the “BAC - CAB” would yield zero!). So you rearrange the thing in preparation for the big move: $$ \mathbf B (\mathbf C \cdot \mathbf A) - \mathbf C (\mathbf B \cdot \mathbf A) $$. Now $$ \mathbf B $$ and $$ \mathbf C $$ are adjacent in both terms, and $$\mathbf A $$ is in position on the right. Proceed:
 
 $$ \mathbf B (\mathbf C \cdot \mathbf A) - \mathbf C (\mathbf B \cdot \mathbf A) = (\mathbf B \mathbf C - \mathbf C \mathbf B) \cdot \mathbf A , $$
 
@@ -63,7 +63,7 @@ or if you prefer using a symbol like I do:
 
 $$ \mathbf B (\mathbf C \cdot \mathbf A) - \mathbf C (\mathbf B \cdot \mathbf A) = (\mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B) \cdot \mathbf A . $$
 
-The question is: does this mean anything? Sure it does! We can *define* $$ \mathbf B \otimes \mathbf C $$ as the object that satisfies $$ ( \mathbf B \otimes \mathbf C ) \cdot \mathbf A = \mathbf B (\mathbf C \cdot \mathbf A ) $$ and also $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$. Later we can work out what this all must look like in terms of components&mdash;it’s important but it takes a back seat to understanding the geometric objects themselves.
+The question is: does this mean anything? Sure it does! We can *define* $$ \mathbf B \otimes \mathbf C $$ as the object that satisfies $$ ( \mathbf B \otimes \mathbf C ) \cdot \mathbf A = \mathbf B (\mathbf C \cdot \mathbf A ) $$ and also $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$. Later we can work out what this all must look like in terms of components&mdash;that’s important but takes a back seat to understanding the geometric objects themselves.
 
 ### Terminology and Antisymmetry
 
@@ -94,16 +94,32 @@ Let’s apply our new identity to our key results from Part I.
 First, we have:
 
 $$
-\mathbf J = - \partialup \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) = - ( \partialup \wedge \mathbf A ) \cdot \partialup_{\mathbf A} = \partialup \cdot ( \partialup \wedge \mathbf A ) ,
+\begin{aligned}
+\mathbf J &= - \partialup \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
+&= - ( \partialup \wedge \mathbf A ) \cdot \partialup_{\mathbf A} \\[2pt]
+&= \partialup \cdot ( \partialup \wedge \mathbf A ) ,
+\end{aligned}
 $$
 
-where the last step follows from the antisymmetry of the wedge product. We define the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)) as $$ \mathbb{F} \equiv \partialup \wedge \mathbf A $$. Then:
+where the last step follows from the antisymmetry of the wedge product, or explicitly:
+
+$$
+\begin{aligned}
+- ( \partialup \wedge \mathbf A ) \cdot \partialup_{ \mathbf A } &= - \left[ ( \partialup \otimes \mathbf A ) \cdot \partialup_{ \mathbf A } - ( \mathbf A \otimes \partialup_{ \mathbf A } ) \cdot \partialup_{ \mathbf A } \right] \\[2pt]
+&= \mathbf A ( \partialup_{ \mathbf A } \cdot \partialup_{ \mathbf A } ) - \partialup ( \mathbf A \cdot \partialup_{ \mathbf A } ) \\[2pt]
+&= ( \partialup \cdot \partialup ) \mathbf A - ( \partialup \cdot \mathbf A ) \partialup_{ \mathbf A } \\[2pt]
+&= \partialup \cdot ( \partialup \otimes \mathbf A ) - \partialup \cdot ( \mathbf A \otimes \partialup_{ \mathbf A } ) \\[2pt]
+&= \partialup \cdot ( \partialup \wedge \mathbf A ) .
+\end{aligned}
+$$
+
+We define the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)) as $$ \mathbb{F} \equiv \partialup \wedge \mathbf A $$. Then:
 
 $$
 \mathbf J = \partialup \cdot \mathbb{F} ,
 $$
 
-and the four-current is the four-divergence of the Faraday dyadic.
+and the four-current is the four-divergence of the Faraday dyadic. That’s a nice way of writing the electromagnetic field equation, isn’t it?
 
 ### The Lorentz Four-Force
 
@@ -119,9 +135,11 @@ $$
 \mathbf F = \frac{q}{c} \, \mathbb{F} \cdot \mathbf V .
 $$
 
+Lovely! “Electrodyadics” (patent pending): all of classical electrodynamics in the field equation $$ \mathbf J = \partialup \cdot \mathbb{F} $$ and the force law $$ \mathbf F = \frac{q}{c} \, \mathbb{F} \cdot \mathbf V $$.
+
 ## Dyadic Components
 
-Lovely! Is that it? Well, more or less, yes, but let’s discuss dyadic components now and see where that leads us. One big caveat: we’re only considering components in standard rectangular $$ (ct, x, y, z) $$ coordinates. A fuller treatment would involve basis vectors explicitly.
+Is that it? Well, yes, but let’s discuss dyadic components now and see where that leads us. One big caveat: we’re only considering components in standard rectangular $$ (ct, x, y, z) $$ coordinates. A fuller treatment would involve basis vectors explicitly.
 
 ### Minkowski Dot Product in Matrix Notation
 
@@ -150,17 +168,29 @@ $$
 If we define $$ \eta \equiv \mathrm{diag}(1, -1, -1, -1) $$ (that 4-by-4 in the middle), and if we use the convention that square-brackets around a vector signify a column-matrix, then we can write that more succinctly:
 
 $$
-[ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ].
+[ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ],
+$$
+
+and also of course:
+
+$$
+[ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] = [ \mathbf B \cdot \mathbf A ].
 $$
 
 ### Dyadic Product in Matrix Notation
 
-Now that we have the Minkowski dot product (between vectors) in matrix notation, we can write $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in matrix notation:
+Now that we have the Minkowski dot product (between vectors) in matrix notation, we can write our dyad-defining equation $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in matrix notation. First:
 
 $$
-[ \mathbf A \cdot (\mathbf B \otimes  \mathbf C )]^\mathrm{T}
+[ \mathbf A \cdot (\mathbf B \otimes  \mathbf C )]
 =
-[( \mathbf A \cdot \mathbf B ) \mathbf C]^\mathrm{T}
+[( \mathbf A \cdot \mathbf B ) \mathbf C].
+$$
+
+To keep the dot-product on the left and the $$ \mathbf B $$ adjacent to the $$ \mathbf C $$, we must use $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] $$ (as opposed to $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] $$ ) and represent $$ \mathbf C $$ as a row-matrix (because $$ [ \mathbf A \cdot \mathbf B ] $$ is a 1-by-1), so:
+
+$$
+[ \mathbf A \cdot \mathbf B ] [ \mathbf C ]^{\mathrm{T}}
 =
 [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ][ \mathbf C ]^{\mathrm{T}} ,
 $$
