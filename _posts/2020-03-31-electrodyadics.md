@@ -30,7 +30,7 @@ $$
 
 where:
 
-* $$ \mathbf J = ( \rho, \, \mathbf j / c ) $$ is the four-current density* (the source field),
+* $$ \mathbf J = ( \rho, \, \mathbf j / c ) $$ is the four-current density\* (the source field),
 * $$ \mathbf A = (A^t, \, \mathbf a) $$ is the electromagnetic four-potential,
 * $$ \mathbf F $$ is the Lorentz four-force that the field exerts on a particle,
 * $$ \mathbf V $$ is that particle’s four-velocity,
@@ -179,23 +179,15 @@ $$
 
 ### Dyadic Product in Matrix Notation
 
-Now that we have the Minkowski dot product (between vectors) in matrix notation, we can write our dyad-defining equation $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in matrix notation. First:
-
-$$
-[ \mathbf A \cdot (\mathbf B \otimes  \mathbf C )]
-=
-[( \mathbf A \cdot \mathbf B ) \mathbf C].
-$$
-
-To keep the dot-product on the left and the $$ \mathbf B $$ adjacent to the $$ \mathbf C $$, we must use $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] $$ (as opposed to $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] $$ ) and represent $$ \mathbf C $$ as a row-matrix (because $$ [ \mathbf A \cdot \mathbf B ] $$ is a 1-by-1), so:
+Now that we have the Minkowski dot product (between vectors) in matrix notation, we can use matrices to represent $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in a way that reveals what $$ ( \mathbf B \otimes \mathbf C ) $$ means in terms of the vectors’ components. To keep the “ABC” order, we need $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] $$ (as opposed to $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] $$ ), and since that’s a 1-by-1 we’ll have to put $$ \mathbf C $$ to its right as a row-matrix:
 
 $$
 [ \mathbf A \cdot \mathbf B ] [ \mathbf C ]^{\mathrm{T}}
 =
-[ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ][ \mathbf C ]^{\mathrm{T}} ,
+[ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ][ \mathbf C ]^{\mathrm{T}} .
 $$
 
-and it’s clear that the matrix-representation of the dyadic product is the [outer product](https://en.wikipedia.org/wiki/Outer_product):
+The matrix-representation of the dyadic product is therefore the [outer product](https://en.wikipedia.org/wiki/Outer_product):
 
 $$
 [ \mathbf B \otimes  \mathbf C ]
