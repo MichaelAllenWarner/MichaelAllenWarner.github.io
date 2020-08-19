@@ -113,7 +113,7 @@ $$
 \end{aligned}
 $$
 
-We define the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)) as $$ \mathbb{F} \equiv \partialup \wedge \mathbf A $$. Then:
+For convenience, we define $$ \mathbb{F} \equiv \partialup \wedge \mathbf A $$, the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)). Then:
 
 $$
 \mathbf J = \partialup \cdot \mathbb{F} ,
