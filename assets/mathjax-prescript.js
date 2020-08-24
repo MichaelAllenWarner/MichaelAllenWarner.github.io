@@ -2,7 +2,7 @@ const preventLineWrapForPunctuation = () => {
   const inlineEquations = document.querySelectorAll('mjx-container:not([display=true])');
 
   for (const equation of inlineEquations) {
-    const [prevSib, nextSib] = ['previousSibling', 'nextSibling'].map(prop => equation[prop]);
+    const { previousSibling: prevSib, nextSibling: nextSib } = equation;
     const [prevIsText, nextIsText] = [prevSib, nextSib].map(sib => sib && sib.nodeType === Node.TEXT_NODE);
     const prevChar = prevIsText ? prevSib.textContent.slice(-1) : '';
     const nextChar = nextIsText ? nextSib.textContent[0] : '';

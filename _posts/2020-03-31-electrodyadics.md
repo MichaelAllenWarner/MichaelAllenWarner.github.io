@@ -179,7 +179,7 @@ $$
 
 ### Dyadic Product in Matrix Notation
 
-Now that we have the Minkowski dot product (between vectors) in matrix notation, we can use matrices to represent $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in a way that reveals what $$ ( \mathbf B \otimes \mathbf C ) $$ means in terms of the vectors’ components. To keep the “ABC” order, we need $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] $$ (as opposed to $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] $$ ), and since that’s a 1-by-1 we’ll have to put $$ \mathbf C $$ to its right as a row-matrix:
+Now that we have the Minkowski dot product (between vectors) in matrix notation, we can use matrices to represent $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in a way that reveals what $$ ( \mathbf B \otimes \mathbf C ) $$ means in terms of the vectors’ components. To keep the “ABC” order, we need $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] $$ (as opposed to $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] $$), and since that’s a 1-by-1 we’ll have to put $$ \mathbf C $$ to its right as a row-matrix:
 
 $$
 [ \mathbf A \cdot \mathbf B ] [ \mathbf C ]^{\mathrm{T}}
