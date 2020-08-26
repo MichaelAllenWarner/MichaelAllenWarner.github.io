@@ -32,17 +32,13 @@ const preventLineWrapForPunctuation = () => {
 window.MathJax = {
   tex: {
     macros: {
-      partialup: '\\style{transform: rotate(-16deg)}{\\boldsymbol \\partial}',
-      del: '\\boldsymbol \\nabla'
+      partialup: '\\style{transform: rotate(-16deg)}{\\boldsymbol{\\partial}}',
+      del: '\\boldsymbol{\\nabla}'
     }
   },
   startup: {
     ready() {
       window.MathJax.startup.defaultReady();
-
-      const font = window.MathJax.startup.output.font;
-      font.getChar('bold', 0x2202)[3].smp = font.getChar('bold-italic', 0x2202)[3].smp;
-
       window.MathJax.startup.promise.then(preventLineWrapForPunctuation);
     }
   }
