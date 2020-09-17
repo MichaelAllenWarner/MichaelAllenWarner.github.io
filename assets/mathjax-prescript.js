@@ -29,13 +29,15 @@ const preventLineWrapForPunctuation = () => {
   }
 };
 
+const rem = px => `${px / 16}rem`;
+
 window.MathJax = {
   tex: {
     macros: {
       del: '\\boldsymbol{\\nabla}',
       vecpartial: '\\style{transform: rotate(-16deg);}{\\boldsymbol{\\partial}}',
-      dyadic: ['\\class{dyadic}{\\overset{\\style{margin-top: -5px; padding-top: 3px;}{\\tiny \\boldsymbol \\leftrightarrow}}{ \\mathsf{ #1 } }}', 1],
-      dyadicpartial: '\\class{dyadic}{\\overset{\\style{margin-top: -5px; padding-top: 3px; transform: translateX(-2px);}{\\tiny \\boldsymbol \\leftrightarrow}}{ \\style{ transform: rotate(-16deg); }{ \\partial } }}'
+      dyadic: [`\\class{dyadic}{\\overset{\\style{margin-top: ${rem(-5)}; padding-top: ${rem(3)};}{\\tiny \\boldsymbol \\leftrightarrow}}{ \\mathsf{ #1 } }}`, 1],
+      dyadicpartial: `\\class{dyadic}{\\overset{\\style{margin-top: ${rem(-5)}; padding-top: ${rem(3)}; transform: translateX(${rem(-2)});}{\\tiny \\boldsymbol \\leftrightarrow}}{ \\style{ transform: rotate(-16deg); }{ \\partial } }}`
     }
   },
   startup: {
