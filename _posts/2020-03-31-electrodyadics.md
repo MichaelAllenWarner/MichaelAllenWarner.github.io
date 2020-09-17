@@ -14,8 +14,8 @@ This post builds on material in [Part I](/physics/2019/07/16/vector-triple-produ
 
 $$
 \begin{aligned}
-\mathbf J &= - \partialup \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
-&= \Box \mathbf A - \partialup (\partialup \cdot \mathbf A)
+\mathbf J &= - \vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
+&= \Box \mathbf A - \vecpartial (\vecpartial \cdot \mathbf A)
 \end{aligned}
 $$
 
@@ -23,8 +23,8 @@ and the Lorentz four-force
 
 $$
 \begin{aligned}
-\mathbf F &= \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) \Big] \\[5pt]
-&= \frac{q}{c} \Big[ \partialup _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \partialup \right) \mathbf A \Big] ,
+\mathbf F &= \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \Big] \\[5pt]
+&= \frac{q}{c} \Big[ \vecpartial _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \vecpartial \right) \mathbf A \Big] ,
 \end{aligned}
 $$
 
@@ -35,8 +35,8 @@ where:
 * $$ \mathbf F $$ is the Lorentz four-force that the field exerts on a particle,
 * $$ \mathbf V $$ is that particle’s four-velocity,
 * $$ q $$ is the particle’s charge,
-* $$ \partialup = (\partial^t, \, - \del) $$ is the four-del vector operator (with $$ \partial^t = \frac{1}{c} \frac{\partial}{\partial t} $$),
-* $$ \Box = \partialup \cdot \partialup$$ is the d’Alembertian scalar operator (aka the four-Laplacian or the wave operator),
+* $$ \vecpartial = (\partial^t, \, - \del) $$ is the four-del vector operator (with $$ \partial^t = \frac{1}{c} \frac{\partial}{\partial t} $$),
+* $$ \Box = \vecpartial \cdot \vecpartial$$ is the d’Alembertian scalar operator (aka the four-Laplacian or the wave operator),
 * and $$ c $$ is of course the speed of light.
 
 \*(our definition of $$ \mathbf J $$ would be $$ \mathbf J / c $$ in most treatments)
@@ -95,9 +95,9 @@ First, we have:
 
 $$
 \begin{aligned}
-\mathbf J &= - \partialup \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
-&= - ( \partialup \wedge \mathbf A ) \cdot \partialup_{\mathbf A} \\[2pt]
-&= \partialup \cdot ( \partialup \wedge \mathbf A ) ,
+\mathbf J &= - \vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
+&= - ( \vecpartial \wedge \mathbf A ) \cdot \vecpartial_{\mathbf A} \\[2pt]
+&= \vecpartial \cdot ( \vecpartial \wedge \mathbf A ) ,
 \end{aligned}
 $$
 
@@ -105,18 +105,18 @@ where the last step follows from the antisymmetry of the wedge product, or expli
 
 $$
 \begin{aligned}
-- ( \partialup \wedge \mathbf A ) \cdot \partialup_{ \mathbf A } &= - \left[ ( \partialup \otimes \mathbf A ) \cdot \partialup_{ \mathbf A } - ( \mathbf A \otimes \partialup_{ \mathbf A } ) \cdot \partialup_{ \mathbf A } \right] \\[2pt]
-&= \mathbf A ( \partialup_{ \mathbf A } \cdot \partialup_{ \mathbf A } ) - \partialup ( \mathbf A \cdot \partialup_{ \mathbf A } ) \\[2pt]
-&= ( \partialup \cdot \partialup ) \mathbf A - ( \partialup \cdot \mathbf A ) \partialup_{ \mathbf A } \\[2pt]
-&= \partialup \cdot ( \partialup \otimes \mathbf A ) - \partialup \cdot ( \mathbf A \otimes \partialup_{ \mathbf A } ) \\[2pt]
-&= \partialup \cdot ( \partialup \wedge \mathbf A ) .
+- ( \vecpartial \wedge \mathbf A ) \cdot \vecpartial_{ \mathbf A } &= - \left[ ( \vecpartial \otimes \mathbf A ) \cdot \vecpartial_{ \mathbf A } - ( \mathbf A \otimes \vecpartial_{ \mathbf A } ) \cdot \vecpartial_{ \mathbf A } \right] \\[2pt]
+&= \mathbf A ( \vecpartial_{ \mathbf A } \cdot \vecpartial_{ \mathbf A } ) - \vecpartial ( \mathbf A \cdot \vecpartial_{ \mathbf A } ) \\[2pt]
+&= ( \vecpartial \cdot \vecpartial ) \mathbf A - ( \vecpartial \cdot \mathbf A ) \vecpartial_{ \mathbf A } \\[2pt]
+&= \vecpartial \cdot ( \vecpartial \otimes \mathbf A ) - \vecpartial \cdot ( \mathbf A \otimes \vecpartial_{ \mathbf A } ) \\[2pt]
+&= \vecpartial \cdot ( \vecpartial \wedge \mathbf A ) .
 \end{aligned}
 $$
 
-For convenience, we define $$ \mathbb{F} \equiv \partialup \wedge \mathbf A $$, the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)). Then:
+For convenience, and introducing a double-arrow notation for dyadics, we define $$ \dyadic F \equiv \vecpartial \wedge \mathbf A $$, the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)). Then:
 
 $$
-\mathbf J = \partialup \cdot \mathbb{F} ,
+\mathbf J = \vecpartial \cdot \dyadic F ,
 $$
 
 and the four-current is the four-divergence of the Faraday dyadic. That’s a nice way of writing the electromagnetic field equation, isn’t it?
@@ -126,16 +126,16 @@ and the four-current is the four-divergence of the Faraday dyadic. That’s a ni
 Now the Lorentz four-force:
 
 $$
-\mathbf F = \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) \Big] = \frac{q}{c} \Big[ ( \partialup \wedge \mathbf A ) \cdot \mathbf V \Big] .
+\mathbf F = \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \Big] = \frac{q}{c} \Big[ ( \vecpartial \wedge \mathbf A ) \cdot \mathbf V \Big] .
 $$
 
-With $$ \mathbb{F} $$:
+With $$ \dyadic F $$:
 
 $$
-\mathbf F = \frac{q}{c} \, \mathbb{F} \cdot \mathbf V .
+\mathbf F = \frac{q}{c} \, \dyadic F \cdot \mathbf V .
 $$
 
-Lovely! “Electrodyadics” (patent pending): all of classical electrodynamics in the field equation $$ \mathbf J = \partialup \cdot \mathbb{F} $$ and the force law $$ \mathbf F = \frac{q}{c} \, \mathbb{F} \cdot \mathbf V $$.
+Lovely! “Electrodyadics” (patent pending): all of classical electrodynamics in the field equation $$ \mathbf J = \vecpartial \cdot \dyadic F $$ and the force law $$ \mathbf F = \frac{q}{c} \, \dyadic F \cdot \mathbf V $$.
 
 ## Dyadic Components
 
@@ -217,7 +217,7 @@ $$
 Next, the Faraday dyadic:
 
 $$
-[ \mathbb{F} ] = [ \partialup \otimes \mathbf A ] - [ \partialup \otimes \mathbf A ]^\mathrm{T}
+[ \dyadic F ] = [ \vecpartial \otimes \mathbf A ] - [ \vecpartial \otimes \mathbf A ]^\mathrm{T}
 =
 \begin{bmatrix}
 \partial^t \\
@@ -240,10 +240,10 @@ A^z
 \end{bmatrix}_{\mathbf A} ,
 $$
 
-where we must remember that $$ \partialup = ( \partial^t, \, \partial^x, \, \partial^y, \, \partial^z ) = ( \frac{1}{c} \frac{\partial}{\partial t}, \, - \del ) $$ (i.e., the spatial components are *negative* partials). That comes to:
+where we must remember that $$ \vecpartial = ( \partial^t, \, \partial^x, \, \partial^y, \, \partial^z ) = ( \frac{1}{c} \frac{\partial}{\partial t}, \, - \del ) $$ (i.e., the spatial components are *negative* partials). That comes to:
 
 $$
-[ \mathbb{F} ]
+[ \dyadic F ]
 =
 \begin{bmatrix}
 0 & \partial^t A^x - \partial^x A^t & \partial^t A^y - \partial^y A^t & \partial^t A^z - \partial^z A^t \\
@@ -256,7 +256,7 @@ $$
 In Part I, [we defined](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html#lorentz-three-force-and-maxwells-equations) the electric field as $$ \mathbf e = - \partial^t \mathbf a - \del A^t $$ and the magnetic field as $$ \mathbf  b = \del \times \mathbf a $$. It follows that:
 
 $$
-[ \mathbb{F} ]
+[ \dyadic F ]
 =
 \begin{bmatrix}
 0 & -e_x & -e_y & -e_z \\
@@ -271,7 +271,7 @@ $$
 In matrix notation, the field equation reads:
 
 $$
-[ \mathbf J ]^\mathrm{T} = [ \partialup ]^\mathrm{T} \eta [ \mathbb{F} ]
+[ \mathbf J ]^\mathrm{T} = [ \vecpartial ]^\mathrm{T} \eta [ \dyadic F ]
 =
 \begin{bmatrix}
 \partial^t & \partial^x & \partial^y & \partial^z
@@ -290,18 +290,18 @@ e_z & -b_y & b_x & 0
 \end{bmatrix} ,
 $$
 
-where it’s understood that $$ \partialup $$ operates on $$ \mathbb{F} $$ (not on $$ \eta $$). Carrying out the multiplication gives the row-matrix representation of the four-vector $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, which constitutes the inhomogeneous pair of Maxwell’s equations (see the [last section](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html#lorentz-three-force-and-maxwells-equations) of Part I). But what about the other two? How do we get the homogeneous $$ \del \cdot \mathbf b = 0 $$ and $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ from a dyadic equation?
+where it’s understood that $$ \vecpartial $$ operates on $$ \dyadic F $$ (not on $$ \eta $$). Carrying out the multiplication gives the row-matrix representation of the four-vector $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, which constitutes the inhomogeneous pair of Maxwell’s equations (see the [last section](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html#lorentz-three-force-and-maxwells-equations) of Part I). But what about the other two? How do we get the homogeneous $$ \del \cdot \mathbf b = 0 $$ and $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ from a dyadic equation?
 
 ## Hodge Duality
 
-Since the left sides of the homogeneous Maxwell equations have the same form as those of the inhomogeneous pair, and since the right sides together constitute a four-vector (the *zero* four-vector), it must be possible to express $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, \partial^t \mathbf b + \del \times \mathbf e ) $$ as the four-divergence of some four-dyadic $$ \mathbb{G} $$ whose components are those of $$ \mathbb{F} $$ rearranged, with $$ \mathbf e $$ and $$ \mathbf b $$ swapped and with the appropriate signs flipped. But which signs?
+Since the left sides of the homogeneous Maxwell equations have the same form as those of the inhomogeneous pair, and since the right sides together constitute a four-vector (the *zero* four-vector), it must be possible to express $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, \partial^t \mathbf b + \del \times \mathbf e ) $$ as the four-divergence of some four-dyadic $$ \dyadic G $$ whose components are those of $$ \dyadic F $$ rearranged, with $$ \mathbf e $$ and $$ \mathbf b $$ swapped and with the appropriate signs flipped. But which signs?
 
 ### The Maxwell Dyadic (Homogeneous Maxwell Equations)
 
 The answer (or *an* answer) reveals itself if we multiply both sides of $$ \partial^t \mathbf b + \del \times \mathbf e = \mathbf 0 $$ by $$ -1 $$, which yields $$ - \partial^t \mathbf b - \del \times \mathbf e = \mathbf 0 $$. Now we have $$ (0, \, \mathbf 0) = ( \del \cdot \mathbf b, \, - \partial^t \mathbf b - \del \times \mathbf e ) $$ to compare with $$ ( \rho, \, \mathbf j / c ) = ( \del \cdot \mathbf e, \, - \partial^t \mathbf e + \del \times \mathbf b ) $$, and we see that we should replace $$ \mathbf e $$ with $$ \mathbf b $$ and $$ \mathbf b$$ with $$ - \mathbf e $$. So:
 
 $$
-[ \mathbb{G} ]
+[ \dyadic G ]
 =
 \begin{bmatrix}
 0 & -b_x & -b_y & -b_z \\
@@ -314,22 +314,22 @@ $$
 and:
 
 $$
-\partialup \cdot \mathbb{G} = \boldsymbol{\emptyset} ,
+\vecpartial \cdot \dyadic G = \boldsymbol{\emptyset} ,
 $$
 
 where $$ \boldsymbol \emptyset $$ is the zero four-vector.
 
-We call $$ \mathbb{G} $$ the **Maxwell dyadic**. Note that because it’s antisymmetric, we would have obtained its additive inverse (*whose divergence also vanishes*) if we’d instead replaced $$ \mathbf b $$ with $$ \mathbf e $$ and $$ \mathbf e $$ with $$ - \mathbf b $$. The choice we made seems to be more common in the literature.
+We call $$ \dyadic G $$ the **Maxwell dyadic**. Note that because it’s antisymmetric, we would have obtained its additive inverse (*whose divergence also vanishes*) if we’d instead replaced $$ \mathbf b $$ with $$ \mathbf e $$ and $$ \mathbf e $$ with $$ - \mathbf b $$. The choice we made seems to be more common in the literature.
 
 ### Hodge Duality (for Antisymmetric Minkowski Dyadics)
 
-The Maxwell dyadic’s component-rotating/sign-flipping relationship with the Faraday dyadic is called [**Hodge duality**](https://en.wikipedia.org/wiki/Hodge_star_operator), and we say that $$ \mathbb{G} $$ is the *Hodge dual* of $$ \mathbb{F} $$:
+The Maxwell dyadic’s component-rotating/sign-flipping relationship with the Faraday dyadic is called [**Hodge duality**](https://en.wikipedia.org/wiki/Hodge_star_operator), and we say that $$ \dyadic G $$ is the *Hodge dual* of $$ \dyadic F $$:
 
 $$
-\mathbb{G} \equiv \star \mathbb{F} .
+\dyadic G \equiv \star \dyadic F .
 $$
 
-If we perform the *corresponding* component-rotating/sign-flipping procedure on $$ \mathbb{G} $$ (i.e., replace $$ \mathbf b $$ with $$ - \mathbf e $$ and $$ - \mathbf e $$ with $$ - \mathbf b $$, which actually amounts to the *same* procedure as before), we’ll end up with $$ - \mathbb{F} $$, so that $$ \star \mathbb{G} = \star \star \mathbb{F} = - \mathbb{F} = ( \partialup \wedge \mathbf A )^{\mathrm{T}} $$. Then the Hodge dual of *that* is $$ - \mathbb{G} $$, whose Hodge dual brings us back to $$ \mathbb{F} $$.
+If we perform the *corresponding* component-rotating/sign-flipping procedure on $$ \dyadic G $$ (i.e., replace $$ \mathbf b $$ with $$ - \mathbf e $$ and $$ - \mathbf e $$ with $$ - \mathbf b $$, which actually amounts to the *same* procedure as before), we’ll end up with $$ - \dyadic F $$, so that $$ \star \dyadic G = \star \star \dyadic F = - \dyadic F = ( \vecpartial \wedge \mathbf A )^{\mathrm{T}} $$. Then the Hodge dual of *that* is $$ - \dyadic G $$, whose Hodge dual brings us back to $$ \dyadic F $$.
 
 Just as the magnetic field is a [pseudovector](https://en.wikipedia.org/wiki/Pseudovector) that gains an extra sign-flip under “orientation-reversing” coordinate transformations (like reflection across an axis), the Maxwell dyadic is a *pseudodyadic* that does the same. Both are examples of [pseudotensors](https://en.wikipedia.org/wiki/Pseudotensor).
 
@@ -376,7 +376,7 @@ $$
 The Hodge dual of *any* three-vector is a three-dyadic with that pattern of components. We can now write the Faraday dyadic in matrix notation like this:
 
 $$
-[ \mathbb{F} ]
+[ \dyadic F ]
 =
 \begin{bmatrix}
 0 & - [ \mathbf e ]^\mathrm{T} \\
@@ -387,7 +387,7 @@ $$
 and the Maxwell dyadic like this:
 
 $$
-[ \mathbb{G} ]
+[ \dyadic G ]
 =
 \begin{bmatrix}
 0 & - [ \mathbf b ]^\mathrm{T} \\
@@ -395,29 +395,29 @@ $$
 \end{bmatrix} .
 $$
 
-Each member of a “Hodge pair” contains the same information as its counterpart, but one is a pseudotensor. In the Hodge pair $$ \mathbb{F} $$ and $$ \mathbb{G} $$, the pseudotensor is the four-dyadic $$ \mathbb{G} $$. In the Hodge pair $$ \mathbf e $$ and $$ \star \mathbf e $$, the pseudotensor is the three-dyadic $$ \star \mathbf e $$. In the Hodge pair $$ \mathbf b $$ and $$ \star \mathbf b $$, the pseudotensor is the three-vector $$ \mathbf b $$.
+Each member of a “Hodge pair” contains the same information as its counterpart, but one is a pseudotensor. In the Hodge pair $$ \dyadic F $$ and $$ \dyadic G $$, the pseudotensor is the four-dyadic $$ \dyadic G $$. In the Hodge pair $$ \mathbf e $$ and $$ \star \mathbf e $$, the pseudotensor is the three-dyadic $$ \star \mathbf e $$. In the Hodge pair $$ \mathbf b $$ and $$ \star \mathbf b $$, the pseudotensor is the three-vector $$ \mathbf b $$.
 
 ### The Poincaré Lemma
 
 Having defined the Maxwell (pseudo)dyadic as the Hodge dual of the Faraday dyadic, we can appreciate that the divergencelessness of the former is an instance of a mathematical identity: the four-divergence of the Hodge dual of a four-vector field’s “differential wedge product” is zero. That’s a mouthful! It’s easier to see in an equation:
 
 $$
-\partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset .
+\vecpartial \cdot \star ( \vecpartial \wedge \mathbf A ) = \boldsymbol \emptyset .
 $$
 
-You can verify this in the trenches by writing $$ \partialup \cdot \mathbb{G} $$ in matrix notation (explicitly in terms of $$ \mathbf A $$) and calculating any particular component. You’ll end up with six terms, each of which is a mixed-partial of a component of $$ \mathbf A $$, and each of which is canceled by its additive inverse. For example, the time component looks like this:
+You can verify this in the trenches by writing $$ \vecpartial \cdot \dyadic G $$ in matrix notation (explicitly in terms of $$ \mathbf A $$) and calculating any particular component. You’ll end up with six terms, each of which is a mixed-partial of a component of $$ \mathbf A $$, and each of which is canceled by its additive inverse. For example, the time component looks like this:
 
 $$
-( \partialup \cdot \mathbb{G} )^{t} = - \partial^x ( \partial^z A^y - \partial^y A^z ) - \partial^y ( \partial^x A^z - \partial^z A^x ) - \partial^z ( \partial^y A^x - \partial^x A^y ) = 0.
+( \vecpartial \cdot \dyadic G )^{t} = - \partial^x ( \partial^z A^y - \partial^y A^z ) - \partial^y ( \partial^x A^z - \partial^z A^x ) - \partial^z ( \partial^y A^x - \partial^x A^y ) = 0.
 $$
 
-The point is that we get $$ \partialup \cdot \mathbb G = \boldsymbol \emptyset $$ “for free” by virtue of the Faraday dyadic’s having the form $$ \partialup \wedge \mathbf A $$.
+The point is that we get $$ \vecpartial \cdot \dyadic G = \boldsymbol \emptyset $$ “for free” by virtue of the Faraday dyadic’s having the form $$ \vecpartial \wedge \mathbf A $$.
 
-This rule $$ \partialup \cdot \star ( \partialup \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space. Indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \partialup \cdot \mathbb{G} $$, and $$ \mathbf b = \del \times \mathbf a $$. Moreover, the divergencelessness of the curl can likewise be written with the Hodge dual of the wedge product:
+This rule $$ \vecpartial \cdot \star ( \vecpartial \wedge \mathbf A ) = \boldsymbol \emptyset $$ is directly analogous to the divergencelessness of the curl in three-dimensional Euclidean space. Indeed, $$ \del \cdot \mathbf b $$ is the time component of $$ \vecpartial \cdot \dyadic G $$, and $$ \mathbf b = \del \times \mathbf a $$. Moreover, the divergencelessness of the curl can likewise be written with the Hodge dual of the wedge product:
 
 $$ \del \cdot \star ( \del \wedge \mathbf a ) = 0 . $$
 
-In the language of [differential forms](https://en.wikipedia.org/wiki/Differential_form), both of these rules can be expressed as back-to-back applications of the [exterior derivative](https://en.wikipedia.org/wiki/Exterior_derivative), which is a generalization of our “differential wedge product” ($$ \partialup \wedge \text{_} $$ or $$ \del \wedge \text{_} $$). The principle that the double exterior derivative vanishes is called the [Poincaré lemma](https://en.wikipedia.org/wiki/Closed_and_exact_differential_forms#Poincar%C3%A9_lemma)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Poincaré lemma is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
+In the language of [differential forms](https://en.wikipedia.org/wiki/Differential_form), both of these rules can be expressed as back-to-back applications of the [exterior derivative](https://en.wikipedia.org/wiki/Exterior_derivative), which is a generalization of our “differential wedge product” ($$ \vecpartial \wedge \text{_} $$ or $$ \del \wedge \text{_} $$). The principle that the double exterior derivative vanishes is called the [Poincaré lemma](https://en.wikipedia.org/wiki/Closed_and_exact_differential_forms#Poincar%C3%A9_lemma)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Poincaré lemma is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
 
 $$
 \star ( \del \wedge \del f ) = \mathbf 0 .

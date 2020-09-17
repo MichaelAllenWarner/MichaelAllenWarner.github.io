@@ -67,6 +67,10 @@
         padding: 0 .11rem; /* otherwise some inline eqs cut off a bit on left/right */
         margin: 0 -.11rem; /* "undo" padding to keep in right position w/ text */
       }
+      /* make inline dyadics fit */
+      mjx-container[jax="CHTML"]:not([display="true"]) .dyadic {
+        vertical-align: text-bottom;
+      }
     </style>
   {%- endif -%}
   {%- feed_meta -%}

@@ -76,22 +76,22 @@ because for the scalar $$ f $$ we have $$ \del _{f} (\mathbf a \cdot \del f) = \
 
 The “four-del” is:
 
-$$\partialup = \left( \frac{1}{c} \, \frac{\partial}{\partial t} , \, - \del \right)$$
+$$\vecpartial = \left( \frac{1}{c} \, \frac{\partial}{\partial t} , \, - \del \right)$$
 
 ($$ c $$ is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](http://www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With $$ \mathbf R $$ as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field $$ \mathbf C = \mathbf C ( \mathbf R ) $$ is:
 
 $$
-\mathbf A \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf C) = \partialup _{\mathbf C} (\mathbf A \cdot \mathbf C) - (\mathbf A \cdot \partialup) \mathbf C .
+\mathbf A \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf C) = \vecpartial _{\mathbf C} (\mathbf A \cdot \mathbf C) - (\mathbf A \cdot \vecpartial) \mathbf C .
 $$
 
-The resulting vector is likewise unchanged by a transformation that takes $$ \mathbf C $$ to ($$ \mathbf C + \partialup F $$) for any spacetime scalar field $$ F = F (\mathbf R) $$, though now we can *only* show this with the “bac - cab” side:
+The resulting vector is likewise unchanged by a transformation that takes $$ \mathbf C $$ to ($$ \mathbf C + \vecpartial F $$) for any spacetime scalar field $$ F = F (\mathbf R) $$, though now we can *only* show this with the “bac - cab” side:
 
 $$
 \begin{aligned}
-\mathbf A \; \text{“} \mkern-5mu \times [ \partialup \times \mkern-5mu \text{”} \, ( \mathbf C + \partialup F ) ] &= \partialup _{\mathbf C \, + \, \partialup F} \, [\mathbf A \cdot (\mathbf C + \partialup F)] - (\mathbf A \cdot \partialup) (\mathbf C + \partialup F) \\[3pt]
-&= \partialup _{\mathbf C} (\mathbf A \cdot \mathbf C) + (\mathbf A \cdot \partialup) \partialup F - (\mathbf A \cdot \partialup) \mathbf C - (\mathbf A \cdot \partialup) \partialup F \\[3pt]
-&= \partialup _{\mathbf C} (\mathbf A \cdot \mathbf C) - (\mathbf A \cdot \partialup) \mathbf C \\[3pt]
-&= \mathbf A \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf C).
+\mathbf A \; \text{“} \mkern-5mu \times [ \vecpartial \times \mkern-5mu \text{”} \, ( \mathbf C + \vecpartial F ) ] &= \vecpartial _{\mathbf C \, + \, \vecpartial F} \, [\mathbf A \cdot (\mathbf C + \vecpartial F)] - (\mathbf A \cdot \vecpartial) (\mathbf C + \vecpartial F) \\[3pt]
+&= \vecpartial _{\mathbf C} (\mathbf A \cdot \mathbf C) + (\mathbf A \cdot \vecpartial) \vecpartial F - (\mathbf A \cdot \vecpartial) \mathbf C - (\mathbf A \cdot \vecpartial) \vecpartial F \\[3pt]
+&= \vecpartial _{\mathbf C} (\mathbf A \cdot \mathbf C) - (\mathbf A \cdot \vecpartial) \mathbf C \\[3pt]
+&= \mathbf A \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf C).
 \end{aligned}
 $$
 
@@ -110,23 +110,23 @@ with $$ \nabla^2 = \del \cdot \del $$ as the [(vector) Laplacian](https://en.wik
 
 $$
 \begin{aligned}
-\partialup \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf C) &= \partialup (\partialup \cdot \mathbf C) - (\partialup \cdot \partialup) \mathbf C \\[2pt]
-&= \partialup (\partialup \cdot \mathbf C) - \Box \mathbf C ,
+\vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf C) &= \vecpartial (\vecpartial \cdot \mathbf C) - (\vecpartial \cdot \vecpartial) \mathbf C \\[2pt]
+&= \vecpartial (\vecpartial \cdot \mathbf C) - \Box \mathbf C ,
 \end{aligned}
 $$
 
-with $$ \Box = \partialup \cdot \partialup $$ as the [d’Alembertian](https://en.wikipedia.org/wiki/D%27Alembert_operator). Taking $$ \mathbf C $$ to ($$ \mathbf C + \partialup F $$) here looks like:
+with $$ \Box = \vecpartial \cdot \vecpartial $$ as the [d’Alembertian](https://en.wikipedia.org/wiki/D%27Alembert_operator). Taking $$ \mathbf C $$ to ($$ \mathbf C + \vecpartial F $$) here looks like:
 
 $$
 \begin{aligned}
-\partialup \; \text{“} \mkern-5mu \times [ \partialup \times \mkern-5mu \text{”} \, ( \mathbf C + \partialup F ) ] &= \partialup [\partialup \cdot (\mathbf C + \partialup F)] - \Box (\mathbf C + \partialup F) \\[3pt]
-&= \partialup (\partialup \cdot \mathbf C) + \partialup \Box F - \Box \mathbf C - \Box \partialup F \\[3pt]
-&= \partialup (\partialup \cdot \mathbf C) - \Box \mathbf C \\[3pt]
-&= \partialup \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf C) ,
+\vecpartial \; \text{“} \mkern-5mu \times [ \vecpartial \times \mkern-5mu \text{”} \, ( \mathbf C + \vecpartial F ) ] &= \vecpartial [\vecpartial \cdot (\mathbf C + \vecpartial F)] - \Box (\mathbf C + \vecpartial F) \\[3pt]
+&= \vecpartial (\vecpartial \cdot \mathbf C) + \vecpartial \Box F - \Box \mathbf C - \Box \vecpartial F \\[3pt]
+&= \vecpartial (\vecpartial \cdot \mathbf C) - \Box \mathbf C \\[3pt]
+&= \vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf C) ,
 \end{aligned}
 $$
 
-where we’ve used $$ \Box \partialup = \partialup \Box $$ (because $$ \Box $$ is a scalar operator).
+where we’ve used $$ \Box \vecpartial = \vecpartial \Box $$ (because $$ \Box $$ is a scalar operator).
 
 ## Covariant Electrodynamics, Four-Vectors Only
 
@@ -138,25 +138,25 @@ Charge- and current-densities together constitute a four-vector $$ \mathbf J = (
 
 $$
 \begin{aligned}
-\mathbf J &= - \partialup \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
-&= \Box \mathbf A - \partialup (\partialup \cdot \mathbf A) .
+\mathbf J &= - \vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
+&= \Box \mathbf A - \vecpartial (\vecpartial \cdot \mathbf A) .
 \end{aligned}
 $$
 
-We haven’t yet established why we’d care about the four-potential, but this equation tells us how the “value” of $$ \mathbf A $$ at a given spacetime location is determined by the value of $$ \mathbf J $$ elsewhere in spacetime. Scare quotes around *value* because $$ \mathbf A $$ isn’t uniquely defined: remember, the above differential triple product is unchanged by a [“gauge” transformation](https://en.wikipedia.org/wiki/Gauge_theory#Classical_electromagnetism) that takes $$ \mathbf A $$ to ($$ \mathbf A + \partialup \psi $$) for *any* spacetime scalar field $$ \psi $$. And look what happens if we choose a $$ \psi $$ that satisfies $$ \Box \psi = - \partialup \cdot \mathbf A $$:
+We haven’t yet established why we’d care about the four-potential, but this equation tells us how the “value” of $$ \mathbf A $$ at a given spacetime location is determined by the value of $$ \mathbf J $$ elsewhere in spacetime. Scare quotes around *value* because $$ \mathbf A $$ isn’t uniquely defined: remember, the above differential triple product is unchanged by a [“gauge” transformation](https://en.wikipedia.org/wiki/Gauge_theory#Classical_electromagnetism) that takes $$ \mathbf A $$ to ($$ \mathbf A + \vecpartial \psi $$) for *any* spacetime scalar field $$ \psi $$. And look what happens if we choose a $$ \psi $$ that satisfies $$ \Box \psi = - \vecpartial \cdot \mathbf A $$:
 
 $$
 \begin{aligned}
-\Box ( \mathbf A + \partialup \psi ) - \partialup [ \partialup \cdot ( \mathbf A + \partialup \psi ) ] &= \Box ( \mathbf A + \partialup \psi ) - \partialup ( \partialup \cdot \mathbf A + \Box \psi ) \\[2pt]
-&= \Box (\mathbf A + \partialup \psi) .
+\Box ( \mathbf A + \vecpartial \psi ) - \vecpartial [ \vecpartial \cdot ( \mathbf A + \vecpartial \psi ) ] &= \Box ( \mathbf A + \vecpartial \psi ) - \vecpartial ( \vecpartial \cdot \mathbf A + \Box \psi ) \\[2pt]
+&= \Box (\mathbf A + \vecpartial \psi) .
 \end{aligned}
 $$
 
-We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential $$ \mathbf A + \partialup \psi $$, which we see is divergenceless: $$ \partialup \cdot (\mathbf A + \partialup \psi) = 0$$. Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* $$ \mathbf A $$, then:
+We’re left with just a [wave equation](https://en.wikipedia.org/wiki/Wave_equation) for the “new” four-potential $$ \mathbf A + \vecpartial \psi $$, which we see is divergenceless: $$ \vecpartial \cdot (\mathbf A + \vecpartial \psi) = 0$$. Making this transformation is called imposing the [Lorenz gauge](https://en.wikipedia.org/wiki/Lorenz_gauge_condition), and it’s always possible to do. For any *divergenceless* $$ \mathbf A $$, then:
 
 $$\mathbf J = \Box \mathbf A = \left( \frac{1}{c^2} \, \frac{\partial^2}{\partial t^2} - \nabla^2 \right) \mathbf A .$$
 
-So in the Lorenz gauge, a non-zero value of $$ \mathbf J $$ at a position in spacetime generates a commensurate disturbance in the $$ \mathbf A $$ field that spreads outward through space at the speed of light; the sum of all such disturbances passing through a location in space at a particular time determines the “value” of the (Lorenz-gauge) $$ \mathbf A $$ field at that spacetime point. (We still need scare quotes because for any scalar $$ \eta $$ that satisfies $$ \Box \eta = 0 $$, we get $$ \Box (\mathbf A + \partialup \eta) = \Box \mathbf A + \partialup \Box \eta = \Box \mathbf A $$, meaning that we have some “gauge freedom” even within the Lorenz gauge.)
+So in the Lorenz gauge, a non-zero value of $$ \mathbf J $$ at a position in spacetime generates a commensurate disturbance in the $$ \mathbf A $$ field that spreads outward through space at the speed of light; the sum of all such disturbances passing through a location in space at a particular time determines the “value” of the (Lorenz-gauge) $$ \mathbf A $$ field at that spacetime point. (We still need scare quotes because for any scalar $$ \eta $$ that satisfies $$ \Box \eta = 0 $$, we get $$ \Box (\mathbf A + \vecpartial \eta) = \Box \mathbf A + \vecpartial \Box \eta = \Box \mathbf A $$, meaning that we have some “gauge freedom” even within the Lorenz gauge.)
 
 ### Lorentz Four-Force
 
@@ -164,8 +164,8 @@ The reason we care about the four-potential is the following empirical result:
 
 $$
 \begin{aligned}
-\mathbf F &= \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\partialup \times \mkern-5mu \text{”} \, \mathbf A) \Big] \\[5pt]
-&= \frac{q}{c} \Big[ \partialup _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \partialup \right) \mathbf A \Big] .
+\mathbf F &= \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \Big] \\[5pt]
+&= \frac{q}{c} \Big[ \vecpartial _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \vecpartial \right) \mathbf A \Big] .
 \end{aligned}
 $$
 
@@ -183,18 +183,18 @@ Except for the [radiation reaction](https://en.wikipedia.org/wiki/Abraham%E2%80%
 
 ### Lorentz Three-Force and Maxwell’s Equations
 
-To extract from this formalism the more familiar three-vector relations (the Lorentz three-force and [Maxwell’s equations](https://en.wikipedia.org/wiki/Lorentz%E2%80%93Heaviside_units#Maxwell's_equations_with_sources)), we have to put the Lorentz four-force into component form. The four-velocity’s component form is $$ \mathbf V = ( \gamma c, \gamma \mathbf v) $$, where $$ \mathbf v $$ is the regular three-velocity and $$ \gamma = [1 - (v /c)^2 ]^{-1/2} $$ is the [Lorentz factor](https://en.wikipedia.org/wiki/Lorentz_factor). For the four-potential we’ll use $$ \mathbf A = (A^t , \mathbf a) $$, and for the four-del we’ll write $$ \partialup = (\partial^t , - \del ) $$ with the understanding that $$ \partial^t = \frac{1}{c} \frac{\partial}{\partial t} $$.
+To extract from this formalism the more familiar three-vector relations (the Lorentz three-force and [Maxwell’s equations](https://en.wikipedia.org/wiki/Lorentz%E2%80%93Heaviside_units#Maxwell's_equations_with_sources)), we have to put the Lorentz four-force into component form. The four-velocity’s component form is $$ \mathbf V = ( \gamma c, \gamma \mathbf v) $$, where $$ \mathbf v $$ is the regular three-velocity and $$ \gamma = [1 - (v /c)^2 ]^{-1/2} $$ is the [Lorentz factor](https://en.wikipedia.org/wiki/Lorentz_factor). For the four-potential we’ll use $$ \mathbf A = (A^t , \mathbf a) $$, and for the four-del we’ll write $$ \vecpartial = (\partial^t , - \del ) $$ with the understanding that $$ \partial^t = \frac{1}{c} \frac{\partial}{\partial t} $$.
 
 So we want to put the following equation into component form:
 
-$$\mathbf F = \frac{q}{c} \Big[ \partialup _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \partialup \right) \mathbf A \Big] . $$
+$$\mathbf F = \frac{q}{c} \Big[ \vecpartial _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \vecpartial \right) \mathbf A \Big] . $$
 
 First carry out the Minkowski dot products, factor out $$ \gamma $$, and distribute $$ c^{-1} $$:
 
 $$
 \begin{aligned}
-\mathbf F &= \frac{q}{c} \Big[ \partialup _{\mathbf A} \left( \gamma c A^t - \gamma \mathbf v \cdot \mathbf a \right) - \left( \gamma c \, \partial^t - \gamma \mathbf v \cdot [- \del] \right) \mathbf A \Big] \\[3pt]
-&= \gamma q \left[ \partialup A^t - \partialup _{\mathbf a} \left( \frac{\mathbf v}{c} \cdot \mathbf a \right) - \partial^t \mathbf A - \left( \frac{\mathbf v}{c} \cdot \del \right) \mathbf A \right] .
+\mathbf F &= \frac{q}{c} \Big[ \vecpartial _{\mathbf A} \left( \gamma c A^t - \gamma \mathbf v \cdot \mathbf a \right) - \left( \gamma c \, \partial^t - \gamma \mathbf v \cdot [- \del] \right) \mathbf A \Big] \\[3pt]
+&= \gamma q \left[ \vecpartial A^t - \vecpartial _{\mathbf a} \left( \frac{\mathbf v}{c} \cdot \mathbf a \right) - \partial^t \mathbf A - \left( \frac{\mathbf v}{c} \cdot \del \right) \mathbf A \right] .
 \end{aligned}
 $$
 
