@@ -139,7 +139,7 @@ Lovely! “Electrodyadics” (patent pending): all of classical electrodynamics 
 
 ## Dyadic Components
 
-Is that it? Well, yes, but let’s discuss dyadic components now and see where that leads us. One big caveat: we’re only considering components in standard rectangular $$ (ct, x, y, z) $$ coordinates. A fuller treatment would involve basis vectors explicitly.
+Is that it? Well, in a sense, yes! Everything else is downstream. But let’s discuss dyadic components now and see where that leads us. To keep things simple, we'll only consider components in standard rectangular $$ (ct, x, y, z) $$ coordinates, and we won't get into basis vectors explicitly.
 
 ### Minkowski Dot Product in Matrix Notation
 
@@ -179,7 +179,7 @@ $$
 
 ### Dyadic Product in Matrix Notation
 
-Now that we have the Minkowski dot product (between vectors) in matrix notation, we can use matrices to represent $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in a way that reveals what $$ ( \mathbf B \otimes \mathbf C ) $$ means in terms of the vectors’ components. To keep the “ABC” order, we need $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] $$ (as opposed to $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] $$), and since that’s a 1-by-1 we’ll have to put $$ \mathbf C $$ to its right as a row-matrix:
+Now that we have the Minkowski dot product (between vectors) in matrix notation, we can use matrices to represent $$ \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) = ( \mathbf A \cdot \mathbf B ) \mathbf C $$ in a way that reveals what $$ ( \mathbf B \otimes \mathbf C ) $$ means in terms of the vectors’ components. To maintain the “ABC” order, we need $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf A ]^{\mathrm{T}} \eta [ \mathbf B ] $$ (as opposed to $$ [ \mathbf A \cdot \mathbf B ] = [ \mathbf B ]^{\mathrm{T}} \eta [ \mathbf A ] $$), and since that’s a 1-by-1 we’ll have to put $$ \mathbf C $$ to its right as a *row*-matrix:
 
 $$
 [ \mathbf A \cdot \mathbf B ] [ \mathbf C ]^{\mathrm{T}}
@@ -212,9 +212,53 @@ B^z C^t & B^z C^x & B^z C^y & B^z C^z
 \end{bmatrix} .
 $$
 
+Recall that under a [Lorentz boost](https://en.wikipedia.org/wiki/Lorentz_transformation), the components of the four-vector $$ \mathbf B $$ transform like so:
+
+$$ [ \mathbf B {}^ \prime ] = \Lambda [ \mathbf B ] $$
+
+(and likewise for $$ \mathbf C $$), where $$ \Lambda $$ is the symmetric matrix that for an arbitrary boost-velocity $$ \mathbf v $$ (with corresponding unit vector $$ \mathbf{ \hat v } $$ and Lorentz factor $$ \gamma $$) is:
+
+$$
+\Lambda
+=
+\begin{bmatrix}
+\gamma & \left[ - \gamma \dfrac{ \mathbf v }{ c } \right] ^{ \mathrm T } \\
+\left[ - \gamma \dfrac{ \mathbf v }{ c } \right] & I_3 + [ ( \gamma - 1 ) ( \mathbf{ \hat v } \otimes \mathbf{ \hat v } ) ]
+\end{bmatrix}
+$$
+
+($$ I_3 $$ being the 3-by-3 [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix)), which in the special case of a boost along the $$ x $$-axis reduces to the more familiar:
+
+$$
+\Lambda
+=
+\begin{bmatrix}
+\gamma & - \gamma \dfrac{ v_x }{ c } & 0 & 0 \\
+- \gamma \dfrac{ v_x }{ c } & \gamma & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix} .
+$$
+
+With $$ [ \mathbf B {}^ \prime ] = \Lambda [ \mathbf B ] $$ and $$ [ \mathbf C {}^ \prime ] = \Lambda [ \mathbf C ] $$ in hand, we see that the sixteen components of the four-dyad $$ \mathbf B \otimes \mathbf C $$ must transform under a Lorentz boost like this:
+
+$$
+[ \mathbf B {}^\prime ] [ \mathbf C {}^\prime ] ^{ \mathrm{T} }
+=
+( \Lambda [ \mathbf B ] ) ( \Lambda [ \mathbf C ] ) ^{ \mathrm{T} }
+=
+\Lambda [ \mathbf B ] [ \mathbf C ] ^{ \mathrm{T} } \Lambda ^{ \mathrm{T} } .
+$$
+
+By linearity, *all* four-dyadics are characterized by components that transform this way under a Lorentz boost. That is, for any four-dyadic $$ \dyadic D $$:
+
+$$ [ \dyadic D {}^\prime ] = \Lambda [ \dyadic D ] \Lambda ^{ \mathrm{T} } , $$
+
+and any sixteen quantities that transform together like this are necessarily the components of a four-dyadic.
+
 ### Components of the Faraday Dyadic
 
-Next, the Faraday dyadic:
+Applying what we've learned, we obtain the components of the Faraday dyadic:
 
 $$
 [ \dyadic F ] = [ \vecpartial \otimes \mathbf A ] - [ \vecpartial \otimes \mathbf A ]^\mathrm{T}
@@ -268,7 +312,7 @@ $$
 
 ### Components of the Field Equation: Something Missing
 
-In matrix notation, the field equation reads:
+In matrix notation, the field equation $$ \mathbf J = \vecpartial \cdot \dyadic F $$ reads:
 
 $$
 [ \mathbf J ]^\mathrm{T} = [ \vecpartial ]^\mathrm{T} \eta [ \dyadic F ]
@@ -337,7 +381,7 @@ Just as the magnetic field is a [pseudovector](https://en.wikipedia.org/wiki/Pse
 
 Hodge duality isn’t specific to antisymmetric Minkowski dyadics. Other types of geometric objects have Hodge duals, too, and that includes vectors and scalars. The mathematical toolkit we’re using isn’t equipped to handle the more advanced facets of this topic&mdash;for that, something like differential forms or index gymnastics is necessary&mdash;but a few remarks are in order.
 
-We’ve taken for granted that scalars, vectors, and dyadics are all geometric objects. Specifically, they are all *tensors*, characterized by components that transform a certain way under coordinate transformations (we haven’t yet covered how a dyadic’s components transform, but dyadics are either dyads or sums of dyads, and dyads are built from vectors, so with our knowledge of the Lorentz transformation for four-vectors this won’t be a difficult task). A tensor’s **rank** tells you how many indices you need to uniquely identify one of its components. A scalar is a rank-0 tensor, a vector is a rank-1 tensor, a dyadic is a rank-2 tensor, and so on.
+We’ve taken for granted that scalars, vectors, and dyadics are all geometric objects. Specifically, they are all *tensors*, characterized by components that transform a certain way under coordinate transformations (we’ve already discussed how four-vectors and four-dyadics transform under a Lorentz boost). A tensor’s **rank** tells you how many indices you need to uniquely identify one of its components. A scalar is a rank-0 tensor, a vector is a rank-1 tensor, a dyadic is a rank-2 tensor, and so on.
 
 In an $$ n $$-dimensional space with a dot-product [signature](https://en.wikipedia.org/wiki/Metric_signature) whose parity is $$ s $$ (e.g., $$ s = 1 $$ for Euclidean space, but $$ s = -1 $$ for Minkowski spacetime because the determinant of $$ \eta $$ is negative), the Hodge dual maps an antisymmetric tensor of rank $$ k $$ to an antisymmetric *pseudo*tensor of rank $$ n - k $$, and vice versa (all vectors and scalars are regarded as antisymmetric in this context). The Hodge dual of the Hodge dual is either the original tensor or its additive inverse: if $$ n $$ is odd, then $$ s $$ alone determines which it is ($$ s = 1 $$ means original, $$ s = -1 $$ means additive inverse); if $$ n $$ is even, then it’s a little more complicated, and the formula $$ (-1)^k s $$ determines which it is (again, positive means original, negative means additive inverse).
 
@@ -425,6 +469,6 @@ $$
 
 Since the “self&ndash;wedge product” is always zero, that relation becomes obvious when you realize that $$ ( \del \wedge \del f ) = ( \del \wedge \del ) f $$ (because the order of mixed partials is reversible), so this is a beautifully simple way to *derive* the gradient’s curl-lessness.
 
-And that’s it for Part II! I’m planning another part (or two?) that will discuss how the components of a four-dyadic must transform under a Lorentz boost, show that our matrix $$ \eta $$ is actually the matrix-representation of a dyadic (the Minkowski metric tensor), and use the tools we’ve developed to cover the electromagnetic stress&ndash;energy tensor and the electromagnetic Lagrangians (for both a particle and the field).
+And that’s it for Part II! I’m planning another part (or two?) that will use the tools we’ve developed to cover the electromagnetic stress&ndash;energy tensor and the electromagnetic Lagrangians (for both a particle and the field).
 
 For more details, see my [little treatise](https://drive.google.com/open?id=0BzbijOFcLYkTSWJ5R0s5U1ZMYWM).
