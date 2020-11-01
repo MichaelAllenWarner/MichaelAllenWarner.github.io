@@ -355,6 +355,19 @@ b_z & e_y & -e_x & 0
 \end{bmatrix} ,
 $$
 
+or
+
+$$
+[ \dyadic G ]
+=
+\begin{bmatrix}
+0 & \partial^y A^z - \partial^z A^y & \partial^z A^x - \partial^x A^z & \partial^x A^y - \partial^y A^x \\
+\partial^z A^y - \partial^y A^z & 0 & \partial^z A^{ct} - \partial^{ct} A^z & \partial^{ct} A^y - \partial^y A^{ct} \\
+\partial^x A^z - \partial^z A^x & \partial^{ct} A^z - \partial^z A^{ct} & 0 & \partial^x A^{ct} - \partial^{ct} A^x \\
+\partial^y A^x - \partial^x A^y & \partial^y A^{ct} - \partial^{ct} A^y & \partial^{ct} A^x - \partial^x A^{ct} & 0
+\end{bmatrix} ,
+$$
+
 and:
 
 $$
@@ -363,7 +376,7 @@ $$
 
 where $$ \boldsymbol \emptyset $$ is the zero four-vector.
 
-We call $$ \dyadic G $$ the **Maxwell dyadic**. Note that because it’s antisymmetric, we would have obtained its additive inverse (*whose divergence also vanishes*) if we’d instead replaced $$ \mathbf b $$ with $$ \mathbf e $$ and $$ \mathbf e $$ with $$ - \mathbf b $$. The choice we made seems to be more common in the literature.
+We'll call $$ \dyadic G $$ the **Maxwell dyadic**. Note that because it’s antisymmetric, we would have obtained its additive inverse (*whose divergence also vanishes*) if we’d instead replaced $$ \mathbf b $$ with $$ \mathbf e $$ and $$ \mathbf e $$ with $$ - \mathbf b $$. The choice we made seems to be more common in the literature.
 
 ### Hodge Duality (for Antisymmetric Minkowski Dyadics)
 
@@ -373,7 +386,7 @@ $$
 \dyadic G \equiv \star \dyadic F .
 $$
 
-If we perform the *corresponding* component-rotating/sign-flipping procedure on $$ \dyadic G $$ (i.e., replace $$ \mathbf b $$ with $$ - \mathbf e $$ and $$ - \mathbf e $$ with $$ - \mathbf b $$, which actually amounts to the *same* procedure as before), we’ll end up with $$ - \dyadic F $$, so that $$ \star \dyadic G = \star \star \dyadic F = - \dyadic F = ( \vecpartial \wedge \mathbf A )^{\mathrm{T}} $$. Then the Hodge dual of *that* is $$ - \dyadic G $$, whose Hodge dual brings us back to $$ \dyadic F $$.
+If we perform the same component-rotating/sign-flipping procedure on $$ \dyadic G $$, we’ll end up with $$ - \dyadic F $$, so that $$ \star \dyadic G = \star \star \dyadic F = - \dyadic F = ( \vecpartial \wedge \mathbf A )^{\mathrm{T}} $$. Then the Hodge dual of *that* is $$ - \dyadic G $$, whose Hodge dual brings us back to $$ \dyadic F $$.
 
 Just as the magnetic field is a [pseudovector](https://en.wikipedia.org/wiki/Pseudovector) that gains an extra sign-flip under “orientation-reversing” coordinate transformations (like reflection across an axis), the Maxwell dyadic is a *pseudodyadic* that does the same. Both are examples of [pseudotensors](https://en.wikipedia.org/wiki/Pseudotensor).
 
@@ -464,10 +477,10 @@ $$ \del \cdot \star ( \del \wedge \mathbf a ) = 0 . $$
 In the language of [differential forms](https://en.wikipedia.org/wiki/Differential_form), both of these rules can be expressed as back-to-back applications of the [exterior derivative](https://en.wikipedia.org/wiki/Exterior_derivative), which is a generalization of our “differential wedge product” ($$ \vecpartial \wedge \text{_} $$ or $$ \del \wedge \text{_} $$). The principle that the double exterior derivative vanishes is called the [Poincaré lemma](https://en.wikipedia.org/wiki/Closed_and_exact_differential_forms#Poincar%C3%A9_lemma)&mdash;again, we’re reaching the limits of our mathematical toolkit, but the basic geometric idea here is that “the boundary of a boundary is zero” (as John Wheeler famously put it). Another manifestation of the Poincaré lemma is the curl-lessness of the gradient, which can *also* be expressed with the Hodge dual and the wedge product:
 
 $$
-\star ( \del \wedge \del f ) = \mathbf 0 .
+\star ( \del \wedge ( \del f ) ) = \mathbf 0 .
 $$
 
-Since the “self&ndash;wedge product” is always zero, that relation becomes obvious when you realize that $$ ( \del \wedge \del f ) = ( \del \wedge \del ) f $$ (because the order of mixed partials is reversible), so this is a beautifully simple way to *derive* the gradient’s curl-lessness.
+Because the order of mixed partials is reversible, $$ \del \wedge ( \del f ) $$ is just $$ ( \del \wedge \del ) f $$ (write out the components explicitly if you need convincing), and that vanishes trivially ($$ \del \otimes \del - \del \otimes \del $$), so this is a beautifully simple way to *derive* the gradient’s curl-lessness.
 
 And that’s it for Part II! I’m planning another part (or two?) that will use the tools we’ve developed to cover the electromagnetic stress&ndash;energy tensor and the electromagnetic Lagrangians (for both a particle and the field).
 
