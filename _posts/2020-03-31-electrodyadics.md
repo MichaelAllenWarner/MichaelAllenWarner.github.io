@@ -376,7 +376,7 @@ $$
 
 where $$ \boldsymbol \emptyset $$ is the zero four-vector.
 
-We'll call $$ \dyadic G $$ the **Maxwell dyadic**. Note that because it’s antisymmetric, we would have obtained its additive inverse (*whose divergence also vanishes*) if we’d instead replaced $$ \mathbf b $$ with $$ \mathbf e $$ and $$ \mathbf e $$ with $$ - \mathbf b $$. The choice we made seems to be more common in the literature.
+We'll call $$ \dyadic G $$ the **Maxwell dyadic**. To verify that it really is a four-dyadic, check that its components transform under a Lorentz boost like $$ [ \dyadic G {}^\prime ] = \Lambda [ \dyadic G ] \Lambda ^{ \mathrm{T} } $$, using the fact that $$ \vecpartial $$ and $$ \mathbf A $$ are four-vectors. Note that because it’s antisymmetric, we would have obtained its additive inverse (*whose divergence also vanishes*) if we’d instead replaced $$ \mathbf b $$ with $$ \mathbf e $$ and $$ \mathbf e $$ with $$ - \mathbf b $$. The choice we made seems to be more common in the literature.
 
 ### Hodge Duality (for Antisymmetric Minkowski Dyadics)
 
