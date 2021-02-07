@@ -33,6 +33,7 @@ const rem = px => `${px / 16}rem`;
 
 window.MathJax = {
   tex: {
+    tags: 'ams',
     macros: {
       del: '\\boldsymbol{\\nabla}',
       vecpartial: '\\style{transform: rotate(-16deg);}{\\boldsymbol{\\partial}}',
@@ -47,3 +48,64 @@ window.MathJax = {
     }
   }
 };
+
+
+// Show equation in tooltip when hovering reference-link.
+// Adapted from: https://gist.github.com/mauriciopoppe/ec311235997fab7b2993
+
+const tooltip = document.createElement('div');
+
+Object.assign(tooltip.style, {
+  visibility: 'hidden',
+  transitionProperty: 'opacity',
+  transitionDuration: '.2s',
+  opacity: '0',
+  width: '100%',
+  paddingRight: rem(10),
+  position: 'absolute',
+  backgroundColor: 'rgba(43, 45, 47, .95)',
+  color: 'white'
+});
+
+// use `main article` as tooltip container (it's set to relative-positioning)
+document.querySelector('main article').appendChild(tooltip);
+
+const onMouseOver = e => {
+  const a = e.currentTarget.closest('a');
+  if (!a) return;
+
+  const equation = document.querySelector(a.hash).closest('mjx-container');
+  const { height } = equation.getBoundingClientRect();
+
+  Object.assign(tooltip.style, {
+    top: rem(a.closest('.MathJax').offsetTop - height - 50),
+    visibility: 'visible',
+    opacity: '1'
+  });
+
+  tooltip.appendChild(equation.cloneNode(true));
+};
+
+// hide mechanism accounts for `transitioncancel` to prevent the
+// tooltip's state from getting permanently "stuck" by fast-mousing
+const hide = () => {
+  tooltip.innerHTML = '';
+  tooltip.style.visibility = 'hidden';
+  tooltip.removeEventListener('transitionend', hide);
+  tooltip.removeEventListener('transitioncancel', hide);
+};
+
+const onMouseOut = e => {
+  if (!e.currentTarget.closest('a')) return;
+  tooltip.addEventListener('transitionend', hide);
+  tooltip.addEventListener('transitioncancel', hide);
+  tooltip.style.opacity = '0';
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await MathJax.startup.promise;
+  document.querySelectorAll('.MathJax_ref').forEach(el => {
+    el.addEventListener('mouseover', onMouseOver);
+    el.addEventListener('mouseout', onMouseOut);
+  });
+});
