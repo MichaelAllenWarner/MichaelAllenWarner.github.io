@@ -81,7 +81,9 @@ $$\vecpartial = \left( \frac{1}{c} \, \frac{\partial}{\partial t} , \, - \del \r
 ($$ c $$ is the speed of light, and yes, that’s a negative sign&mdash;without it the four “components” [wouldn’t obey the Lorentz transformation](http://www.feynmanlectures.caltech.edu/II_25.html#Ch25-S3) and thus wouldn’t together constitute a four-vector operator). With $$ \mathbf R $$ as the [four-position](https://en.wikipedia.org/wiki/Four-vector#Four-position), the *Minkowski* differential vector triple product for a four-vector field $$ \mathbf C = \mathbf C ( \mathbf R ) $$ is:
 
 $$
+\begin{equation}\label{minkowskitripleproduct}
 \mathbf A \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf C) = \vecpartial _{\mathbf C} (\mathbf A \cdot \mathbf C) - (\mathbf A \cdot \vecpartial) \mathbf C .
+\end{equation}
 $$
 
 The resulting vector is likewise unchanged by a transformation that takes $$ \mathbf C $$ to ($$ \mathbf C + \vecpartial F $$) for any spacetime scalar field $$ F = F (\mathbf R) $$, though now we can *only* show this with the “bac - cab” side:
@@ -100,10 +102,12 @@ $$
 Then there’s the *extra* special case of the [curl of the curl](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_curl), which outputs a vector *field*:
 
 $$
+\begin{equation}\label{doublecurl}
 \begin{aligned}
 \del \times (\del \times \mathbf c) &= \del (\del \cdot \mathbf c) - (\del \cdot \del) \mathbf c \\[2pt]
 &= \del (\del \cdot \mathbf c) - \nabla^2 \mathbf c ,
 \end{aligned}
+\end{equation}
 $$
 
 with $$ \nabla^2 = \del \cdot \del $$ as the [(vector) Laplacian](https://en.wikipedia.org/wiki/Vector_Laplacian), a scalar operator. The four-vector “double curl” is:
@@ -134,7 +138,7 @@ The physics is really pretty simple now. We’ll do this in [Heaviside&ndash;Lor
 
 ### Four-Current Density, Four-Potential, Lorenz Gauge
 
-Charge- and current-densities together constitute a four-vector $$ \mathbf J = (\rho, \, \mathbf j / c) $$ called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. (Usually it’s defined as $$(\rho c , \, \mathbf j)$$, but dividing by $$ c $$ now saves us from having to divide $$ \mathbf J $$ by $$ c $$ later when it appears in other equations.) We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) $$ \mathbf A $$ as any four-vector field whose (negative) “double curl” is the four-current density:
+Charge- and current-densities together constitute a four-vector $$ \mathbf J = (\rho, \, \mathbf j / c) $$ called the [four-current density](https://en.wikipedia.org/wiki/Four-current), which is the electromagnetic source field. (Usually it’s defined as $$(\rho c , \, \mathbf j)$$, but dividing by $$ c $$ now saves us from having to divide $$ \mathbf J $$ by $$ c $$ later when it appears in other equations.) We then define the [four-potential](https://en.wikipedia.org/wiki/Electromagnetic_four-potential) $$ \mathbf A $$ as any four-vector field whose (negative) “double curl” is the four-current density (see Equation \ref{doublecurl}):
 
 $$
 \begin{aligned}
@@ -160,7 +164,7 @@ So in the Lorenz gauge, a non-zero value of $$ \mathbf J $$ at a position in spa
 
 ### Lorentz Four-Force
 
-The reason we care about the four-potential is the following empirical result:
+The reason we care about the four-potential is the following empirical result (see Equation \ref{minkowskitripleproduct}):
 
 $$
 \begin{aligned}

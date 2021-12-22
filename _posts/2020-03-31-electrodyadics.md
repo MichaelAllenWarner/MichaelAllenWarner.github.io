@@ -13,19 +13,23 @@ usemathjax: true
 This post builds on material in [Part I](/physics/2019/07/16/vector-triple-products-in-minkowski-spacetime.html), whose key results (in Heaviside&ndash;Lorentz units) were the electromagnetic field equation:
 
 $$
+\begin{equation}\label{emfield}
 \begin{aligned}
 \mathbf J &= - \vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
 &= \Box \mathbf A - \vecpartial (\vecpartial \cdot \mathbf A)
 \end{aligned}
+\end{equation}
 $$
 
 and the Lorentz four-force
 
 $$
+\begin{equation}\label{lorentzforce}
 \begin{aligned}
 \mathbf F &= \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \Big] \\[5pt]
 &= \frac{q}{c} \Big[ \vecpartial _{\mathbf A} \left( \mathbf V \cdot \mathbf A  \right) - \left( \mathbf V \cdot \vecpartial \right) \mathbf A \Big] ,
 \end{aligned}
+\end{equation}
 $$
 
 where:
@@ -69,61 +73,82 @@ The question is: does this mean anything? Sure it does! We can *define* $$ \math
 
 We call the operation $$ \mathbf B \otimes \mathbf C $$ the [**dyadic product**](https://en.wikipedia.org/wiki/Dyadic_product) (a special case of the [**tensor product**](https://en.wikipedia.org/wiki/Tensor_product), which we won’t cover in generality), and we call the resulting object a **dyad**. Dyads and *sums of dyads* are collectively **dyadics**, so $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) $$ is a four-dyadic but not a four-dyad.
 
-A dyad’s **transpose** is the dyadic product in reverse order: $$ ( \mathbf B \otimes \mathbf C ) ^\textrm{T} = \mathbf C \otimes \mathbf B $$. A *dyadic’s* transpose is the sum of the transposes of the dyads that total the dyadic: $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) ^\textrm{T} = \mathbf C \otimes \mathbf B - \mathbf B \otimes \mathbf C $$. Note that this last example is a dyadic whose transpose is also its additive inverse. Such a dyadic is **antisymmetric**, and we use the following shorthand for forming an antisymmetric dyadic from a pair of vectors:
+A dyad’s **transpose** is the dyadic product in reverse order: $$ ( \mathbf B \otimes \mathbf C ) ^\textrm{T} = \mathbf C \otimes \mathbf B $$. This definition leads to an identity we’ll use:
+
+$$
+\begin{aligned}
+\mathbf A \cdot ( \mathbf B \otimes \mathbf C ) ^\textrm{T} &= \mathbf A \cdot ( \mathbf C \otimes \mathbf B ) \\[2pt]
+&= ( \mathbf A \cdot \mathbf C ) \mathbf B \\[2pt]
+&= \mathbf B ( \mathbf C \cdot \mathbf A ) \\[2pt]
+\mathbf A \cdot ( \mathbf B \otimes \mathbf C ) ^\textrm{T} &= ( \mathbf B \otimes \mathbf C ) \cdot \mathbf A ,
+\end{aligned}
+$$
+
+and of course also:
+
+$$ ( \mathbf B \otimes \mathbf C ) ^\textrm{T} \cdot \mathbf A = \mathbf A \cdot ( \mathbf B \otimes \mathbf C ) . $$
+
+A *dyadic’s* transpose is the sum of the transposes of the dyads that total the dyadic: $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) ^\textrm{T} = \mathbf C \otimes \mathbf B - \mathbf B \otimes \mathbf C $$. Convince yourself that the identities we just derived for dyads extend to dyadics in a straightforward way:
+
+$$
+\begin{equation}\label{dyadicidentity}
+\mathbf A \cdot \dyadic D {}^\textrm{T} = \dyadic D \cdot \mathbf A \qquad \textrm{and} \qquad \dyadic D {}^\textrm{T} \cdot \mathbf A = \mathbf A \cdot \dyadic D ,
+\end{equation}
+$$
+
+where we’ve introduced a double-sided arrow notation for dyadics.
+
+Note that the dyadic $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) ^\textrm{T} $$ has a transpose that is also its additive inverse. Such a dyadic is **antisymmetric**, and we use the following shorthand for forming an antisymmetric dyadic from a pair of vectors:
 
 $$ \mathbf B \wedge \mathbf C \, \equiv \, \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B $$
 
 (the **wedge product**). Looking back to our “BAC - CAB” expression, we see now that an identity relates vector triple products to wedge products:
 
 $$
+\begin{equation}\label{wedgeidentity}
 \begin{aligned}
 \mathbf A \; \text{“} \mkern-5mu \times ( \mathbf B \times \mkern-5mu \text{”} \, \mathbf C ) &= \mathbf B ( \mathbf C \cdot \mathbf A ) - \mathbf C ( \mathbf B \cdot \mathbf A ) \\[2pt]
 &= ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) \cdot \mathbf A \\[2pt]
 \mathbf A \; \text{“} \mkern-5mu \times ( \mathbf B \times \mkern-5mu \text{”} \, \mathbf C ) &= ( \mathbf B \wedge \mathbf C ) \cdot \mathbf A .
 \end{aligned}
+\end{equation}
 $$
 
 (An analogous identity holds for three-vectors, where the vector triple product is “literal”: $$ \mathbf a \times ( \mathbf b \times \mathbf c ) = ( \mathbf b \wedge \mathbf c ) \cdot \mathbf a $$.)
 
 ## Electrodyadics
 
-Let’s apply our new identity to our key results from Part I.
+Let’s apply our new identity (Equation \ref{wedgeidentity}) to our key results from Part I.
 
 ### The Electromagnetic Field Equation
 
-First, we have:
+For the field equation (Equation \ref{emfield}), first we have:
 
 $$
 \begin{aligned}
 \mathbf J &= - \vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \\[2pt]
 &= - ( \vecpartial \wedge \mathbf A ) \cdot \vecpartial_{\mathbf A} \\[2pt]
-&= \vecpartial \cdot ( \vecpartial \wedge \mathbf A ) ,
+&= - \vecpartial \cdot ( \vecpartial \wedge \mathbf A ) ^\textrm{T}
 \end{aligned}
 $$
 
-where the last step follows from the antisymmetry of the wedge product, or explicitly:
+(by Equation \ref{dyadicidentity}). Since the wedge product is antisymmetric, that’s just:
+
+$$ \mathbf J = \vecpartial \cdot ( \vecpartial \wedge \mathbf A ) . $$
+
+For convenience, we define $$ \dyadic F \equiv \vecpartial \wedge \mathbf A $$, the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)). Then:
 
 $$
-\begin{aligned}
-- ( \vecpartial \wedge \mathbf A ) \cdot \vecpartial_{ \mathbf A } &= - \left[ ( \vecpartial \otimes \mathbf A ) \cdot \vecpartial_{ \mathbf A } - ( \mathbf A \otimes \vecpartial_{ \mathbf A } ) \cdot \vecpartial_{ \mathbf A } \right] \\[2pt]
-&= \mathbf A ( \vecpartial_{ \mathbf A } \cdot \vecpartial_{ \mathbf A } ) - \vecpartial ( \mathbf A \cdot \vecpartial_{ \mathbf A } ) \\[2pt]
-&= ( \vecpartial \cdot \vecpartial ) \mathbf A - ( \vecpartial \cdot \mathbf A ) \vecpartial_{ \mathbf A } \\[2pt]
-&= \vecpartial \cdot ( \vecpartial \otimes \mathbf A ) - \vecpartial \cdot ( \mathbf A \otimes \vecpartial_{ \mathbf A } ) \\[2pt]
-&= \vecpartial \cdot ( \vecpartial \wedge \mathbf A ) .
-\end{aligned}
-$$
-
-For convenience, and introducing a double-arrow notation for dyadics, we define $$ \dyadic F \equiv \vecpartial \wedge \mathbf A $$, the antisymmetric **Faraday dyadic** (usually called the [Faraday tensor](https://en.wikipedia.org/wiki/Electromagnetic_tensor)). Then:
-
-$$
+\begin{equation}\label{dyadicemfield}
 \mathbf J = \vecpartial \cdot \dyadic F ,
+\end{equation}
 $$
 
 and the four-current is the four-divergence of the Faraday dyadic. That’s a nice way of writing the electromagnetic field equation, isn’t it?
 
 ### The Lorentz Four-Force
 
-Now the Lorentz four-force:
+Now the Lorentz four-force (Equation \ref{lorentzforce}):
 
 $$
 \mathbf F = \frac{q}{c} \Big[ \mathbf V \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf A) \Big] = \frac{q}{c} \Big[ ( \vecpartial \wedge \mathbf A ) \cdot \mathbf V \Big] .

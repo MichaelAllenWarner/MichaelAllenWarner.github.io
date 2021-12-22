@@ -74,7 +74,22 @@ const onMouseOver = e => {
   const a = e.currentTarget.closest('a');
   if (!a) return;
 
-  const equation = document.querySelector(a.hash).closest('mjx-container');
+  /*
+    MathJax currently puts colon in ids, which is invalid and causes
+    methods like `document.querySelector` and `document.getElementById`
+    to error out. To get around this, we use `[id^="..."][id$="..."]`
+    as the selector if needed, where the first part has everything
+    before the colon and the last part has everything after the colon.
+  */
+  let target;
+  try {
+    target = document.querySelector(a.hash);
+  } catch (err) {
+    const [idStart, idEnd] = a.hash.slice(1).split(encodeURIComponent(':'));
+    target = document.querySelector(`[id^="${idStart}"][id$="${idEnd}"]`);
+  }
+
+  const equation = target.closest('mjx-container');
   const { height } = equation.getBoundingClientRect();
 
   Object.assign(tooltip.style, {
