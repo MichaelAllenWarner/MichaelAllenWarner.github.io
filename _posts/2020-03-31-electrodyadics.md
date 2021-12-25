@@ -98,7 +98,7 @@ $$
 
 where we’ve introduced a double-sided arrow notation for dyadics.
 
-Note that the dyadic $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) ^\textrm{T} $$ has a transpose that is also its additive inverse. Such a dyadic is **antisymmetric**, and we use the following shorthand for forming an antisymmetric dyadic from a pair of vectors:
+Note that the dyadic $$ ( \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B ) $$ has a transpose that is also its additive inverse. Such a dyadic is **antisymmetric**, and we use the following shorthand for forming an antisymmetric dyadic from a pair of vectors:
 
 $$ \mathbf B \wedge \mathbf C \, \equiv \, \mathbf B \otimes \mathbf C - \mathbf C \otimes \mathbf B $$
 

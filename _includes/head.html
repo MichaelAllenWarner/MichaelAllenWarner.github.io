@@ -58,6 +58,7 @@
         overflow-x: auto;
         overflow-y: hidden; /* might have to undo this if anything gets cut off, or apply it only to not-display */
         max-width: 100%;
+        min-width: 0px !important;
         scrollbar-width: none; /* for FF (webkit pseudoelement rule below) */
       }
       mjx-container[jax="CHTML"]::-webkit-scrollbar {
@@ -70,6 +71,10 @@
         display: inline-flex; /* inline-block ruins vertical alignment (unfixable w/ `vertical-align`) */
         padding: 0 .11rem; /* otherwise some inline eqs cut off a bit on left/right */
         margin: 0 -.11rem; /* "undo" padding to keep in right position w/ text */
+      }
+      /* adjust equation label vertically */
+      mjx-container[jax="CHTML"][display="true"] mjx-mtext {
+        transform: translateY(-.14em);
       }
       /* make inline dyadics fit */
       mjx-container[jax="CHTML"]:not([display="true"]) .dyadic {
