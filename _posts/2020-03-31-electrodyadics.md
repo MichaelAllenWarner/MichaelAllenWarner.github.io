@@ -337,7 +337,7 @@ $$
 
 ### Components of the Field Equation: Something Missing
 
-In matrix notation, the field equation $$ \mathbf J = \vecpartial \cdot \dyadic F $$ reads:
+In matrix notation, Equation \ref{dyadicemfield} reads:
 
 $$
 [ \mathbf J ]^\mathrm{T} = [ \vecpartial ]^\mathrm{T} \eta [ \dyadic F ]

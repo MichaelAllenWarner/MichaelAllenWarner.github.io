@@ -102,21 +102,21 @@ $$
 Then there’s the *extra* special case of the [curl of the curl](https://en.wikipedia.org/wiki/Vector_calculus_identities#Curl_of_curl), which outputs a vector *field*:
 
 $$
-\begin{equation}\label{doublecurl}
 \begin{aligned}
 \del \times (\del \times \mathbf c) &= \del (\del \cdot \mathbf c) - (\del \cdot \del) \mathbf c \\[2pt]
 &= \del (\del \cdot \mathbf c) - \nabla^2 \mathbf c ,
 \end{aligned}
-\end{equation}
 $$
 
 with $$ \nabla^2 = \del \cdot \del $$ as the [(vector) Laplacian](https://en.wikipedia.org/wiki/Vector_Laplacian), a scalar operator. The four-vector “double curl” is:
 
 $$
+\begin{equation}\label{doublecurl}
 \begin{aligned}
 \vecpartial \; \text{“} \mkern-5mu \times (\vecpartial \times \mkern-5mu \text{”} \, \mathbf C) &= \vecpartial (\vecpartial \cdot \mathbf C) - (\vecpartial \cdot \vecpartial) \mathbf C \\[2pt]
 &= \vecpartial (\vecpartial \cdot \mathbf C) - \Box \mathbf C ,
 \end{aligned}
+\end{equation}
 $$
 
 with $$ \Box = \vecpartial \cdot \vecpartial $$ as the [d’Alembertian](https://en.wikipedia.org/wiki/D%27Alembert_operator). Taking $$ \mathbf C $$ to ($$ \mathbf C + \vecpartial F $$) here looks like:
